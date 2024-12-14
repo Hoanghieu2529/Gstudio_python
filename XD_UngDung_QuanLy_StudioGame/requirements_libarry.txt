@@ -1,0 +1,8 @@
+/*python.exe -m pip install --upgrade pip*/
+mysql-connector-python
+PyQt5
+pandas
+Matplotlib
+pyinstaller
+mysql.connector
+Faker
