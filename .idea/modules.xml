@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/StudioGame_do_an_python.iml" filepath="$PROJECT_DIR$/.idea/StudioGame_do_an_python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml" filepath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml" />
+    </modules>
+  </component>
+</project>
