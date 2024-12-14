@@ -102,7 +102,9 @@ pip install -r requirements.txt
   - Tạo báo cáo tài chính.
   - Biểu đồ tiến độ dự án.
   - Xuất báo cáo dạng PDF hoặc biểu đồ.
-  - 
+  - Dashboard
+  - Thiết kế tính năng quản lý dự án.
+  - Thiết kế tính năng quản lý quy trình.
 ---
 Theo dõi checklist:
 ```
