@@ -53,13 +53,14 @@ MVC
 | `sqlalchemy`              | ORM mạnh mẽ để quản lý cơ sở dữ liệu (Tùy chọn).               |
 
 ### **Thư viện hỗ trợ**
-| Thư viện                  | Mục đích                                                        |
-|---------------------------|-----------------------------------------------------------------|
-| `pandas`                  | Xử lý dữ liệu và tạo báo cáo.                                   |
-| `matplotlib`              | Vẽ biểu đồ trực quan hóa dữ liệu.                              |
-| `reportlab`               | Xuất báo cáo PDF.                                              |
-| `pytest`                  | Kiểm thử tự động cho ứng dụng.                                 |
-| `bcrypt`                  | Mã hóa và bảo mật mật khẩu.                                    |
+| Thư viện     | Mục đích                          |
+|--------------|-----------------------------------|
+| `pandas`     | Xử lý dữ liệu và tạo báo cáo.     |
+| `matplotlib` | Vẽ biểu đồ trực quan hóa dữ liệu. |
+| `reportlab`  | Xuất báo cáo PDF.                 |
+| `pytest`     | Kiểm thử tự động cho ứng dụng.    |
+| `bcrypt`     | Mã hóa và bảo mật mật khẩu.       |
+| `Faker`      | Tạo dữ liệu tự động.              |
 
 ---
 
