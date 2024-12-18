@@ -6,4 +6,4 @@ Matplotlib
 pyinstaller
 mysql.connector
 Faker
-Ploty
+Plotly
