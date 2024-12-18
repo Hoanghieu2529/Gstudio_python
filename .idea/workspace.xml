@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2174a43c-df16-4d57-af13-12ccf21b23f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/CongViec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/DuAn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/NhanVien.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/PhongBan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/Studio.py" afterDir="false" />
+    <list default="true" id="2174a43c-df16-4d57-af13-12ccf21b23f1" name="Changes" comment="v.01 Tạo Model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/requirements_libarry.txt" beforeDir="false" afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/requirements_library.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/NhanVien.py" beforeDir="false" afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/NhanVien.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/Timesheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/Timesheet.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +163,7 @@
       <workItem from="1734153747180" duration="45000" />
       <workItem from="1734153797939" duration="3192000" />
       <workItem from="1734454450944" duration="1091000" />
-      <workItem from="1734527554457" duration="5073000" />
+      <workItem from="1734527554457" duration="7617000" />
     </task>
     <task id="LOCAL-00001" summary="v.01">
       <option name="closed" value="true" />
@@ -178,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734154433711</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v.01 Tạo Model">
+      <option name="closed" value="true" />
+      <created>1734533223243</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734533223243</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +227,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v.01" />
-    <option name="LAST_COMMIT_MESSAGE" value="v.01" />
+    <MESSAGE value="v.01 Tạo Model" />
+    <option name="LAST_COMMIT_MESSAGE" value="v.01 Tạo Model" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$sql_fake_dulieu.coverage" NAME="sql_fake_dulieu Coverage Results" MODIFIED="1734155232176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
