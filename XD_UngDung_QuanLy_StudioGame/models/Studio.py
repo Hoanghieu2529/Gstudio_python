@@ -1,6 +1,6 @@
 class Studio:
-    def __init__(self, studio_Name: str):
-        self.studio_Name = studio_Name
+    def __init__(self, ten_studio: str):
+        self.ten_studio = ten_studio
         self.phongban = []
         self.duan = []
         self.nhanvien = []

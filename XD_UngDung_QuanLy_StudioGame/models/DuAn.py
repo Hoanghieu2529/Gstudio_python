@@ -1,11 +1,11 @@
 class DuAn:
-    def __init__(self, duan_id: int, duan_name: str, duan_mota: str, duan_start: str, duan_end: str, duan_status: str):
-        self.duan_id = duan_id
-        self.duan_name = duan_name
-        self.duan_mota = duan_mota
-        self.duan_start = duan_start
-        self.duan_end = duan_end
-        self.duan_status = duan_status
+    def __init__(self, ma_duan: int, ten_duan: str, mota_duan: str, ng_batdau_duan: str, ng_ketthuc_duan: str, trang_thai_duan: str):
+        self.ma_duan = ma_duan
+        self.ten_duan = ten_duan
+        self.mota_duan = mota_duan
+        self.ng_batdau_duan = ng_batdau_duan
+        self.ng_ketthuc_duan = ng_ketthuc_duan
+        self.trang_thai_duan = trang_thai_duan
         self.congviec = []
         self.thanhvien = []
 
