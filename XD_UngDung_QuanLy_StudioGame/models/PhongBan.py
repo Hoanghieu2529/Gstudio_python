@@ -3,10 +3,16 @@ class PhongBan:
         self.ma_phongban = ma_phongban
         self.ten_phongban = ten_phongban
         self.quanly_phongban = quanly_phongban
-        self.thanhvien = []
+        self.nhanvien = []
 
-    def them_thanhvien(self):
-        self.thanhvien.append(self.thanhvien)
+    def them_nhanvien(self, nhanvien: str):
+        self.nhanvien.append(nhanvien)
 
-    def print_dsnv(self):
-        pass
+    def loaibo_nhanvien(self, ten_nhanvien: str):
+        self.nhanvien = [nv for nv in self.nhanvien if nv != ten_nhanvien]
+
+    def lietke_nhanvien(self):
+        return self.nhanvien
+
+    def __str__(self):
+        return f"Phòng ban: {self.ten_phongban} (Mã: {self.ma_phongban})"
