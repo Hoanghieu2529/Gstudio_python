@@ -3,8 +3,8 @@ import sys
 import os
 
 def install_requirements():
-    """Tự động cài đặt các thư viện từ file requirements_library.txt"""
-    requirements_file = "requirements_library.txt"
+    """Tự động cài đặt các thư viện từ file requirements.txt"""
+    requirements_file = "requirements.txt"
 
     # Đảm bảo  chạy lệnh này trong terminal trước khi cài bất cứ thư viện nào: python.exe -m pip install --upgrade pip
     # Kiểm tra file requirements có tồn tại không ?
