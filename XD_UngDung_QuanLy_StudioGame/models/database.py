@@ -8,7 +8,7 @@ class Database:
             password="1234",
             database="studio"
         )
-        self.cursor = self.connection.cursor()
+        self.cursor = self.connection.cursor(dictionary=True)
 
     def execute_query(self, query, values=None):
         """Thực thi truy vấn với hoặc không có tham số"""

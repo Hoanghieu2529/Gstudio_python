@@ -237,7 +237,7 @@
       <workItem from="1734447478954" duration="650000" />
       <workItem from="1734544956986" duration="840000" />
       <workItem from="1734955361191" duration="2367000" />
-      <workItem from="1734958165459" duration="5252000" />
+      <workItem from="1734958165459" duration="6683000" />
     </task>
     <task id="LOCAL-00001" summary="v.01">
       <option name="closed" value="true" />
@@ -335,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734961410821</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="v.0.5.2_them bang database">
+      <option name="closed" value="true" />
+      <created>1734966444424</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734966444424</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +394,8 @@
     <MESSAGE value="v.0.4" />
     <MESSAGE value="v.0.5_View" />
     <MESSAGE value="v.0.5.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v.0.5.1" />
+    <MESSAGE value="v.0.5.2_them bang database" />
+    <option name="LAST_COMMIT_MESSAGE" value="v.0.5.2_them bang database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

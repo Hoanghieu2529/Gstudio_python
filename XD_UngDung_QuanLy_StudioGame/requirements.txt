@@ -1,10 +1,10 @@
 mysql-connector-python
-PyQt5 pyqt5-tools
+PyQt5
+pyqt5-tools
 pygubu
 pandas
-Matplotlib
+matplotlib
 pyinstaller
-mysql.connector
 Faker
-Plotlyqqmake
-Page
+plotly
+page
