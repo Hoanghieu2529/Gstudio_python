@@ -45,12 +45,13 @@ MVC
 ## **Thư viện sử dụng**
 
 ### **Thư viện chính**
-| Thư viện                  | Mục đích                                                        |
-|---------------------------|-----------------------------------------------------------------|
-| `mysql-connector-python`  | Kết nối và thao tác với cơ sở dữ liệu MySQL.                   |
-| `tkinter`                 | Tạo giao diện desktop (Mặc định trong Python).                 |
+| Thư viện                  | Mục đích                                                         |
+|---------------------------|------------------------------------------------------------------|
+| `mysql-connector-python`  | Kết nối và thao tác với cơ sở dữ liệu MySQL.                     |
+| `tkinter`                 | Tạo giao diện desktop (Mặc định trong Python).                   |
 | `pyqt5`                   | Tạo giao diện desktop chuyên nghiệp (Tùy chọn thay thế Tkinter). |
-| `sqlalchemy`              | ORM mạnh mẽ để quản lý cơ sở dữ liệu (Tùy chọn).               |
+| `sqlalchemy`              | ORM mạnh mẽ để quản lý cơ sở dữ liệu (Tùy chọn).                 |
+| `pyqt5-tools designer`    | tool keo thả.                                                    |
 
 ### **Thư viện hỗ trợ**
 | Thư viện                  | Mục đích                                                        |
