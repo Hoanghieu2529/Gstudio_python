@@ -33,7 +33,7 @@ CREATE TABLE du_an (
 );
 
 CREATE TABLE cong_viec (
-    macv INT AUTO_INCREMENT PRIMARY KEY,
+    macv INT PRIMARY KEY,
     mada INT,
     ten_cong_viec VARCHAR(100) NOT NULL,
     mo_ta TEXT,
@@ -45,13 +45,19 @@ CREATE TABLE cong_viec (
 );
 
 CREATE TABLE bang_thoi_gian (
-    matg INT AUTO_INCREMENT PRIMARY KEY,
+    matg INT PRIMARY KEY,
     manv INT,
     macv INT,
     so_gio INT NOT NULL,
     ngay_lam DATE NOT NULL,
     FOREIGN KEY (manv) REFERENCES nhan_vien(manv),
     FOREIGN KEY (macv) REFERENCES cong_viec(macv)
+);
+CREATE TABLE nguoi_dung (
+    mand INT PRIMARY KEY,
+    ten_dang_nhap VARCHAR(50) NOT NULL UNIQUE,
+    mat_khau VARCHAR(255) NOT NULL,
+    vai_tro VARCHAR(255)
 );
 
 # -- Dữ liệu bảng phong_ban
@@ -67,6 +73,9 @@ INSERT INTO nhan_vien (manv, email, chuc_vu, mapb) VALUES (100,'Nguyễn Duy Hi�
 INSERT INTO nhan_vien (manv, email, chuc_vu, mapb) VALUES (101,'Nguyễn Anh Đức', '23210102@ms.uit.edu.vn', 'Giám đốc', 001);
 INSERT INTO nhan_vien (manv, email, chuc_vu, mapb) VALUES (102,'Hồ Thị Ngọc Định', '23210099@ms.uit.edu.vn', 'Phó giám đốc', 001);
 
+INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241201,'hieund',123,'quan tri vien');
+INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241202,'ducna',123,'lap trinh vien');
+INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241203,'dinhhtn',123,'kiem thu');
 
 -- Dữ liệu bảng dự án # manv tự động thêm từ 1 đén 100
 INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES
