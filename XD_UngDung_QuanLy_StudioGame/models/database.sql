@@ -57,26 +57,27 @@ CREATE TABLE nguoi_dung (
     mand INT PRIMARY KEY,
     ten_dang_nhap VARCHAR(50) NOT NULL UNIQUE,
     mat_khau VARCHAR(255) NOT NULL,
-    vai_tro VARCHAR(255)
+    vai_tro ENUM('quan tri vien', 'lap trinh vien', 'kiem thu','nguoi dung') NOT NULL
 );
 
-# -- Dữ liệu bảng phong_ban
-# INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('001', 'Ban Điều Hành', 'Điều hành mọi hoạt động công ty');
-# INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('002', 'IT', 'Quản lý hệ thống IT');
-# INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('003', 'Nhân sự', 'Chính sách và phúc lợi, lương thưởng');
-# INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('004', 'Tài chính', 'Quản lý tài chính công ty');
-# INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('005', 'Marketing', 'Thực hiện các hành động marketing và quản lý thương hiệu');
-# INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('006', 'Bán hàng', 'Tìm kiếm khách hàng và bán hàng');
+-- Dữ liệu bảng phong_ban
+INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('001', 'Ban Điều Hành', 'Điều hành mọi hoạt động công ty');
+INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('002', 'IT', 'Quản lý hệ thống IT');
+INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('003', 'Nhân sự', 'Chính sách và phúc lợi, lương thưởng');
+INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('004', 'Tài chính', 'Quản lý tài chính công ty');
+INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('005', 'Marketing', 'Thực hiện các hành động marketing và quản lý thương hiệu');
+INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('006', 'Bán hàng', 'Tìm kiếm khách hàng và bán hàng');
 
 -- Du liệu bảng nhân vien
 INSERT INTO nhan_vien (manv, email, chuc_vu, mapb) VALUES (100,'Nguyễn Duy Hiếu', '23210111@ms.uit.edu.vn', 'Chủ tịch', 001);
 INSERT INTO nhan_vien (manv, email, chuc_vu, mapb) VALUES (101,'Nguyễn Anh Đức', '23210102@ms.uit.edu.vn', 'Giám đốc', 001);
 INSERT INTO nhan_vien (manv, email, chuc_vu, mapb) VALUES (102,'Hồ Thị Ngọc Định', '23210099@ms.uit.edu.vn', 'Phó giám đốc', 001);
 
+-- Dữ liệu bảng người dùng
 INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241201,'hieund',123,'quan tri vien');
 INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241202,'ducna',123,'lap trinh vien');
 INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241203,'dinhhtn',123,'kiem thu');
-
+INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241204, 'nguyenvan', 123, 'nguoi dung');
 -- Dữ liệu bảng dự án # manv tự động thêm từ 1 đén 100
 INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES
 ('Baldur\'s Gate 3', 'Một tựa game nhập vai nổi bật với thế giới mở phong phú và lối chơi đỉnh cao.', '2024-01-15', '2024-06-30', 1),

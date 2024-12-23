@@ -1,10 +1,9 @@
 mysql-connector-python
 PyQt5
-pyqt5-tools
 pygubu
 pandas
 matplotlib
 pyinstaller
 Faker
 plotly
-page
+bcrypt

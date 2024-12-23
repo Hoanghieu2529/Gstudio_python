@@ -45,49 +45,76 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Studio_view.executor&quot;: &quot;Run&quot;,
-    &quot;Python.install_requirements.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mvc_co_ban01_view_ui.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sql_fake_dulieu.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test2.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IT/UIT/HK4/KTPython/StudioGame_do_an_python/XD_UngDung_QuanLy_StudioGame/Test&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Kiem_thu.executor": "Run",
+    "Python.Studio_view.executor": "Run",
+    "Python.View_dang_nhap.executor": "Run",
+    "Python.install_requirements.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.mvc_co_ban01_view_ui.executor": "Run",
+    "Python.sql_fake_dulieu.executor": "Run",
+    "Python.test2.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/IT/UIT/HK4/KTPython/StudioGame_do_an_python/XD_UngDung_QuanLy_StudioGame/Test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\Test" />
       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\Test" />
       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\models" />
       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame" />
       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Studio_view">
-    <configuration name="Studio_view" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Kiem_thu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="XD_UngDung_QuanLy_StudioGame" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test/Kiem_thu.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Kiem_thu_Studio_view" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="XD_UngDung_QuanLy_StudioGame" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,7 +128,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/Studio_view.py" />
+      <option name="SCRIPT_NAME" value="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\Test\Kiem_thu_Studio_view.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,7 +137,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="install_requirements" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="View_dang_nhap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="XD_UngDung_QuanLy_StudioGame" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,13 +146,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12 (StudioGame_do_an_python)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/install_requirements.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/View_dang_nhap.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,36 +206,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="StudioGame_do_an_python" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Studio_view" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.View_dang_nhap" />
+        <item itemvalue="Python.Kiem_thu" />
+        <item itemvalue="Python.Kiem_thu_Studio_view" />
         <item itemvalue="Python.mvc_co_ban01_view_ui" />
-        <item itemvalue="Python.install_requirements" />
-        <item itemvalue="Python.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +240,7 @@
       <workItem from="1734447478954" duration="650000" />
       <workItem from="1734544956986" duration="840000" />
       <workItem from="1734955361191" duration="2367000" />
-      <workItem from="1734958165459" duration="6683000" />
+      <workItem from="1734958165459" duration="17099000" />
     </task>
     <task id="LOCAL-00001" summary="v.01">
       <option name="closed" value="true" />
@@ -343,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734966444424</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="v.0.5.3_cập nhật thư viện">
+      <option name="closed" value="true" />
+      <created>1734967893535</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734967893535</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +406,8 @@
     <MESSAGE value="v.0.5_View" />
     <MESSAGE value="v.0.5.1" />
     <MESSAGE value="v.0.5.2_them bang database" />
-    <option name="LAST_COMMIT_MESSAGE" value="v.0.5.2_them bang database" />
+    <MESSAGE value="v.0.5.3_cập nhật thư viện" />
+    <option name="LAST_COMMIT_MESSAGE" value="v.0.5.3_cập nhật thư viện" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -408,10 +420,12 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1734835205815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1734979420360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$sql_fake_dulieu.coverage" NAME="sql_fake_dulieu Coverage Results" MODIFIED="1734182041719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$mvc_co_ban01_view_ui.coverage" NAME="mvc_co_ban01_view_ui Coverage Results" MODIFIED="1734545468568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$View_dang_nhap.coverage" NAME="View_dang_nhap Coverage Results" MODIFIED="1734979132375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1734356019627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$Kiem_thu.coverage" NAME="Kiem_thu Coverage Results" MODIFIED="1734976409159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$install_requirements.coverage" NAME="install_requirements Coverage Results" MODIFIED="1734545285147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$Studio_view.coverage" NAME="Studio_view Coverage Results" MODIFIED="1734963765373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
   </component>
