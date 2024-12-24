@@ -209,22 +209,49 @@ INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (237
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (238, 'Vũ Thiện Quang', 'vũ.quang@ms.uit.edu.vn', 'Trưởng phòng', '003', 44000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (239, 'Phan Ngọc Tú', 'phan.tú@ms.uit.edu.vn', 'Nhân viên', '001', 29000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (240, 'Phan Thi Minh', 'phan.minh@ms.uit.edu.vn', 'Nhân viên', '003', 21000000);
+-- dữ liệu khách hàng 
+INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Mai Khánh Toàn', 'mai.khánh.toàn@example.com', '0923456789', 'Đà Nẵng, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Ngô Minh Tuấn', 'ngô.minh.tuấn@example.com', '0934567890', 'Bình Dương, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Nguyễn Hoàng Lộc', 'nguyễn.hoàng.lộc@example.com', '0967890123', 'Hà Nội, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Trần Hải Minh', 'trần.hải.minh@example.com', '0978901234', 'Vũng Tàu, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Bùi Anh Dũng', 'bùi.anh.dũng@example.com', '0990123456', 'Hải Phòng, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Lý Thị Lan', 'lý.thị.lan@example.com', '0990123456', 'Hà Nội, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Đoàn Hữu Đức', 'đoàn.hữu.đức@example.com', '0901234567', 'Hải Phòng, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Vũ Lan Anh', 'vũ.lan.anh@example.com', '0945678901', 'Đà Nẵng, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Phạm Hoàng Duy', 'phạm.hoàng.duy@example.com', '0945678901', 'Cần Thơ, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Bùi Lan Anh', 'bùi.lan.anh@example.com', '0967890123', 'Hồ Chí Minh, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Trần Hữu Tâm', 'trần.hữu.tâm@example.com', '0978901234', 'Hải Phòng, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Nguyễn Văn An', 'nguyễn.văn.an@example.com', '0990123456', 'Vũng Tàu, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Hồ Thị Hoa', 'hồ.thị.hoa@example.com', '0934567890', 'Lào Cai, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Trần Thị Bình', 'trần.thị.bình@example.com', '0989012345', 'Cần Thơ, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Nguyễn Hoàng Hải', 'nguyễn.hoàng.hải@example.com', '0990123456', 'Nha Trang, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Mai Khánh Hòa', 'mai.khánh.hòa@example.com', '0923456789', 'Hà Nội, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Lê Quang Sơn', 'lê.quang.sơn@example.com', '0912345678', 'Hà Nội, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Ngô Minh Quân', 'ngô.minh.quân@example.com', '0990123456', 'Đà Nẵng, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Lê Minh Cường', 'lê.minh.cường@example.com', '0945678901', 'Cần Thơ, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Nguyễn Thị Lan', 'nguyễn.thị.lan@example.com', '0989012345', 'Cần Thơ, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Phạm Bình Lộc', 'phạm.bình.lộc@example.com', '0967890123', 'Đà Nẵng, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Đoàn Hữu Tiến', 'đoàn.hữu.tiến@example.com', '0934567890', 'Vũng Tàu, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Lê Tuấn Kiệt', 'lê.tuấn.kiệt@example.com', '0934567890', 'Vũng Tàu, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Phạm Tuấn Tài', 'phạm.tuấn.tài@example.com', '0967890123', 'Hải Phòng, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
+    VALUES ('Hồ Thị Lan', 'hồ.thị.lan@example.com', '0989012345', 'Hồ Chí Minh, Việt Nam');
 -- Dữ liệu bảng người dùng
 INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241201,'hieund',123,'quan tri vien');
 INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241202,'ducna',123,'lap trinh vien');
 INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241203,'dinhhtn',123,'kiem thu');
 INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,vai_tro) VALUES (241204, 'nguyenvan', 123, 'nguoi dung');
 -- Dữ liệu bảng dự án # manv tự động thêm từ 1 đén 100
-INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES
-('Baldur\'s Gate 3', 'Một tựa game nhập vai nổi bật với thế giới mở phong phú và lối chơi đỉnh cao.', '2024-01-15', '2024-06-30', 1),
-('The Legend of Zelda: Tears of the Kingdom', 'Một cuộc phiêu lưu kỳ thú với lối chơi sáng tạo và đồ họa tuyệt đẹp.', '2024-03-01', '2024-09-15', 2),
-('Starfield', 'Trò chơi phiêu lưu không gian với hàng nghìn hành tinh để khám phá.', '2024-04-20', '2024-10-10', 3),
-('Diablo IV', 'Hành trình chống lại quỷ dữ trong một thế giới tối tăm và đầy nguy hiểm.', '2024-02-25', '2024-07-20', 4),
-('Hogwarts Legacy', 'Trải nghiệm thế giới phù thủy tại trường Hogwarts với nhiều điều kỳ diệu.', '2024-01-10', '2024-06-05', 5),
-('Final Fantasy XVI', 'Một câu chuyện sử thi kết hợp với lối chơi hành động độc đáo.', '2024-03-15', '2024-08-30', 6),
-('Resident Evil 4 Remake', 'Phiên bản làm lại của tựa game kinh dị nổi tiếng, với đồ họa và cơ chế cải tiến.', '2024-02-01', '2024-07-15', 7),
-('Cyberpunk 2077: Phantom Liberty', 'Bản mở rộng đầy hứa hẹn của tựa game Cyberpunk 2077.', '2024-05-10', '2024-10-20', 8),
-('Armored Core VI: Fires of Rubicon', 'Trải nghiệm lái robot chiến đấu trong những trận chiến khốc liệt.', '2024-06-01', '2024-11-15', 9),
-('Assassin\'s Creed Mirage', 'Quay trở lại với cốt truyện sát thủ truyền thống trong thế giới Trung Đông.', '2024-07-05', '2024-12-01', 10);
+INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('Baldur''s Gate 3', 'Một tựa game nhập vai nổi bật với thế giới mở phong phú và lối chơi đỉnh cao.', '2024-01-15', '2024-06-30', 1);
+INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('The Legend of Zelda: Tears of the Kingdom', 'Một cuộc phiêu lưu kỳ thú với lối chơi sáng tạo và đồ họa tuyệt đẹp.', '2024-03-01', '2024-09-15', 2);
+INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('Starfield', 'Trò chơi phiêu lưu không gian với hàng nghìn hành tinh để khám phá.', '2024-04-20', '2024-10-10', 3);
+INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('Diablo IV', 'Hành trình chống lại quỷ dữ trong một thế giới tối tăm và đầy nguy hiểm.', '2024-02-25', '2024-07-20', 4);
+INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('Final Fantasy XVI', 'Một câu chuyện sử thi kết hợp với lối chơi hành động độc đáo.', '2024-03-15', '2024-08-30', 6);
+INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('Resident Evil 4 Remake', 'Phiên bản làm lại của tựa game kinh dị nổi tiếng, với đồ họa và cơ chế cải tiến.', '2024-02-01', '2024-07-15', 7);
+INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('Cyberpunk 2077: Phantom Liberty', 'Bản mở rộng đầy hứa hẹn của tựa game Cyberpunk 2077.', '2024-05-10', '2024-10-20', 8);
+INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('Armored Core VI: Fires of Rubicon', 'Trải nghiệm lái robot chiến đấu trong những trận chiến khốc liệt.', '2024-06-01', '2024-11-15', 9);
+INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('Assassin''s Creed Mirage', 'Quay trở lại với cốt truyện sát thủ truyền thống trong thế giới Trung Đông.', '2024-07-05', '2024-12-01', 10);
+
 select * from phong_ban
 select * from nhan_vien
+select * from du_an
