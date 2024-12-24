@@ -1,6 +1,10 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import font
+from tkinter import Toplevel
+from controllers.controller_dang_ky import controller_dang_ky
+from View.View_dang_ky import View_dang_ky
+
 
 class View_dang_nhap:
     def __init__(self, root, controller):
@@ -32,24 +36,27 @@ class View_dang_nhap:
         self.ten_dang_nhap.grid(row=0, column=1, padx=10, pady=10, sticky="w")
         self.mat_khau.grid(row=1, column=1, padx=10, pady=10, sticky="w")
 
-        # Khung dành Đăng nhập
+        # Khung dành cho Đăng nhập và Quên mật khẩu
         button_frame = tk.Frame(frame, bg="#f0f0f0")
         button_frame.grid(row=2, column=0, columnspan=2, pady=20)
 
         # Nút Đăng nhập
         btn_dang_nhap = tk.Button(button_frame, text="Đăng nhập", command=self.dang_nhap)
-        btn_dang_nhap.grid(row=2, column=0, pady=10, padx=(0, 5), sticky="e")
-
+        btn_dang_nhap.grid(row=0, column=0, padx=(0, 5))
 
         # Quên mật khẩu
-        lbl_quen_mat_khau = tk.Label(frame, text="Quên mật khẩu?", fg="blue", cursor="hand2", bg="#f0f0f0")
-        lbl_quen_mat_khau.grid(row=2, column=1, padx=(70, 0))
+        lbl_quen_mat_khau = tk.Label(
+            button_frame, text="Quên mật khẩu?", fg="blue", cursor="hand2", bg="#f0f0f0"
+        )
+        lbl_quen_mat_khau.grid(row=0, column=1, padx=(10, 0))
         lbl_quen_mat_khau.bind("<Button-1>", self.quen_mat_khau)
 
         # Đăng ký
         underline_font = font.Font(underline=True)
-        lbl_dang_ky = tk.Label(frame, text="Đăng ký", fg="blue", cursor="hand2", bg="#f0f0f0", font=underline_font)
-        lbl_dang_ky.grid(row=3, column=3, columnspan=2, pady=70,padx=(50, 0))
+        lbl_dang_ky = tk.Label(
+            frame, text="Đăng ký", fg="blue", cursor="hand2", bg="#f0f0f0", font=underline_font
+        )
+        lbl_dang_ky.grid(row=3, column=0, columnspan=2, pady=20)
         lbl_dang_ky.bind("<Button-1>", self.dang_ky)
 
     def dang_nhap(self):
@@ -63,8 +70,14 @@ class View_dang_nhap:
 
     def dang_ky(self, event=None):
         """Hàm xử lý khi nhấn vào Đăng ký"""
-        messagebox.showinfo("Đăng ký", "Chức năng đăng ký đang được phát triển!")
+        self.goi_dang_ky()
 
     def quen_mat_khau(self, event=None):
         """Hàm xử lý khi nhấn vào Quên mật khẩu"""
         messagebox.showinfo("Quên mật khẩu", "Chức năng quên mật khẩu đang được phát triển!")
+
+    def goi_dang_ky(self):
+        """Hiển thị cửa sổ đăng ký"""
+        toplevel = Toplevel(self.root)  # Tạo cửa sổ mới
+        controller = controller_dang_ky()
+        View_dang_ky(toplevel, controller)
