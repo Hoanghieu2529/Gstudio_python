@@ -23,7 +23,7 @@ class dich_vu_Gmail(dichvu_email):
         self.smtp_server = "smtp.gmail.com"
         self.smtp_port = 587
         self.sender_email = "panda.studio.uit@gmail.com"
-        self.sender_password = "edxn ojwl rjjo fpxu"  # Mật khẩu ứng dụng Gmail
+        self.sender_password = "tfpn ybfc yszp lklf"  # Mật khẩu ứng dụng Gmail
 
     def tao_otp(self):
         """Tạo mã OTP ngẫu nhiên gồm 6 chữ số."""

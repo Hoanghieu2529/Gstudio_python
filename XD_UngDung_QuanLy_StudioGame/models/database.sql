@@ -58,8 +58,9 @@ CREATE TABLE nguoi_dung (
     ten_dang_nhap VARCHAR(50) NOT NULL UNIQUE,
     mat_khau VARCHAR(255) NOT NULL,
     email VARCHAR(250),
-    vai_tro ENUM('quan tri vien', 'lap trinh vien', 'kiem thu','nguoi dung','vãng lai') NOT NULL
+    vai_tro ENUM('quan tri vien', 'lap trinh vien', 'kiem thu','nguoi dung','vang lai') NOT NULL
 );
+ALTER TABLE nguoi_dung ADD COLUMN ngay_dang_ky DATE;
 
 -- Dữ liệu bảng phong_ban
 INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('001', 'Ban Điều Hành', 'Điều hành mọi hoạt động công ty');
@@ -70,7 +71,7 @@ INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('005', 'Marketing', '
 INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('006', 'Bán hàng', 'Tìm kiếm khách hàng và bán hàng');
 
 -- Du liệu bảng nhân vien
-INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (101, 'Phan Thanh Bình', 'phan.bình@ms.uit.edu.vn', 'Nhân viên', '003', 22000000);
+INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (101, 'Nguyễn Duy Hiếu', 'hieund1@ms.uit.edu.vn', 'Quản lý', '001', 22000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (102, 'Hồ Trí Quang', 'hồ.quang@ms.uit.edu.vn', 'Quản lý', '001', 79000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (103, 'Đoàn Minh Trí', 'đoàn.trí@ms.uit.edu.vn', 'Quản lý', '003', 55000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (104, 'Hồ Bảo Lâm', 'hồ.lâm@ms.uit.edu.vn', 'Trưởng phòng', '003', 40000000);
@@ -256,3 +257,6 @@ INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES (
 select * from phong_ban
 select * from nhan_vien
 select * from du_an
+
+-- Đếm số người dùng đã đăng ký trong năm
+SELECT COUNT(*) AS so_nguoi_dung FROM nguoi_dung WHERE YEAR(ngay_dang_ky) = 2024 AND MONTH(ngay_dang_ky) = 12

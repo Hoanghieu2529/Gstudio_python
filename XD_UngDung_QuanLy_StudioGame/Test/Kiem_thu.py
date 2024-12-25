@@ -128,3 +128,4 @@ def kiem_thu_dang_ky():
 if __name__ == "__main__":
     main()
     kiem_thu_dang_ky()
+    model_nguoi_dung.them_nguoi_dung("test_user", "password123", "test_email@gmail.com", "nguoi dung")

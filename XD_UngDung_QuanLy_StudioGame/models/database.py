@@ -15,10 +15,10 @@ class Database:
         self.cursor.execute(query, values or ())
         self.connection.commit()
 
-    # def fetch_one(self, query, values=None):
-    #     """Lấy một hàng dữ liệu từ một truy vấn"""
-    #     self.cursor.execute(query, values or ())
-    #     return self.cursor.fetchone()
+    def fetch_one(self, query, values=None):
+        """Lấy một hàng dữ liệu từ một truy vấn"""
+        self.cursor.execute(query, values or ())
+        return self.cursor.fetchone()
 
     def fetch_all(self, query, values=None):
         """Lấy tất cả dữ liệu từ một truy vấn"""

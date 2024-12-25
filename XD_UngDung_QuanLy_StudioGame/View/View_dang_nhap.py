@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import PhotoImage
 from tkinter import messagebox
 from tkinter import font
 from tkinter import Toplevel
@@ -22,6 +23,8 @@ class View_dang_nhap:
         y_position = (screen_height // 2) - (window_height // 2)
         self.root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
         self.root.configure(bg="#f0f0f0")  # màu nền
+        logo = PhotoImage(file="Images/Logo_studio.png")  # Đường dẫn tới logo
+        self.root.iconphoto(False, logo)
 
         # Sử dụng Frame để quản lý
         frame = tk.Frame(self.root, bg="#f0f0f0")

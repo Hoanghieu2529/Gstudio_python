@@ -1,5 +1,7 @@
 import tkinter as tk
+from tkinter import PhotoImage
 from tkinter import messagebox
+from tkinter import font
 from controllers.controller_dang_ky import controller_dang_ky
 
 class View_dang_ky:
@@ -8,8 +10,18 @@ class View_dang_ky:
         self.controller = controller
         self.root = root
         self.root.title("Đăng Ký Tài Khoản")
-        self.root.geometry("400x500")
         self.root.configure(bg="#f0f0f0")
+
+        # Đặt kích thước giao diện và căn giữa màn hình
+        window_width = 400
+        window_height = 500
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+        x_position = (screen_width // 2) - (window_width // 2)
+        y_position = (screen_height // 2) - (window_height // 2)
+        self.root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
+        logo = PhotoImage(file="Images/Logo_studio.png")  # Đường dẫn tới logo
+        self.root.iconphoto(False, logo)
 
         # Các thành phần giao diện
         tk.Label(root, text="Tên đăng nhập:", bg="#f0f0f0").grid(row=0, column=0, padx=10, pady=10, sticky="e")

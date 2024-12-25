@@ -1,3 +1,3 @@
-from .Nguoidung_View import NguoiDungForm
+from .View_Nguoidung import NguoiDungForm
 from .Sidebar import Sidebar
-from .Studio_View import StudioForm
+from .View_Studio import StudioForm
