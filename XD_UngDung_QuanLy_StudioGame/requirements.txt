@@ -1,9 +1,10 @@
-mysql-connector-python
-PyQt5
+mysql-connector-python~=9.1.0
+PyQt5~=5.15.11
 pygubu
 pandas
 matplotlib
 pyinstaller
-Faker
+Faker~=33.1.0
 plotly
-bcrypt
+bcrypt~=4.2.1
+PySide6~=6.8.1
