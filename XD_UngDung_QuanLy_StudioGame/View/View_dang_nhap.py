@@ -8,9 +8,10 @@ from View.View_dang_ky import View_dang_ky
 
 
 class View_dang_nhap:
-    def __init__(self, root, controller):
+    def __init__(self, root, controller_dangnhap, on_login_success=None):
         """Thiết lập giao diện đăng nhập"""
-        self.controller = controller
+        self.controller = controller_dangnhap
+        self.on_login_success = on_login_success
         self.root = root
         self.root.title("HỆ THỐNG QUẢN LÝ DỰ ÁN STUDIO - Đăng Nhập")
 
@@ -23,8 +24,11 @@ class View_dang_nhap:
         y_position = (screen_height // 2) - (window_height // 2)
         self.root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
         self.root.configure(bg="#f0f0f0")  # màu nền
-        logo = PhotoImage(file="Images/Logo_studio.png")  # Đường dẫn tới logo
-        self.root.iconphoto(False, logo)
+        try:
+            logo = PhotoImage(file="Images/Logo_studio.png")
+            self.root.iconphoto(False, logo)
+        except Exception as e:
+            print(f"Lỗi khi tải logo: {e}")
 
         # Sử dụng Frame để quản lý
         frame = tk.Frame(self.root, bg="#f0f0f0")
@@ -67,9 +71,18 @@ class View_dang_nhap:
         ten_dn = self.ten_dang_nhap.get()
         mat_khau = self.mat_khau.get()
         if self.controller.xu_ly_dang_nhap(ten_dn, mat_khau):
-            messagebox.showinfo("Thành công", "Đăng nhập thành công!")
+            if self.on_login_success:
+                self.on_login_success()  # Gọi callback chuyển sang giao diện chính
+            self.root.destroy()
         else:
-            messagebox.showerror("Thất bại", "Tên đăng nhập hoặc mật khẩu không đúng!")
+            messagebox.showerror("Thất bại!", "Tên đăng nhập hoặc mật khẩu không đúng!")
+
+    def mo_giao_dien_chinh(self):
+        """Mở giao diện chính sau khi đăng nhập"""
+        self.root.destroy()
+
+        root_chinh = tk.Tk()  # Tạo cửa sổ chính
+        root_chinh.mainloop()
 
     def dang_ky(self, event=None):
         """Hàm xử lý khi nhấn vào Đăng ký"""

@@ -1,11 +1,14 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+from tkinter import PhotoImage
+
 
 
 class PhongBanForm:
     def __init__(self, master):
         self.frame = tk.Frame(master, bg="#f8f9fa")
         self.frame.pack(fill=tk.BOTH, expand=True)
+        self.root.iconphoto(False, PhotoImage(file="Images/Logo_studio.png"))
 
         self.create_toolbar(self.frame)
         self.create_treeview(self.frame)

@@ -59,18 +59,25 @@ class model_nguoi_dung:
     @staticmethod
     def kiem_tra_dang_nhap(ten_dang_nhap, mat_khau):
         """Xác thực thông tin đăng nhập."""
+        query = "SELECT mat_khau FROM nguoi_dung WHERE ten_dang_nhap = %s"
+        db = Database()
         try:
-            query = "SELECT mat_khau FROM nguoi_dung WHERE ten_dang_nhap = %s"
-            db = Database()
             user = db.fetch_one(query, (ten_dang_nhap,))
-            if user:
-                stored_password = user['mat_khau']
-                if bcrypt.checkpw(mat_khau.encode('utf-8'), stored_password.encode('utf-8')):
-                    return True
+            if not user:
+                print("Không tìm thấy người dùng.")
+                return False
+
+            stored_password = user['mat_khau']
+            print(f"Kiểm tra mật khẩu cho người dùng {ten_dang_nhap}.")
+            if bcrypt.checkpw(mat_khau.encode('utf-8'), stored_password.encode('utf-8')):
+                return True
+            print("Mật khẩu không đúng.")
             return False
         except Exception as e:
-            print("Lỗi khi kiểm tra đăng nhập:", e)
+            print(f"Lỗi khi kiểm tra đăng nhập: {e}")
             return False
+        finally:
+            del db   # Đảm bảo đóng kết nối
 
     @staticmethod
     def kiem_tra_vai_tro(ten_dang_nhap):
