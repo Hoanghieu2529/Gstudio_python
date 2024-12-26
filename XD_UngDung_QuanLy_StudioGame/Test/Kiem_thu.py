@@ -1,6 +1,6 @@
 from models.models_nguoi_dung import model_nguoi_dung
-from controllers.controllers_dang_ky import controller_dang_ky
-from dich_vu_email import DichVu_Gmail
+from controllers.controller_dang_ky import controller_dang_ky
+from Services.dich_vu_email  import dich_vu_Gmail
 
 # ================= KIỂM THỬ NGƯỜI DÙNG =================
 def kiem_thu_them_nguoi_dung():
@@ -41,7 +41,7 @@ def kiem_thu_kiem_tra_vai_tro():
 # ================= KIỂM THỬ EMAIL =================
 def kiem_thu_gui_otp():
     """Chức năng kiểm thử gửi OTP"""
-    dich_vu = DichVu_Gmail()
+    dich_vu = dich_vu_Gmail()
 
     print("\nGửi OTP kiểm thử...")
     recipient_email = input("Nhập email của bạn: ")

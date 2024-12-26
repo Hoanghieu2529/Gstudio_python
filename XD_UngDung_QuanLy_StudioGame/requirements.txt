@@ -8,3 +8,4 @@ Faker~=33.1.0
 plotly
 bcrypt~=4.2.1
 PySide6~=6.8.1
+tkcalendar
