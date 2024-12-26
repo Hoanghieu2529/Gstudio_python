@@ -1,12 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
-from controllers import CongViecFormController
+from controllers import DuAnFormController
 
-class CongViecForm:
+class DuAnForm:
     def __init__(self, master):
         self.frame = tk.Frame(master, bg="#f8f9fa")
         self.frame.pack(fill=tk.BOTH, expand=True)
-        self.controller = CongViecFormController(self)
+        self.controller = DuAnFormController(self)
 
         self.create_toolbar(self.frame)
         self.create_treeview(self.frame)
@@ -26,22 +26,22 @@ class CongViecForm:
         delete_btn.pack(side=tk.LEFT, padx=10)
 
     def create_treeview(self, parent_frame):
-        columns_congviec = ("Số thứ tự", "Mã công việc", "Tên công việc", "Mô tả công việc", "Giao cho", "Hạn cuối", "Trạng thái")
-        self.tree_congviec = ttk.Treeview(parent_frame, columns=columns_congviec, show="headings")
+        columns_duan = ("Số thứ tự", "Mã dự án", "Tên dự án", "Mô tả dự án", "Ngày bắt đầu", "Ngày kết thúc", "Trạng thái")
+        self.tree_duan = ttk.Treeview(parent_frame, columns=columns_duan, show="headings")
 
-        for col in columns_congviec:
-            self.tree_congviec.heading(col, text=col)
-            self.tree_congviec.column(col, width=100)  # Auto fit các cột
+        for col in columns_duan:
+            self.tree_duan.heading(col, text=col)
+            self.tree_duan.column(col, width=100)  # Auto fit các cột
 
-        self.tree_congviec.pack(fill=tk.BOTH, expand=True)
+        self.tree_duan.pack(fill=tk.BOTH, expand=True)
 
-        h_scroll = ttk.Scrollbar(parent_frame, orient="horizontal", command=self.tree_congviec.xview)
-        self.tree_congviec.configure(xscrollcommand=h_scroll.set)
+        h_scroll = ttk.Scrollbar(parent_frame, orient="horizontal", command=self.tree_duan.xview)
+        self.tree_duan.configure(xscrollcommand=h_scroll.set)
         h_scroll.pack(side=tk.BOTTOM, fill=tk.X)
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.title("Quản lý Công việc")
+    root.title("Quản lý Dự án")
     root.geometry("800x600")
-    app = CongViecForm(root)
+    app = DuAnForm(root)
     root.mainloop()
