@@ -1,14 +1,11 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from tkinter import PhotoImage
-
-
+from tkcalendar import DateEntry
 
 class PhongBanForm:
     def __init__(self, master):
         self.frame = tk.Frame(master, bg="#f8f9fa")
         self.frame.pack(fill=tk.BOTH, expand=True)
-        self.root.iconphoto(False, PhotoImage(file="Images/Logo_studio.png"))
 
         self.create_toolbar(self.frame)
         self.create_treeview(self.frame)
@@ -17,66 +14,122 @@ class PhongBanForm:
         toolbar = tk.Frame(parent_frame, bg="#f8f9fa")
         toolbar.pack(fill=tk.X, pady=10)
 
-        create_btn = tk.Button(toolbar, text="Thêm mới", command=self.create_record, bg="#d1e7dd")
-        read_btn = tk.Button(toolbar, text="Đọc", command=self.read_record, bg="#fff3cd")
-        update_btn = tk.Button(toolbar, text="Cập nhật", command=self.update_record, bg="#cff4fc")
-        delete_btn = tk.Button(toolbar, text="Xóa", command=self.delete_record, bg="#f8d7da")
+        create_btn = tk.Button(toolbar, text="Thêm mới", command=self.create_record, bg="#f8f9fa")
+        read_btn = tk.Button(toolbar, text="Đọc", command=self.read_record, bg="#f8f9fa")
+        update_btn = tk.Button(toolbar, text="Cập nhật", command=self.update_record, bg="#f8f9fa")
+        delete_btn = tk.Button(toolbar, text="Xóa", command=self.delete_record, bg="#f8f9fa")
 
-        create_btn.pack(side=tk.LEFT, padx=10, pady=5)
-        read_btn.pack(side=tk.LEFT, padx=10, pady=5)
-        update_btn.pack(side=tk.LEFT, padx=10, pady=5)
-        delete_btn.pack(side=tk.LEFT, padx=10, pady=5)
+        create_btn.pack(side=tk.LEFT, padx=10)
+        read_btn.pack(side=tk.LEFT, padx=10)
+        update_btn.pack(side=tk.LEFT, padx=10)
+        delete_btn.pack(side=tk.LEFT, padx=10)
 
     def create_treeview(self, parent_frame):
-        columns_studio = ("Mã nhân viên", "Tên nhân viên", "Mô tả", "Điện thoại")
-        self.tree_studio = ttk.Treeview(parent_frame, columns=columns_studio, show="headings", selectmode="browse")
+        columns_phongban = ("Số thứ tự", "Mã phòng ban", "Tên phòng ban", "Quản lý phòng ban", "Danh sách công việc")
+        self.tree_phongban = ttk.Treeview(parent_frame, columns=columns_phongban, show="headings")
 
-        for col in columns_studio:
-            self.tree_studio.heading(col, text=col)
-            self.tree_studio.column(col, width=150, anchor=tk.W)
+        for col in columns_phongban:
+            self.tree_phongban.heading(col, text=col)
+            self.tree_phongban.column(col, width=100)
 
-        self.tree_studio.pack(fill=tk.BOTH, expand=True, pady=5)
+        self.tree_phongban.pack(fill=tk.BOTH, expand=True)
 
-        h_scroll = ttk.Scrollbar(parent_frame, orient="horizontal", command=self.tree_studio.xview)
-        self.tree_studio.configure(xscrollcommand=h_scroll.set)
+        h_scroll = ttk.Scrollbar(parent_frame, orient="horizontal", command=self.tree_phongban.xview)
+        self.tree_phongban.configure(xscrollcommand=h_scroll.set)
         h_scroll.pack(side=tk.BOTTOM, fill=tk.X)
 
-    def create_record(self):
-        # Giá trị mẫu mới
-        new_id = self.tree_studio.get_children().__len__() + 1  # Tự tăng ID
-        new_name = "Dự án A"
-        new_description = "Mô tả dự án mẫu"
-        new_phone = "0123456789"
-        self.tree_studio.insert("", "end", values=(new_id, new_name, new_description, new_phone))
+        self.auto_generate_stt = 1
 
-    def read_record(self):
-        try:
-            selected_item = self.tree_studio.selection()[0]
-            item = self.tree_studio.item(selected_item)
-            values = item["values"]
-            tk.messagebox.showinfo(
-                "Thông tin dự án",
-                f"ID: {values[0]}\nTên dự án: {values[1]}\nMô tả: {values[2]}\nĐiện thoại: {values[3]}"
-            )
-        except IndexError:
-            tk.messagebox.showwarning("Cảnh báo", "Vui lòng chọn một dự án để xem chi tiết")
+    def create_record(self):
+        form = tk.Toplevel(self.frame)
+        form.title("Thêm mới phòng ban")
+
+        labels = ["Mã phòng ban", "Tên phòng ban", "Quản lý phòng ban", "Danh sách công việc"]
+        entries = self.generate_form_entries(form, labels)
+
+        save_btn = tk.Button(form, text="Lưu", command=lambda: self.save_record(entries, form))
+        save_btn.grid(row=len(labels) + 1, columnspan=2, pady=10)
 
     def update_record(self):
-        try:
-            selected_item = self.tree_studio.selection()[0]
-            item = self.tree_studio.item(selected_item)
-            values = item["values"]
-            # Cập nhật với dữ liệu mẫu
-            new_values = (values[0], "Dự án B (Cập nhật)", "Mô tả đã cập nhật", values[3])
-            self.tree_studio.item(selected_item, values=new_values)
-            tk.messagebox.showinfo("Thông báo", "Cập nhật thành công!")
-        except IndexError:
-            tk.messagebox.showwarning("Cảnh báo", "Vui lòng chọn một dự án để cập nhật")
+        selected_item = self.tree_phongban.selection()
+        if not selected_item:
+            messagebox.showwarning("Cảnh báo", "Vui lòng chọn một phòng ban để cập nhật")
+            return
+        item = self.tree_phongban.item(selected_item)
+        values = item["values"]
+
+        form = tk.Toplevel(self.frame)
+        form.title("Cập nhật thông tin phòng ban")
+
+        labels = ["Mã phòng ban", "Tên phòng ban", "Quản lý phòng ban", "Danh sách công việc"]
+        entries = self.generate_form_entries(form, labels, values)
+
+        save_btn = tk.Button(form, text="Lưu thay đổi", command=lambda: self.save_changes(entries, selected_item, form))
+        save_btn.grid(row=len(labels) + 1, columnspan=2, pady=10)
+
+    def generate_form_entries(self, form, labels, values=None):
+        entries = []
+        for i, label in enumerate(labels):
+            tk.Label(form, text=label).grid(row=i, column=0, padx=10, pady=5)
+            if label == "Danh sách công việc":
+                entry = tk.Listbox(form, selectmode="multiple")
+                jobs = ["Lập trình", "Front end", "Back end", "Tester"]
+                for job in jobs:
+                    entry.insert(tk.END, job)
+                if values:
+                    selected_jobs = values[i + 1].split(", ")
+                    for job in selected_jobs:
+                        idx = jobs.index(job)
+                        entry.select_set(idx)
+            else:
+                entry = tk.Entry(form)
+                if values:
+                    entry.insert(0, values[i + 1])
+            entry.grid(row=i, column=1, padx=10, pady=5, sticky=tk.W)
+            entries.append(entry)
+        return entries
+
+    def save_record(self, entries, form):
+        new_record = [self.auto_generate_stt] + [self.get_entry_value(entry) for entry in entries]
+        self.tree_phongban.insert("", "end", values=new_record)
+        self.auto_generate_stt += 1
+        form.destroy()
+
+    def save_changes(self, entries, selected_item, form):
+        new_values = [selected_item[0]] + [self.get_entry_value(entry) for entry in entries]
+        self.tree_phongban.item(selected_item, values=new_values)
+        form.destroy()
+
+    def get_entry_value(self, entry):
+        if isinstance(entry, tk.Listbox):
+            return ", ".join(entry.get(idx) for idx in entry.curselection())
+        return entry.get()
+
+    def read_record(self):
+        selected_item = self.tree_phongban.selection()
+        if not selected_item:
+            messagebox.showwarning("Cảnh báo", "Vui lòng chọn một phòng ban để xem chi tiết")
+            return
+        item = self.tree_phongban.item(selected_item)
+        values = item["values"]
+        messagebox.showinfo("Thông tin phòng ban",
+                            f"Mã phòng ban: {values[1]}\n"
+                            f"Tên phòng ban: {values[2]}\n"
+                            f"Quản lý phòng ban: {values[3]}\n"
+                            f"Danh sách công việc: {values[4]}")
 
     def delete_record(self):
-        try:
-            selected_item = self.tree_studio.selection()[0]
-            self.tree_studio.delete(selected_item)
-            tk.messagebox.showinfo("Thông báo", "Xóa thành công!")
-        except IndexError:
-            tk.messagebox.showwarning("Cảnh báo", "Vui lòng chọn một dự án để xóa")
+        selected_item = self.tree_phongban.selection()
+        if not selected_item:
+            messagebox.showwarning("Cảnh báo", "Vui lòng chọn một phòng ban để xóa")
+            return
+        confirm = messagebox.askyesno("Xác nhận", "Bạn thật sự muốn xóa phòng ban này không?")
+        if confirm:
+            self.tree_phongban.delete(selected_item)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    root.title("Quản lý Phòng Ban")
+    root.geometry("800x600")
+    app = PhongBanForm(root)
+    root.mainloop()

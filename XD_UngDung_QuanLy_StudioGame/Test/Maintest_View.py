@@ -1,6 +1,5 @@
-from View import Sidebar
-from View import NguoiDungForm
-from View import StudioForm
+from View import Sidebar, NguoiDungForm, StudioForm, DuAnForm, NhanVienForm, PhongBanForm
+
 import tkinter as tk
 
 
@@ -32,6 +31,12 @@ class AdminDashboard(tk.Tk):
             NguoiDungForm(self.main_content)
         elif option == "Studio":
             StudioForm(self.main_content)
+        elif option == "Phòng ban":
+            PhongBanForm(self.main_content)
+        elif option == "Dự án":
+            DuAnForm(self.main_content)
+        elif option == "Nhân viên":
+            NhanVienForm(self.main_content)
         # Thêm các form khác tương tự
 
 if __name__ == "__main__":
