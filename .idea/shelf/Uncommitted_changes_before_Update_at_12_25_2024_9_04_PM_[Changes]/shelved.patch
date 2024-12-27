@@ -1,0 +1,650 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2174a43c-df16-4d57-af13-12ccf21b23f1\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"SQL File\" />\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Hoanghieu2529&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Hoanghieu2529/Gstudio_python&quot;,\r\n    &quot;accountId&quot;: &quot;85a04cb8-e349-4bf1-9bed-8e1f49cfe127&quot;\r\n  }\r\n}</component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/.venv/Scripts/activate.bat\" root0=\"SKIP_INSPECTION\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2qC5W9bHOEK89pyYSjDLlN27bpX\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Python.Kiem_thu.executor\": \"Run\",\r\n    \"Python.Studio_view.executor\": \"Run\",\r\n    \"Python.View_dang_nhap.executor\": \"Run\",\r\n    \"Python.install_requirements.executor\": \"Run\",\r\n    \"Python.main.executor\": \"Run\",\r\n    \"Python.mvc_co_ban01_view_ui.executor\": \"Run\",\r\n    \"Python.sql_fake_dulieu.executor\": \"Run\",\r\n    \"Python.test2.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"last_opened_file_path\": \"D:/IT/UIT/HK4/KTPython/StudioGame_do_an_python/XD_UngDung_QuanLy_StudioGame/Test\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"inlay.hints\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"mysql\"\r\n    ],\r\n    \"GitStage.ChangesTree.GroupingKeys\": [\r\n      \"directory\",\r\n      \"module\",\r\n      \"repository\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\IT\\UIT\\HK4\\KTPython\\StudioGame_do_an_python\\XD_UngDung_QuanLy_StudioGame\\Test\" />\r\n      <recent name=\"D:\\IT\\UIT\\HK4\\KTPython\\StudioGame_do_an_python\\XD_UngDung_QuanLy_StudioGame\\models\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\IT\\UIT\\HK4\\KTPython\\StudioGame_do_an_python\\XD_UngDung_QuanLy_StudioGame\\Test\" />\r\n      <recent name=\"D:\\IT\\UIT\\HK4\\KTPython\\StudioGame_do_an_python\\XD_UngDung_QuanLy_StudioGame\\models\" />\r\n      <recent name=\"D:\\IT\\UIT\\HK4\\KTPython\\StudioGame_do_an_python\\XD_UngDung_QuanLy_StudioGame\" />\r\n      <recent name=\"D:\\IT\\UIT\\HK4\\KTPython\\StudioGame_do_an_python\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.main\">\r\n    <configuration name=\"Kiem_thu\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"XD_UngDung_QuanLy_StudioGame\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test/Kiem_thu.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Kiem_thu_Studio_view\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"XD_UngDung_QuanLy_StudioGame\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"D:\\IT\\UIT\\HK4\\KTPython\\StudioGame_do_an_python\\XD_UngDung_QuanLy_StudioGame\\Test\\Kiem_thu_Studio_view.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"View_dang_nhap\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"XD_UngDung_QuanLy_StudioGame\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/View_dang_nhap.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"main\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"XD_UngDung_QuanLy_StudioGame\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/main.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"mvc_co_ban01_view_ui\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"XD_UngDung_QuanLy_StudioGame\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test/mvc_co_ban01_view_ui.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.main\" />\r\n        <item itemvalue=\"Python.View_dang_nhap\" />\r\n        <item itemvalue=\"Python.Kiem_thu\" />\r\n        <item itemvalue=\"Python.Kiem_thu_Studio_view\" />\r\n        <item itemvalue=\"Python.mvc_co_ban01_view_ui\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.24807.21\" />\r\n        <option value=\"bundled-python-sdk-00717045f1d3-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.24807.21\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"2174a43c-df16-4d57-af13-12ccf21b23f1\" name=\"Changes\" comment=\"\" />\r\n      <created>1734153745792</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1734153745792</updated>\r\n      <workItem from=\"1734153747180\" duration=\"45000\" />\r\n      <workItem from=\"1734153797939\" duration=\"15769000\" />\r\n      <workItem from=\"1734226021008\" duration=\"1268000\" />\r\n      <workItem from=\"1734230533024\" duration=\"651000\" />\r\n      <workItem from=\"1734355730170\" duration=\"1920000\" />\r\n      <workItem from=\"1734447478954\" duration=\"650000\" />\r\n      <workItem from=\"1734544956986\" duration=\"840000\" />\r\n      <workItem from=\"1734955361191\" duration=\"2367000\" />\r\n      <workItem from=\"1734958165459\" duration=\"17099000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"v.01\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734154433711</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734154433711</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"v.01\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734164861235</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734164861235</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"v.01\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734164865524</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734164865524</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"v.02\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734164935166</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734164935166</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"v.0.3\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734230985416</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734230985416</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"v.0.3\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734231018152</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734231018152</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"v.0.3\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734544991148</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734544991148</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"v.0.4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734545660903</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734545660903</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"v.0.4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734545703136</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734545703136</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"v.0.5_View\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734835857751</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734835857751</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"v.0.5_View\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734835860133</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734835860133</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"v.0.5.1\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734961410821</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734961410821</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"v.0.5.2_them bang database\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734966444424</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734966444424</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"v.0.5.3_cập nhật thư viện\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734967893535</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734967893535</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"15\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"User\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"*\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"v.01\" />\r\n    <MESSAGE value=\"v.02\" />\r\n    <MESSAGE value=\"v.0.3\" />\r\n    <MESSAGE value=\"v.0.4\" />\r\n    <MESSAGE value=\"v.0.5_View\" />\r\n    <MESSAGE value=\"v.0.5.1\" />\r\n    <MESSAGE value=\"v.0.5.2_them bang database\" />\r\n    <MESSAGE value=\"v.0.5.3_cập nhật thư viện\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"v.0.5.3_cập nhật thư viện\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/sql_fake_dulieu.py</url>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/StudioGame_do_an_python$main.coverage\" NAME=\"main Coverage Results\" MODIFIED=\"1734979420360\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame\" />\r\n    <SUITE FILE_PATH=\"coverage/StudioGame_do_an_python$sql_fake_dulieu.coverage\" NAME=\"sql_fake_dulieu Coverage Results\" MODIFIED=\"1734182041719\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models\" />\r\n    <SUITE FILE_PATH=\"coverage/StudioGame_do_an_python$mvc_co_ban01_view_ui.coverage\" NAME=\"mvc_co_ban01_view_ui Coverage Results\" MODIFIED=\"1734545468568\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test\" />\r\n    <SUITE FILE_PATH=\"coverage/StudioGame_do_an_python$View_dang_nhap.coverage\" NAME=\"View_dang_nhap Coverage Results\" MODIFIED=\"1734979132375\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View\" />\r\n    <SUITE FILE_PATH=\"coverage/StudioGame_do_an_python$test2.coverage\" NAME=\"test2 Coverage Results\" MODIFIED=\"1734356019627\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/StudioGame_do_an_python$Kiem_thu.coverage\" NAME=\"Kiem_thu Coverage Results\" MODIFIED=\"1734976409159\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test\" />\r\n    <SUITE FILE_PATH=\"coverage/StudioGame_do_an_python$install_requirements.coverage\" NAME=\"install_requirements Coverage Results\" MODIFIED=\"1734545285147\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame\" />\r\n    <SUITE FILE_PATH=\"coverage/StudioGame_do_an_python$Studio_view.coverage\" NAME=\"Studio_view Coverage Results\" MODIFIED=\"1734963765373\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 060cd9b581a4e41a69b410a364b32f7aa4fe3701)
++++ b/.idea/workspace.xml	(date 1735135488024)
+@@ -4,7 +4,17 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2174a43c-df16-4d57-af13-12ccf21b23f1" name="Changes" comment="" />
++    <list default="true" id="2174a43c-df16-4d57-af13-12ccf21b23f1" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/Main_View.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/Nguoidung_View.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/Sidebar.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/StudioForm.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/__init__.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/requirements.txt" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -30,7 +40,7 @@
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+     &quot;url&quot;: &quot;https://github.com/Hoanghieu2529/Gstudio_python&quot;,
+-    &quot;accountId&quot;: &quot;85a04cb8-e349-4bf1-9bed-8e1f49cfe127&quot;
++    &quot;accountId&quot;: &quot;1acd38aa-6c51-4488-8687-da28d7a857ec&quot;
+   }
+ }</component>
+   <component name="HighlightingSettingsPerFile">
+@@ -45,53 +55,57 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Python.Kiem_thu.executor": "Run",
+-    "Python.Studio_view.executor": "Run",
+-    "Python.View_dang_nhap.executor": "Run",
+-    "Python.install_requirements.executor": "Run",
+-    "Python.main.executor": "Run",
+-    "Python.mvc_co_ban01_view_ui.executor": "Run",
+-    "Python.sql_fake_dulieu.executor": "Run",
+-    "Python.test2.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "master",
+-    "last_opened_file_path": "D:/IT/UIT/HK4/KTPython/StudioGame_do_an_python/XD_UngDung_QuanLy_StudioGame/Test",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "inlay.hints",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Python.Example.executor&quot;: &quot;Run&quot;,
++    &quot;Python.Kiem_thu.executor&quot;: &quot;Run&quot;,
++    &quot;Python.Kiem_thu_Studio_view.executor&quot;: &quot;Run&quot;,
++    &quot;Python.Main_View.executor&quot;: &quot;Run&quot;,
++    &quot;Python.Maintest_View.executor&quot;: &quot;Run&quot;,
++    &quot;Python.Menu_View.executor&quot;: &quot;Run&quot;,
++    &quot;Python.Studio_view.executor&quot;: &quot;Run&quot;,
++    &quot;Python.View_dang_nhap.executor&quot;: &quot;Run&quot;,
++    &quot;Python.install_requirements.executor&quot;: &quot;Run&quot;,
++    &quot;Python.main.executor&quot;: &quot;Run&quot;,
++    &quot;Python.mvc_co_ban01_view_ui.executor&quot;: &quot;Run&quot;,
++    &quot;Python.sql_fake_dulieu.executor&quot;: &quot;Run&quot;,
++    &quot;Python.test2.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;last_opened_file_path&quot;: &quot;D:/IT/UIT/HK4/KTPython/StudioGame_do_an_python/XD_UngDung_QuanLy_StudioGame/Test&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+-  "keyToStringList": {
+-    "DatabaseDriversLRU": [
+-      "mysql"
++  &quot;keyToStringList&quot;: {
++    &quot;DatabaseDriversLRU&quot;: [
++      &quot;mysql&quot;
+     ],
+-    "GitStage.ChangesTree.GroupingKeys": [
+-      "directory",
+-      "module",
+-      "repository"
++    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
++      &quot;directory&quot;,
++      &quot;module&quot;,
++      &quot;repository&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\Test" />
+       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\models" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\Test" />
+       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\models" />
+       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame" />
+       <recent name="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Python.main">
+-    <configuration name="Kiem_thu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="Python.Main_View">
++    <configuration name="Example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="XD_UngDung_QuanLy_StudioGame" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -100,12 +114,12 @@
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test/Kiem_thu.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/Example.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -114,7 +128,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="Kiem_thu_Studio_view" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="Main_View" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="XD_UngDung_QuanLy_StudioGame" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -128,7 +142,7 @@
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="D:\IT\UIT\HK4\KTPython\StudioGame_do_an_python\XD_UngDung_QuanLy_StudioGame\Test\Kiem_thu_Studio_view.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/Main_View.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -137,7 +151,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="View_dang_nhap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="Maintest_View" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="XD_UngDung_QuanLy_StudioGame" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -146,12 +160,12 @@
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/View_dang_nhap.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test/Maintest_View.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -160,7 +174,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="Nguoidung_View" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="XD_UngDung_QuanLy_StudioGame" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -169,12 +183,12 @@
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/main.py" />
++      <option name="SCRIPT_NAME" value="D:\CTID\Semester 4\02 - Ky thuat lap trinh Python\Project\Gstudio_python\XD_UngDung_QuanLy_StudioGame\View\Nguoidung_View.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -183,7 +197,7 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
+-    <configuration name="mvc_co_ban01_view_ui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="XD_UngDung_QuanLy_StudioGame" />
+       <option name="ENV_FILES" value="" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -192,12 +206,12 @@
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+       <option name="SDK_HOME" value="" />
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
+       <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test/mvc_co_ban01_view_ui.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/main.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -208,19 +222,19 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Python.Main_View" />
++        <item itemvalue="Python.Maintest_View" />
+         <item itemvalue="Python.main" />
+-        <item itemvalue="Python.View_dang_nhap" />
+-        <item itemvalue="Python.Kiem_thu" />
+-        <item itemvalue="Python.Kiem_thu_Studio_view" />
+-        <item itemvalue="Python.mvc_co_ban01_view_ui" />
++        <item itemvalue="Python.Nguoidung_View" />
++        <item itemvalue="Python.Example" />
+       </list>
+     </recent_temporary>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.24807.21" />
+-        <option value="bundled-python-sdk-00717045f1d3-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.24807.21" />
++        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
++        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -240,7 +254,8 @@
+       <workItem from="1734447478954" duration="650000" />
+       <workItem from="1734544956986" duration="840000" />
+       <workItem from="1734955361191" duration="2367000" />
+-      <workItem from="1734958165459" duration="17099000" />
++      <workItem from="1734958165459" duration="6683000" />
++      <workItem from="1735080684632" duration="1595000" />
+     </task>
+     <task id="LOCAL-00001" summary="v.01">
+       <option name="closed" value="true" />
+@@ -346,15 +361,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1734966444424</updated>
+     </task>
+-    <task id="LOCAL-00014" summary="v.0.5.3_cập nhật thư viện">
+-      <option name="closed" value="true" />
+-      <created>1734967893535</created>
+-      <option name="number" value="00014" />
+-      <option name="presentableId" value="LOCAL-00014" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1734967893535</updated>
+-    </task>
+-    <option name="localTasksCounter" value="15" />
++    <option name="localTasksCounter" value="14" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -406,8 +413,7 @@
+     <MESSAGE value="v.0.5_View" />
+     <MESSAGE value="v.0.5.1" />
+     <MESSAGE value="v.0.5.2_them bang database" />
+-    <MESSAGE value="v.0.5.3_cập nhật thư viện" />
+-    <option name="LAST_COMMIT_MESSAGE" value="v.0.5.3_cập nhật thư viện" />
++    <option name="LAST_COMMIT_MESSAGE" value="v.0.5.2_them bang database" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -420,13 +426,20 @@
+     </breakpoint-manager>
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1734979420360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
+-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$sql_fake_dulieu.coverage" NAME="sql_fake_dulieu Coverage Results" MODIFIED="1734182041719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
++    <SUITE FILE_PATH="coverage/Gstudio_python$Kiem_thu_Studio_view.coverage" NAME="Kiem_thu_Studio_view Coverage Results" MODIFIED="1735048754282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
++    <SUITE FILE_PATH="coverage/Gstudio_python$Example.coverage" NAME="Example Coverage Results" MODIFIED="1735051380476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
++    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1734835205815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
++    <SUITE FILE_PATH="coverage/Gstudio_python$mvc_co_ban01_view_ui.coverage" NAME="mvc_co_ban01_view_ui Coverage Results" MODIFIED="1735048815073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
++    <SUITE FILE_PATH="coverage/Gstudio_python$main.coverage" NAME="main Coverage Results" MODIFIED="1735057714164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
+     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$mvc_co_ban01_view_ui.coverage" NAME="mvc_co_ban01_view_ui Coverage Results" MODIFIED="1734545468568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
+-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$View_dang_nhap.coverage" NAME="View_dang_nhap Coverage Results" MODIFIED="1734979132375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
+-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1734356019627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$Kiem_thu.coverage" NAME="Kiem_thu Coverage Results" MODIFIED="1734976409159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
++    <SUITE FILE_PATH="coverage/Gstudio_python$View_dang_nhap.coverage" NAME="View_dang_nhap Coverage Results" MODIFIED="1735048644204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
++    <SUITE FILE_PATH="coverage/Gstudio_python$Kiem_thu.coverage" NAME="Kiem_thu Coverage Results" MODIFIED="1735048696716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
+     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$install_requirements.coverage" NAME="install_requirements Coverage Results" MODIFIED="1734545285147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
++    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$sql_fake_dulieu.coverage" NAME="sql_fake_dulieu Coverage Results" MODIFIED="1734182041719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
++    <SUITE FILE_PATH="coverage/Gstudio_python$Menu_View.coverage" NAME="Menu_View Coverage Results" MODIFIED="1735057542614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
+     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$Studio_view.coverage" NAME="Studio_view Coverage Results" MODIFIED="1734963765373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
++    <SUITE FILE_PATH="coverage/Gstudio_python$Maintest_View.coverage" NAME="Maintest_View Coverage Results" MODIFIED="1735083119172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
++    <SUITE FILE_PATH="coverage/Gstudio_python$Main_View.coverage" NAME="Main_View Coverage Results" MODIFIED="1735083254001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
++    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1734356019627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Black\">\r\n    <option name=\"sdkName\" value=\"Python 3.12 (StudioGame_do_an_python)\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.12 (StudioGame_do_an_python)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 060cd9b581a4e41a69b410a364b32f7aa4fe3701)
++++ b/.idea/misc.xml	(date 1735048547867)
+@@ -3,5 +3,5 @@
+   <component name="Black">
+     <option name="sdkName" value="Python 3.12 (StudioGame_do_an_python)" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (StudioGame_do_an_python)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (XD_UngDung_QuanLy_StudioGame)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: XD_UngDung_QuanLy_StudioGame/View/Nguoidung_View.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/XD_UngDung_QuanLy_StudioGame/View/Nguoidung_View.py b/XD_UngDung_QuanLy_StudioGame/View/Nguoidung_View.py
+new file mode 100644
+--- /dev/null	(date 1735059637525)
++++ b/XD_UngDung_QuanLy_StudioGame/View/Nguoidung_View.py	(date 1735059637525)
+@@ -0,0 +1,70 @@
++import tkinter as tk
++from tkinter import ttk, messagebox
++
++class NguoiDungForm:
++    def __init__(self, master):
++        self.frame = tk.Frame(master, bg="#f8f9fa")
++        self.frame.pack(fill=tk.BOTH, expand=True)
++
++        self.create_toolbar(self.frame)
++        self.create_treeview(self.frame)
++
++    def create_toolbar(self, parent_frame):
++        toolbar = tk.Frame(parent_frame, bg="#f8f9fa")
++        toolbar.pack(fill=tk.X, pady=10)
++
++        create_btn = tk.Button(toolbar, text="Thêm mới", command=self.create_record, bg="#f8f9fa")
++        read_btn = tk.Button(toolbar, text="Đọc", command=self.read_record, bg="#f8f9fa")
++        update_btn = tk.Button(toolbar, text="Cập nhật", command=self.update_record, bg="#f8f9fa")
++        delete_btn = tk.Button(toolbar, text="Xóa", command=self.delete_record, bg="#f8f9fa")
++
++        create_btn.pack(side=tk.LEFT, padx=10)
++        read_btn.pack(side=tk.LEFT, padx=10)
++        update_btn.pack(side=tk.LEFT, padx=10)
++        delete_btn.pack(side=tk.LEFT, padx=10)
++
++    def create_treeview(self, parent_frame):
++        columns_nguoidung = ("ID", "Tên", "Email", "Điện thoại")
++        self.tree_nguoidung = ttk.Treeview(parent_frame, columns=columns_nguoidung, show="headings")
++
++        for col in columns_nguoidung:
++            self.tree_nguoidung.heading(col, text=col)
++
++        self.tree_nguoidung.pack(fill=tk.BOTH, expand=True)
++
++        h_scroll = ttk.Scrollbar(parent_frame, orient="horizontal", command=self.tree_nguoidung.xview)
++        self.tree_nguoidung.configure(xscrollcommand=h_scroll.set)
++        h_scroll.pack(side=tk.BOTTOM, fill=tk.X)
++
++    def create_record(self):
++        new_id = "1"
++        new_name = "John Doe"
++        new_email = "john@example.com"
++        new_phone = "0123456789"
++        self.tree_nguoidung.insert("", "end", values=(new_id, new_name, new_email, new_phone))
++
++    def read_record(self):
++        selected_item = self.tree_nguoidung.selection()
++        if not selected_item:
++            tk.messagebox.showwarning("Cảnh báo", "Vui lòng chọn một người dùng để xem chi tiết")
++            return
++        item = self.tree_nguoidung.item(selected_item)
++        values = item["values"]
++        tk.messagebox.showinfo("Thông tin người dùng", f"ID: {values[0]}\nTên: {values[1]}\nEmail: {values[2]}\nĐiện thoại: {values[3]}")
++
++    def update_record(self):
++        selected_item = self.tree_nguoidung.selection()
++        if not selected_item:
++            tk.messagebox.showwarning("Cảnh báo", "Vui lòng chọn một người dùng để cập nhật")
++            return
++        item = self.tree_nguoidung.item(selected_item)
++        values = item["values"]
++        new_values = (values[0], "Jane Doe", values[2], values[3])
++        self.tree_nguoidung.item(selected_item, values=new_values)
++
++    def delete_record(self):
++        selected_item = self.tree_nguoidung.selection()
++        if not selected_item:
++            tk.messagebox.showwarning("Cảnh báo", "Vui lòng chọn một người dùng để xóa")
++            return
++        self.tree_nguoidung.delete(selected_item)
+Index: XD_UngDung_QuanLy_StudioGame/requirements.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>mysql-connector-python\r\nPyQt5\r\npygubu\r\npandas\r\nmatplotlib\r\npyinstaller\r\nFaker\r\nplotly\r\nbcrypt
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/XD_UngDung_QuanLy_StudioGame/requirements.txt b/XD_UngDung_QuanLy_StudioGame/requirements.txt
+--- a/XD_UngDung_QuanLy_StudioGame/requirements.txt	(revision 060cd9b581a4e41a69b410a364b32f7aa4fe3701)
++++ b/XD_UngDung_QuanLy_StudioGame/requirements.txt	(date 1735082588795)
+@@ -1,9 +1,10 @@
+-mysql-connector-python
+-PyQt5
++mysql-connector-python~=9.1.0
++PyQt5~=5.15.11
+ pygubu
+ pandas
+ matplotlib
+ pyinstaller
+-Faker
++Faker~=33.1.0
+ plotly
+-bcrypt
+\ No newline at end of file
++bcrypt~=4.2.1
++PySide6~=6.8.1
+\ No newline at end of file
+Index: XD_UngDung_QuanLy_StudioGame/View/__init__.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/XD_UngDung_QuanLy_StudioGame/View/__init__.py b/XD_UngDung_QuanLy_StudioGame/View/__init__.py
+--- a/XD_UngDung_QuanLy_StudioGame/View/__init__.py	(revision 060cd9b581a4e41a69b410a364b32f7aa4fe3701)
++++ b/XD_UngDung_QuanLy_StudioGame/View/__init__.py	(date 1735057921480)
+@@ -1,0 +1,2 @@
++from .Nguoidung_View import NguoiDungForm
++from .Sidebar import Sidebar
+\ No newline at end of file
+Index: XD_UngDung_QuanLy_StudioGame/View/Sidebar.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/XD_UngDung_QuanLy_StudioGame/View/Sidebar.py b/XD_UngDung_QuanLy_StudioGame/View/Sidebar.py
+new file mode 100644
+--- /dev/null	(date 1735057681686)
++++ b/XD_UngDung_QuanLy_StudioGame/View/Sidebar.py	(date 1735057681686)
+@@ -0,0 +1,12 @@
++import tkinter as tk
++
++class Sidebar(tk.Frame):
++    def __init__(self, master, show_form_callback):
++        super().__init__(master, bg="Gray", width=200, height=600)
++        self.pack(side=tk.LEFT, fill=tk.Y)
++
++        options = ["Dashboard", "Người dùng", "Studio", "Phòng ban", "Nhân viên", "Dự án", "Công việc", "Bảng thời gian"]
++        for option in options:
++            btn = tk.Button(self, text=option, bg="Gray", fg="white", bd=0, pady=10, font=("SF Pro Display", 13),
++                            command=lambda opt=option: show_form_callback(opt))
++            btn.pack(fill=tk.X)
+Index: XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.12 (StudioGame_do_an_python)\" jdkType=\"Python SDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml b/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml
+--- a/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml	(revision 060cd9b581a4e41a69b410a364b32f7aa4fe3701)
++++ b/XD_UngDung_QuanLy_StudioGame/.idea/XD_UngDung_QuanLy_StudioGame.iml	(date 1735048547876)
+@@ -1,8 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <module type="PYTHON_MODULE" version="4">
+   <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="jdk" jdkName="Python 3.12 (StudioGame_do_an_python)" jdkType="Python SDK" />
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.venv" />
++    </content>
++    <orderEntry type="jdk" jdkName="Python 3.13 (XD_UngDung_QuanLy_StudioGame)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: XD_UngDung_QuanLy_StudioGame/View/StudioForm.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/XD_UngDung_QuanLy_StudioGame/View/StudioForm.py b/XD_UngDung_QuanLy_StudioGame/View/StudioForm.py
+new file mode 100644
+--- /dev/null	(date 1735058331391)
++++ b/XD_UngDung_QuanLy_StudioGame/View/StudioForm.py	(date 1735058331391)
+@@ -0,0 +1,7 @@
++import tkinter as tk
++from tkinter import ttk
++
++class StudioForm(tk.Frame):
++    def __init__(self, master=None):
++        super().__init__(master)
++        self.master = master
+\ No newline at end of file
+Index: XD_UngDung_QuanLy_StudioGame/View/Main_View.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/XD_UngDung_QuanLy_StudioGame/View/Main_View.py b/XD_UngDung_QuanLy_StudioGame/View/Main_View.py
+new file mode 100644
+--- /dev/null	(date 1735083253991)
++++ b/XD_UngDung_QuanLy_StudioGame/View/Main_View.py	(date 1735083253991)
+@@ -0,0 +1,116 @@
++# -*- coding: utf-8 -*-
++
++import sys
++from PySide6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QStackedWidget, QWidget, QPushButton, QGridLayout, QTableView
++from PySide6.QtCore import QRect, QCoreApplication, QMetaObject
++from PySide6.QtGui import QIcon
++
++class Ui_MainWindow(object):
++    def setupUi(self, MainWindow):
++        if not MainWindow.objectName():
++            MainWindow.setObjectName(u"MainWindow")
++        MainWindow.resize(804, 637)
++        icon = QIcon(QIcon.fromTheme("ContactNew"))
++        MainWindow.setWindowIcon(icon)
++        MainWindow.setAutoFillBackground(False)
++
++        self.centralwidget = QWidget(MainWindow)
++        self.centralwidget.setObjectName(u"centralwidget")
++
++        self.verticalLayoutWidget = QWidget(self.centralwidget)
++        self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
++        self.verticalLayoutWidget.setGeometry(QRect(10, 0, 191, 561))
++        self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
++        self.verticalLayout.setObjectName(u"verticalLayout")
++        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
++
++        self.pushButton_2 = QPushButton(self.verticalLayoutWidget)
++        self.pushButton_2.setObjectName(u"pushButton_2")
++        self.verticalLayout.addWidget(self.pushButton_2)
++
++        self.pushButton_3 = QPushButton(self.verticalLayoutWidget)
++        self.pushButton_3.setObjectName(u"pushButton_3")
++        self.verticalLayout.addWidget(self.pushButton_3)
++
++        self.pushButton_4 = QPushButton(self.verticalLayoutWidget)
++        self.pushButton_4.setObjectName(u"pushButton_4")
++        self.verticalLayout.addWidget(self.pushButton_4)
++
++        self.pushButton_5 = QPushButton(self.verticalLayoutWidget)
++        self.pushButton_5.setObjectName(u"pushButton_5")
++        self.verticalLayout.addWidget(self.pushButton_5)
++
++        self.pushButton_6 = QPushButton(self.verticalLayoutWidget)
++        self.pushButton_6.setObjectName(u"pushButton_6")
++        self.verticalLayout.addWidget(self.pushButton_6)
++
++        self.pushButton_7 = QPushButton(self.verticalLayoutWidget)
++        self.pushButton_7.setObjectName(u"pushButton_7")
++        self.verticalLayout.addWidget(self.pushButton_7)
++
++        self.pushButton_8 = QPushButton(self.verticalLayoutWidget)
++        self.pushButton_8.setObjectName(u"pushButton_8")
++        self.verticalLayout.addWidget(self.pushButton_8)
++
++        self.pushButton = QPushButton(self.verticalLayoutWidget)
++        self.pushButton.setObjectName(u"pushButton")
++        self.verticalLayout.addWidget(self.pushButton)
++
++        self.stackedWidget = QStackedWidget(self.centralwidget)
++        self.stackedWidget.setGeometry(QRect(210, 10, 571, 581))
++        self.stackedWidget.setObjectName(u"stackedWidget")
++
++        self.page1 = QWidget()
++        self.page1.setObjectName(u"page1")
++        self.tableView1 = QTableView(self.page1)
++        self.tableView1.setGeometry(QRect(0, 0, 571, 581))
++        self.tableView1.setObjectName(u"tableView1")
++        self.stackedWidget.addWidget(self.page1)
++
++        self.page2 = QWidget()
++        self.page2.setObjectName(u"page2")
++        self.tableView2 = QTableView(self.page2)
++        self.tableView2.setGeometry(QRect(0, 0, 571, 581))
++        self.tableView2.setObjectName(u"tableView2")
++        self.stackedWidget.addWidget(self.page2)
++
++        self.page3 = QWidget()
++        self.page3.setObjectName(u"page3")
++        self.tableView3 = QTableView(self.page3)
++        self.tableView3.setGeometry(QRect(0, 0, 571, 581))
++        self.tableView3.setObjectName(u"tableView3")
++        self.stackedWidget.addWidget(self.page3)
++
++        MainWindow.setCentralWidget(self.centralwidget)
++        self.retranslateUi(MainWindow)
++        QMetaObject.connectSlotsByName(MainWindow)
++
++        # Connect buttons to views
++        self.pushButton.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
++        self.pushButton_2.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
++        self.pushButton_3.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
++        # Add connections for other buttons and pages here
++
++    def retranslateUi(self, MainWindow):
++        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Studio Controller", None))
++        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Studio", None))
++        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Phòng ban", None))
++        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Nhân viên", None))
++        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"Dự án", None))
++        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"Công việc", None))
++        self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"Bảng thời gian", None))
++        self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"Hướng dẫn sử dụng", None))
++        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Người dùng", None))
++
++
++class MainWindow(QMainWindow, Ui_MainWindow):
++    def __init__(self):
++        super(MainWindow, self).__init__()
++        self.setupUi(self)
++
++
++if __name__ == "__main__":
++    app = QApplication(sys.argv)
++    window = MainWindow()
++    window.show()
++    sys.exit(app.exec())
