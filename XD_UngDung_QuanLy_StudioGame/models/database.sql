@@ -61,6 +61,11 @@ CREATE TABLE nguoi_dung (
     vai_tro ENUM('quan tri vien', 'lap trinh vien', 'kiem thu','nguoi dung','vang lai') NOT NULL
 );
 ALTER TABLE nguoi_dung ADD COLUMN ngay_dang_ky DATE;
+ALTER TABLE nguoi_dung ADD COLUMN ghi_nho TINYINT(1) DEFAULT 0;
+
+# UPDATE nguoi_dung
+# set studio.nguoi_dung.ngay_dang_ky = '2024/12/12'
+# where mand =1;
 
 -- Dữ liệu bảng phong_ban
 INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('001', 'Ban Điều Hành', 'Điều hành mọi hoạt động công ty');
@@ -239,9 +244,9 @@ INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi)
     VALUES ('Phạm Tuấn Tài', 'phạm.tuấn.tài@example.com', '0967890123', 'Hải Phòng, Việt Nam'); INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) 
     VALUES ('Hồ Thị Lan', 'hồ.thị.lan@example.com', '0989012345', 'Hồ Chí Minh, Việt Nam');
 -- Dữ liệu bảng người dùng
-INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro) VALUES (241201,'hieund',123, 'hieund@studio','quan tri vien');
-INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro) VALUES (241202,'ducna',123,'duc@studio','lap trinh vien');
-INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro) VALUES (241203,'dinhhtn',123,'dinh@studio','kiem thu');
+INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro) VALUES (241201,'hieund',123, '23210111@ms.uit.edu.vn','quan tri vien');
+INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro) VALUES (241202,'ducna',123,'23210102@ms.uit.edu.vn','lap trinh vien');
+INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro) VALUES (241203,'dinhhtn',123,'23210099@ms.uit.edu.vn','kiem thu');
 INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro) VALUES (241204, 'nguyenvan', 123, 'nguoidung@gmail','nguoi dung');
 -- Dữ liệu bảng dự án # manv tự động thêm từ 1 đén 100
 INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh) VALUES ('Baldur''s Gate 3', 'Một tựa game nhập vai nổi bật với thế giới mở phong phú và lối chơi đỉnh cao.', '2024-01-15', '2024-06-30', 1);
