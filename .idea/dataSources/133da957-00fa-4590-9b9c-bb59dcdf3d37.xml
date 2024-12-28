@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="@localhost">
+<dataSource name="studio@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.53">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
@@ -115,7 +115,7 @@ phpmyadmin|schema||pma|localhost|INSERT|G
 phpmyadmin|schema||pma|localhost|SELECT|G
 phpmyadmin|schema||pma|localhost|UPDATE|G
 sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>8.0.33</ServerVersion>
+      <ServerVersion>8.0.40</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
@@ -1016,35 +1016,36 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <collation id="287" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="288" parent="1" name="btc4c5">
+    <schema id="288" parent="1" name="datmonannhahang">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="289" parent="1" name="datmonannhahang">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="290" parent="1" name="information_schema">
+    <schema id="289" parent="1" name="information_schema">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="291" parent="1" name="mysql">
+    <schema id="290" parent="1" name="mysql">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="291" parent="1" name="pandarestaurant">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="qlgv">
+    <schema id="293" parent="1" name="qlbh2">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="294" parent="1" name="quanlysinhvien">
+    <schema id="294" parent="1" name="sakila">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="295" parent="1" name="quanlysinhvienda">
+    <schema id="295" parent="1" name="studio">
+      <Current>1</Current>
+      <LastIntrospectionLocalTimestamp>2024-12-28.13:23:02</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="296" parent="1" name="studio">
-      <LastIntrospectionLocalTimestamp>2024-12-14.05:46:49</LastIntrospectionLocalTimestamp>
+    <schema id="296" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="297" parent="1" name="sys">
+    <schema id="297" parent="1" name="world">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="298" parent="1" name="Panda">
@@ -1073,5 +1074,358 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
+    <table id="304" parent="295" name="bang_thoi_gian">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="305" parent="295" name="cong_viec">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="306" parent="295" name="du_an">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="307" parent="295" name="khach_hang">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="308" parent="295" name="nguoi_dung">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="309" parent="295" name="nhan_vien">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="310" parent="295" name="phong_ban">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="311" parent="304" name="matg">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="312" parent="304" name="manv">
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="313" parent="304" name="macv">
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="314" parent="304" name="so_gio">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="315" parent="304" name="ngay_lam">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <foreign-key id="316" parent="304" name="bang_thoi_gian_ibfk_1">
+      <ColNames>manv</ColNames>
+      <RefColNames>manv</RefColNames>
+      <RefTableName>nhan_vien</RefTableName>
+    </foreign-key>
+    <foreign-key id="317" parent="304" name="bang_thoi_gian_ibfk_2">
+      <ColNames>macv</ColNames>
+      <RefColNames>macv</RefColNames>
+      <RefTableName>cong_viec</RefTableName>
+    </foreign-key>
+    <index id="318" parent="304" name="PRIMARY">
+      <ColNames>matg</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="319" parent="304" name="manv">
+      <ColNames>manv</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="320" parent="304" name="macv">
+      <ColNames>macv</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="321" parent="304" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="322" parent="305" name="macv">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="323" parent="305" name="mada">
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="324" parent="305" name="ten_cong_viec">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="325" parent="305" name="mo_ta">
+      <Position>4</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="326" parent="305" name="giao_cho">
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="327" parent="305" name="han_chot">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="328" parent="305" name="trang_thai">
+      <DefaultExpression>&apos;chua_thuc_hien&apos;</DefaultExpression>
+      <Position>7</Position>
+      <StoredType>enum(&apos;chua_thuc_hien&apos;, &apos;dang_thuc_hien&apos;, &apos;hoan_thanh&apos;)|0e</StoredType>
+    </column>
+    <foreign-key id="329" parent="305" name="cong_viec_ibfk_1">
+      <ColNames>mada</ColNames>
+      <RefColNames>mada</RefColNames>
+      <RefTableName>du_an</RefTableName>
+    </foreign-key>
+    <foreign-key id="330" parent="305" name="cong_viec_ibfk_2">
+      <ColNames>giao_cho</ColNames>
+      <RefColNames>manv</RefColNames>
+      <RefTableName>nhan_vien</RefTableName>
+    </foreign-key>
+    <index id="331" parent="305" name="PRIMARY">
+      <ColNames>macv</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="332" parent="305" name="mada">
+      <ColNames>mada</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="333" parent="305" name="giao_cho">
+      <ColNames>giao_cho</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="334" parent="305" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="335" parent="306" name="mada">
+      <AutoIncrement>10</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="336" parent="306" name="ten_du_an">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="337" parent="306" name="mo_ta">
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="338" parent="306" name="ngay_bat_dau">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="339" parent="306" name="ngay_ket_thuc">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="340" parent="306" name="makh">
+      <Position>6</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <foreign-key id="341" parent="306" name="du_an_ibfk_1">
+      <ColNames>makh</ColNames>
+      <RefColNames>makh</RefColNames>
+      <RefTableName>khach_hang</RefTableName>
+    </foreign-key>
+    <index id="342" parent="306" name="PRIMARY">
+      <ColNames>mada</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="343" parent="306" name="makh">
+      <ColNames>makh</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="344" parent="306" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="345" parent="307" name="makh">
+      <AutoIncrement>26</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="346" parent="307" name="ten_khach_hang">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="347" parent="307" name="email">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="348" parent="307" name="so_dien_thoai">
+      <Position>4</Position>
+      <StoredType>varchar(15)|0s</StoredType>
+    </column>
+    <column id="349" parent="307" name="dia_chi">
+      <Position>5</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <index id="350" parent="307" name="PRIMARY">
+      <ColNames>makh</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="351" parent="307" name="email">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="352" parent="307" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="353" parent="307" name="email">
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+    <column id="354" parent="308" name="mand">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="355" parent="308" name="ten_dang_nhap">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="356" parent="308" name="mat_khau">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="357" parent="308" name="email">
+      <Position>4</Position>
+      <StoredType>varchar(250)|0s</StoredType>
+    </column>
+    <column id="358" parent="308" name="vai_tro">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>enum(&apos;quan tri vien&apos;, &apos;lap trinh vien&apos;, &apos;kiem thu&apos;, &apos;nguoi dung&apos;, &apos;vang lai&apos;)|0e</StoredType>
+    </column>
+    <column id="359" parent="308" name="ngay_dang_ky">
+      <Position>6</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <index id="360" parent="308" name="PRIMARY">
+      <ColNames>mand</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="361" parent="308" name="ten_dang_nhap">
+      <ColNames>ten_dang_nhap</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="362" parent="308" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="363" parent="308" name="ten_dang_nhap">
+      <UnderlyingIndexName>ten_dang_nhap</UnderlyingIndexName>
+    </key>
+    <column id="364" parent="309" name="manv">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="365" parent="309" name="ho_ten">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="366" parent="309" name="email">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="367" parent="309" name="chuc_vu">
+      <Position>4</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="368" parent="309" name="mapb">
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="369" parent="309" name="luong_cb">
+      <Position>6</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <foreign-key id="370" parent="309" name="nhan_vien_ibfk_1">
+      <ColNames>mapb</ColNames>
+      <RefColNames>mapb</RefColNames>
+      <RefTableName>phong_ban</RefTableName>
+    </foreign-key>
+    <index id="371" parent="309" name="PRIMARY">
+      <ColNames>manv</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="372" parent="309" name="email">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="373" parent="309" name="mapb">
+      <ColNames>mapb</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="374" parent="309" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="375" parent="309" name="email">
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+    <column id="376" parent="310" name="mapb">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="377" parent="310" name="ten_phong_ban">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="378" parent="310" name="mo_ta">
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <index id="379" parent="310" name="PRIMARY">
+      <ColNames>mapb</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="380" parent="310" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

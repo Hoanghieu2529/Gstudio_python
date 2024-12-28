@@ -12,6 +12,9 @@ class NhanVien:
         self._email_nhanvien = email_nhanvien
         self._congviec = []
 
+    def them_nhanvien(self):
+        pass
+
     def giao_congviec(self, congviec: CongViec):
         if not isinstance(congviec, CongViec):
             raise TypeError('congviec phải là kiểu CongViec')

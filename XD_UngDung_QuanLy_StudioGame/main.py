@@ -1,11 +1,9 @@
 import tkinter as tk
-from tkinter import PhotoImage
-from View.Sidebar import Sidebar
-from View.View_Nguoidung import NguoiDungForm
-from View.View_dang_nhap import View_dang_nhap
+from tkinter import PhotoImage, ttk
+from View import Sidebar, NguoiDungForm, View_dang_nhap, View_dang_ky, StudioForm, PhongBanForm, DuAnForm, NhanVienForm, \
+    CongViecForm
 from controllers.controller_dang_ky import controller_dang_ky
 from controllers.controller_dang_nhap import controller_dang_nhap
-from View.View_dang_ky import View_dang_ky
 
 
 def goi_dang_ky():
@@ -37,8 +35,18 @@ class MainApp:
         if self.current_frame:
             self.current_frame.destroy()  # Xóa frame hiện tại
 
-        if form_name == "Người dùng":
-            self.current_frame = NguoiDungForm(self.root).frame
+        form = {
+            "Người dùng": NguoiDungForm,
+            "Studio": StudioForm,
+            "Phòng ban": PhongBanForm,
+            "Dự án": DuAnForm,
+            "Nhân viên": NhanVienForm,
+            "Công việc": CongViecForm,
+        }
+
+        form_class = form.get(form_name)
+        if form_class:
+            self.current_frame = form_class(self.root).frame
         else:
             self.current_frame = tk.Frame(self.root, bg="#f8f9fa")
             self.current_frame.pack(fill=tk.BOTH, expand=True)
