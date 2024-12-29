@@ -1,6 +1,6 @@
 from models.models_nguoi_dung import model_nguoi_dung
 from controllers.controller_dang_ky import controller_dang_ky
-from Services.dich_vu_email  import dich_vu_Gmail
+from Scrips.dich_vu_email  import dich_vu_Gmail
 
 # ================= KIỂM THỬ NGƯỜI DÙNG =================
 def kiem_thu_them_nguoi_dung():

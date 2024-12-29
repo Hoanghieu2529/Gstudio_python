@@ -1,5 +1,5 @@
 from models.models_nguoi_dung import model_nguoi_dung
-from Services.dich_vu_email import dich_vu_Gmail
+from Scrips.dich_vu_email import dich_vu_Gmail
 import random
 
 class controller_dang_ky:

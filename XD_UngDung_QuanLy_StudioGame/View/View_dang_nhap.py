@@ -41,6 +41,8 @@ class View_dang_nhap:
         self.ten_dang_nhap.grid(row=0, column=1, padx=10, pady=10, sticky="w")
         self.mat_khau.grid(row=1, column=1, padx=10, pady=10, sticky="w")
 
+        self.root.bind("<Return>", lambda event: self.dang_nhap())
+
         # Checkbox ghi nhớ tài khoản
         self.remember_var = tk.BooleanVar()
         self.chk_remember = tk.Checkbutton(frame, text="Ghi nhớ thông tin", variable=self.remember_var, bg="#f0f0f0")
@@ -72,18 +74,6 @@ class View_dang_nhap:
         # Tải thông tin tài khoản đã lưu
         self.load_login_info()
 
-    # def dang_nhap(self):
-    #     """Hàm xử lý khi nhấn nút Đăng nhập"""
-    #     ten_dn = self.ten_dang_nhap.get()
-    #     mat_khau = self.mat_khau.get()
-    #
-    #     if self.controller.xu_ly_dang_nhap(ten_dn, mat_khau):
-    #         self.update_remember_account(ten_dn)
-    #         if self.on_login_success:
-    #             self.on_login_success()  # Gọi callback chuyển sang giao diện chính
-    #         self.root.destroy()
-    #     else:
-    #         messagebox.showerror("Thất bại!", "Tên đăng nhập hoặc mật khẩu không đúng!")
     def dang_nhap(self):
         """Hàm xử lý khi nhấn nút Đăng nhập"""
         ten_dn = self.ten_dang_nhap.get()
