@@ -1,24 +1,10 @@
 import tkinter as tk
-from tkinter import ttk, messagebox, PhotoImage
-from View.Sidebar import Sidebar
-from View.View_Nguoidung import NguoiDungForm
-from View.View_Studio import StudioForm
-from View.View_Phongban import PhongBanForm
-from View.View_DuAn import DuAnForm
-from View.View_NhanVien import NhanVienForm
-from View.View_CongViec import CongViecForm
-from View.View_dang_nhap import View_dang_nhap
+from tkinter import PhotoImage, ttk
+from View import Sidebar, NguoiDungForm, View_dang_nhap, View_dang_ky, StudioForm, PhongBanForm, DuAnForm, NhanVienForm, \
+    CongViecForm
 from controllers.controller_dang_ky import controller_dang_ky
 from controllers.controller_dang_nhap import controller_dang_nhap
-from View.View_dang_ky import View_dang_ky
 
-def center_window(window, width, height):
-    """Căn giữa cửa sổ trên màn hình"""
-    screen_width = window.winfo_screenwidth()
-    screen_height = window.winfo_screenheight()
-    x = (screen_width // 2) - (width // 2)
-    y = (screen_height // 2) - (height // 2)
-    window.geometry(f"{width}x{height}+{x}+{y}")
 
 def goi_dang_ky():
     """Hàm gọi giao diện đăng ký"""
@@ -33,8 +19,7 @@ class MainApp:
         """Khởi tạo giao diện chính của ứng dụng"""
         self.root = root
         self.root.title("HỆ THỐNG QUẢN LÝ DỰ ÁN STUDIO")
-        # self.root.geometry("1200x800")
-        center_window(self.root, 1200, 800)
+        self.root.geometry("1200x800")
         try:
             self.root.iconphoto(False, PhotoImage(file="Images/Logo_studio.png"))
         except Exception as e:
@@ -50,29 +35,18 @@ class MainApp:
         if self.current_frame:
             self.current_frame.destroy()  # Xóa frame hiện tại
 
-        forms = {
+        form = {
             "Người dùng": NguoiDungForm,
             "Studio": StudioForm,
             "Phòng ban": PhongBanForm,
             "Dự án": DuAnForm,
             "Nhân viên": NhanVienForm,
-            "Công việc": CongViecForm
+            "Công việc": CongViecForm,
         }
-        form_class = forms.get(form_name)
+
+        form_class = form.get(form_name)
         if form_class:
             self.current_frame = form_class(self.root).frame
-        # if form_name == "Người dùng":
-        #     self.current_frame = NguoiDungForm(self.root).frame
-        # elif form_name == "Studio":
-        #     self.current_frame = StudioForm(self.root).frame
-        # elif form_name == "Phòng ban":
-        #     self.current_frame = PhongBanForm(self.root).frame
-        # elif form_name == "Dự án":
-        #     self.current_frame = DuAnForm(self.root).frame
-        # elif form_name == "Nhân viên":
-        #     self.current_frame = NhanVienForm(self.root).frame
-        # elif form_name == "Công việc":
-        #     self.current_frame = CongViecForm(self.root).frame
         else:
             self.current_frame = tk.Frame(self.root, bg="#f8f9fa")
             self.current_frame.pack(fill=tk.BOTH, expand=True)
