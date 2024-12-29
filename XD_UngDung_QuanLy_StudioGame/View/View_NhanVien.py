@@ -57,6 +57,7 @@ class Nhan_vien_form(KhungCoSo):
         # Tạo giao diện chính
         self.tao_thanh_cong_cu()
         self.tao_bang_du_lieu()
+        self.cap_nhat_du_lieu()
 
     def tao_thanh_cong_cu(self):
         """Tạo thanh công cụ"""
@@ -150,11 +151,18 @@ class Nhan_vien_form(KhungCoSo):
 
         # Lấy dữ liệu từ model
         danh_sach = model_NhanVien().lay_danh_sach_nhan_vien()
+        if not danh_sach:
+            messagebox.showwarning("Thông báo", "Không có dữ liệu từ cơ sở dữ liệu.")
+            return
 
         # Thêm dữ liệu vào Treeview
         for stt, nv in enumerate(danh_sach, start=1):  # `enumerate` để tự động tạo Số thứ tự
-            self.bang_nhan_vien.insert("", "end", values=(
-                stt, nv["manv"], nv["ho_ten"], nv["chuc_vu"], nv["ten_phong_ban"], nv["email"]))
+            try:
+                self.bang_nhan_vien.insert("", "end", values=(
+                    stt, nv["manv"], nv["ho_ten"], nv["chuc_vu"], nv["ten_phong_ban"], nv["email"]))
+            except KeyError as e:
+                print(f"Lỗi dữ liệu: {e}")
+
 
 if __name__ == "__main__":
     root = tk.Tk()

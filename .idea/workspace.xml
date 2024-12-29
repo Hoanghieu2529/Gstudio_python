@@ -377,7 +377,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734966444424</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="V.0.7_Thêm Giao diện quản trị, chỉnh lại form sidebar">
+      <option name="closed" value="true" />
+      <created>1735493265904</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1735493265904</updated>
+    </task>
+    <task id="LOCAL-00015" summary="V.0.7_Thêm Giao diện quản trị, chỉnh lại form sidebar">
+      <option name="closed" value="true" />
+      <created>1735493269629</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735493269629</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +446,8 @@
     <MESSAGE value="v.0.5.1" />
     <MESSAGE value="v.0.5.2_them bang database" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;XD_UngDung_QuanLy_StudioGame/View/Sidebar.py&#10;#&#9;XD_UngDung_QuanLy_StudioGame/main.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="V.0.7_Thêm Giao diện quản trị, chỉnh lại form sidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="V.0.7_Thêm Giao diện quản trị, chỉnh lại form sidebar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -443,7 +460,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1735492989488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1735494592215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
     <SUITE FILE_PATH="coverage/Gstudio_python$Kiem_thu.coverage" NAME="Kiem_thu Coverage Results" MODIFIED="1735221978178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
     <SUITE FILE_PATH="coverage/Gstudio_python$View_CongViec.coverage" NAME="View_CongViec Coverage Results" MODIFIED="1735227018993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/Gstudio_python$mvc_co_ban01_view_ui.coverage" NAME="mvc_co_ban01_view_ui Coverage Results" MODIFIED="1735048815073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
