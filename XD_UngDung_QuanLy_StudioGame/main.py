@@ -6,6 +6,9 @@ from controllers.controller_dang_nhap import controller_dang_nhap
 from models.models_NhanVien import model_NhanVien
 from View.View_quan_tri import ViewQuanTri
 from controllers.controller_quan_tri import ControllerQuanTri
+from View.View_tinh_luong import ViewTinhLuong
+from controllers.controller_tinh_luong import ControllerTinhLuong
+
 
 def goi_dang_ky():
     """Hàm gọi giao diện đăng ký"""
@@ -29,7 +32,6 @@ class MainApp:
         # Tạo Sidebar và Frame chính
         self.sidebar = Sidebar(self.root, self.show_form)
         self.current_frame = None
-        self.controller_quan_tri = None
 
         # Hiển thị giao diện mặc định
         self.show_form("Người dùng")
@@ -47,13 +49,21 @@ class MainApp:
             "Nhân viên": Nhan_vien_form,
             "Công việc": CongViecForm,
             "Quản trị": ViewQuanTri,
+            "Tính lương": ViewTinhLuong,
         }
 
         if form_name in form_classes:
             form_class = form_classes[form_name]
             if form_name == "Quản trị":
                 self.show_quan_tri()
+            elif form_name == "Tính lương":
+                view_instance = ViewTinhLuong(self.root, None)  # Khởi tạo view trước
+                controller_tinh_luong = ControllerTinhLuong(view_instance)  # Khởi tạo controller với view
+                view_instance.controller = controller_tinh_luong  # Liên kết controller với view
+                self.current_frame = view_instance
+                self.current_frame.pack(fill=tk.BOTH, expand=True)
             else:
+                # Hiển thị các form khác
                 form_instance = form_class(self.root)
                 self.current_frame = form_instance.frame if hasattr(form_instance, 'frame') else form_instance
                 self.current_frame.pack(fill=tk.BOTH, expand=True)
@@ -64,46 +74,12 @@ class MainApp:
 
     def show_quan_tri(self):
         """Hiển thị giao diện Quản trị"""
-        # Khởi tạo view trước
+        # Khởi tạo view và controller
         view_quan_tri = ViewQuanTri(self.root, None)
-
-        # Khởi tạo controller và truyền view vào controller
         controller_quan_tri = ControllerQuanTri(view_quan_tri)
-
-        # Gán controller vào view
         view_quan_tri.controller = controller_quan_tri
-
-        # Hiển thị view
         self.current_frame = view_quan_tri
         self.current_frame.pack(fill=tk.BOTH, expand=True)
-
-    def show_nhanvien_form(self):
-        """Hiển thị và cập nhật dữ liệu Nhân Viên"""
-        if self.current_frame:
-            self.current_frame.destroy()
-
-        self.current_frame = tk.Frame(self.root, bg="#f8f9fa")
-        self.current_frame.pack(fill=tk.BOTH, expand=True)
-
-        tree_nhanvien = ttk.Treeview(
-            self.current_frame,
-            columns=("manv", "ho_ten", "chuc_vu", "email", "ten_phong_ban"),
-            show="headings"
-        )
-        tree_nhanvien.heading("manv", text="ID")
-        tree_nhanvien.heading("ho_ten", text="Họ Tên")
-        tree_nhanvien.heading("chuc_vu", text="Chức Vụ")
-        tree_nhanvien.heading("email", text="Email")
-        tree_nhanvien.heading("ten_phong_ban", text="Phòng Ban")
-        tree_nhanvien.pack(fill=tk.BOTH, expand=True)
-
-        # Lấy dữ liệu từ model
-        nhan_vien_model = model_NhanVien()
-        danh_sach = nhan_vien_model.lay_danh_sach_nhan_vien()
-
-        for nv in danh_sach:
-            tree_nhanvien.insert("", "end", values=(
-                nv["manv"], nv["ho_ten"], nv["chuc_vu"], nv["email"], nv["ten_phong_ban"]))
 
 def ham_chinh():
     """Chạy ứng dụng sau khi đăng nhập thành công"""

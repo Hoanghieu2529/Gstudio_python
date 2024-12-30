@@ -39,12 +39,12 @@
     &quot;assignee&quot;: &quot;Hoanghieu2529&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Hoanghieu2529/Gstudio_python",
-    "accountId": "85a04cb8-e349-4bf1-9bed-8e1f49cfe127"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Hoanghieu2529/Gstudio_python&quot;,
+    &quot;accountId&quot;: &quot;85a04cb8-e349-4bf1-9bed-8e1f49cfe127&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.venv/Scripts/activate.bat" root0="SKIP_INSPECTION" />
   </component>
@@ -77,6 +77,8 @@
     "Python.View_NhanVien.executor": "Run",
     "Python.View_Sidebar.executor": "Run",
     "Python.View_dang_nhap.executor": "Run",
+    "Python.View_tinh_luong.executor": "Run",
+    "Python.controller_tinh_luong.executor": "Run",
     "Python.database.executor": "Run",
     "Python.install_requirements.executor": "Run",
     "Python.ma_hoa_mk.executor": "Run",
@@ -143,7 +145,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="View_Sidebar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="XD_UngDung_QuanLy_StudioGame" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,12 +154,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/database.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/View_Sidebar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,7 +168,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ma_hoa_mk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="View_tinh_luong" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="XD_UngDung_QuanLy_StudioGame" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,12 +177,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Scrips" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Scrips/ma_hoa_mk.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View/View_tinh_luong.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="controller_tinh_luong" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="XD_UngDung_QuanLy_StudioGame" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/controllers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/controllers/controller_tinh_luong.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -212,36 +237,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="models_NhanVien" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="XD_UngDung_QuanLy_StudioGame" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models/models_NhanVien.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.View_tinh_luong" />
+        <item itemvalue="Python.controller_tinh_luong" />
+        <item itemvalue="Python.View_Sidebar" />
         <item itemvalue="Python.View_NhanVien" />
-        <item itemvalue="Python.ma_hoa_mk" />
-        <item itemvalue="Python.database" />
-        <item itemvalue="Python.models_NhanVien" />
       </list>
     </recent_temporary>
   </component>
@@ -272,6 +274,7 @@
       <workItem from="1734958165459" duration="6683000" />
       <workItem from="1735080684632" duration="1595000" />
       <workItem from="1735135470797" duration="4465000" />
+      <workItem from="1735564917856" duration="8557000" />
     </task>
     <task id="LOCAL-00001" summary="v.01">
       <option name="closed" value="true" />
@@ -393,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735493269629</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="V.0.7_Thêm Giao diện quản trị, chỉnh lại form sidebar">
+      <option name="closed" value="true" />
+      <created>1735495234352</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1735495234352</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,17 +471,19 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1735494592215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1735574172112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$View_tinh_luong.coverage" NAME="View_tinh_luong Coverage Results" MODIFIED="1735573033195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/Gstudio_python$Kiem_thu.coverage" NAME="Kiem_thu Coverage Results" MODIFIED="1735221978178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
     <SUITE FILE_PATH="coverage/Gstudio_python$View_CongViec.coverage" NAME="View_CongViec Coverage Results" MODIFIED="1735227018993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/Gstudio_python$mvc_co_ban01_view_ui.coverage" NAME="mvc_co_ban01_view_ui Coverage Results" MODIFIED="1735048815073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$models_NhanVien.coverage" NAME="models_NhanVien Coverage Results" MODIFIED="1735477515716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$install_requirements.coverage" NAME="install_requirements Coverage Results" MODIFIED="1734545285147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$View_Sidebar.coverage" NAME="View_Sidebar Coverage Results" MODIFIED="1735448486279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$View_Sidebar.coverage" NAME="View_Sidebar Coverage Results" MODIFIED="1735571872842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$controller_tinh_luong.coverage" NAME="controller_tinh_luong Coverage Results" MODIFIED="1735572947264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/controllers" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$database.coverage" NAME="database Coverage Results" MODIFIED="1735478131012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$sql_fake_dulieu.coverage" NAME="sql_fake_dulieu Coverage Results" MODIFIED="1734182041719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
-    <SUITE FILE_PATH="coverage/Gstudio_python$Studio_View.coverage" NAME="Studio_View Coverage Results" MODIFIED="1735223053222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/Gstudio_python$Phongban_View.coverage" NAME="Phongban_View Coverage Results" MODIFIED="1735226343119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
+    <SUITE FILE_PATH="coverage/Gstudio_python$Studio_View.coverage" NAME="Studio_View Coverage Results" MODIFIED="1735223053222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$Studio_view.coverage" NAME="Studio_view Coverage Results" MODIFIED="1734963765373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/Gstudio_python$Main_View.coverage" NAME="Main_View Coverage Results" MODIFIED="1735136501253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/Gstudio_python$Duan_View.coverage" NAME="Duan_View Coverage Results" MODIFIED="1735225208112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />

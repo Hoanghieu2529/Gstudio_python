@@ -104,3 +104,7 @@ class ViewQuanTri(tk.Frame):
         """Xóa nội dung hiển thị trong khung bên phải"""
         for widget in self.right_frame.winfo_children():
             widget.destroy()
+
+    def cap_nhat_danh_sach_nguoi_dung(self, du_lieu):
+        """Cập nhật danh sách người dùng trên giao diện."""
+        print("Cập nhật danh sách người dùng:", du_lieu)

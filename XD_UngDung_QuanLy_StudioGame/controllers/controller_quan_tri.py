@@ -7,9 +7,8 @@ class ControllerQuanTri:
 
     def hien_thi_danh_sach_nguoi_dung(self):
         data = self.model.lay_danh_sach_nguoi_dung()
-        self.view.hien_thi_danh_sach_nguoi_dung(data)
-        if self.view:
-            self.view.cap_nhat_danh_sach_nguoi_dung(danh_sach)
+        if hasattr(self.view, 'cap_nhat_danh_sach_nguoi_dung'):
+            self.view.cap_nhat_danh_sach_nguoi_dung(data)
 
     def hien_thi_tong_luong_theo_phong_ban(self):
         data = self.model.lay_tong_luong_theo_phong_ban()

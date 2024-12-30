@@ -15,5 +15,9 @@ class ModelTinhLuong:
 
     def cap_nhat_ngay_cong(self, manv, ngay_cong_moi):
         """Cập nhật số ngày công cho nhân viên."""
-        # Ở đây thêm logic cập nhật thông tin vào cơ sở dữ liệu nếu cần.
-        pass
+        query = """
+        UPDATE nhan_vien
+        SET ngay_cong = %s
+        WHERE manv = %s
+        """
+        self.db.execute(query, (ngay_cong_moi, manv))
