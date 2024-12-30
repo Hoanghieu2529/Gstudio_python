@@ -351,6 +351,3 @@ select * from khach_hang;
 select * from nguoi_dung;
 select * from nhan_vien;
 select * from phong_ban;
-
-
-
