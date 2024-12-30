@@ -72,7 +72,7 @@ CREATE TABLE bang_cong (
                            mabc INT PRIMARY KEY,
                            manv INT,
                            macv INT,
-                           so_gio INT NOT NULL,
+                           ngay_cong INT NOT NULL,
                            ngay_lam DATE NOT NULL,
                            so_luong_san_pham INT
 );
@@ -110,9 +110,9 @@ ALTER TABLE bang_cong
 
 
 -- Du liệu bảng nhân vien
-INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (101, 'Nguyễn Duy Hiếu', 'hieund1@ms.uit.edu.vn', 'Quản lý', '001', 22000000);
-INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (102, 'Hồ Trí Quang', 'hồ.quang@ms.uit.edu.vn', 'Quản lý', '001', 79000000);
-INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (103, 'Đoàn Minh Trí', 'đoàn.trí@ms.uit.edu.vn', 'Quản lý', '003', 55000000);
+INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (101, 'Nguyễn Duy Hiếu', 'hieund1@ms.uit.edu.vn', 'Quản lý', '001', 82000000);
+INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (102, 'Hồ Thị Ngọc Định', 'dinhho@ms.uit.edu.vn', 'Quản lý', '001', 69000000);
+INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (103, 'Nguyễn Anh Đức', 'ducad@ms.uit.edu.vn', 'Quản lý', '003', 55000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (104, 'Hồ Bảo Lâm', 'hồ.lâm@ms.uit.edu.vn', 'Trưởng phòng', '003', 40000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (105, 'Trần Thanh Trúc', 'trần.trúc@ms.uit.edu.vn', 'Trưởng phòng', '005', 52000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (106, 'Nguyễn Quang Bình', 'nguyễn.bình@ms.uit.edu.vn', 'Lập trình viên', '005', 30000000);
@@ -303,46 +303,46 @@ VALUES
 
 
 -- Thêm dữ liệu cho phòng Bán hàng
-INSERT INTO bang_cong (mabc, manv, macv, so_gio, ngay_lam, so_luong_san_pham)
+INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
 VALUES
-    (1, 109, 101, 8, '2024-01-10', 50),
-    (2, 111, 102, 6, '2024-01-11', 55),
-    (3, 112, 103, 7, '2024-01-12', 48);
+    (1, 109, 101, 22, '2024-01-10', 50),
+    (2, 111, 102, 17, '2024-01-11', 55),
+    (3, 112, 103, 16, '2024-01-12', 48);
 
 -- Thêm dữ liệu cho phòng Marketing
-INSERT INTO bang_cong (mabc, manv, macv, so_gio, ngay_lam, so_luong_san_pham)
+INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
 VALUES
-    (4, 105, 201, 8, '2024-01-13', 30),
-    (5, 106, 202, 7, '2024-01-14', 32),
-    (6, 120, 203, 6, '2024-01-15', 28);
+    (4, 105, 201, 22, '2024-01-13', 30),
+    (5, 106, 202, 20, '2024-01-14', 32),
+    (6, 120, 203, 19, '2024-01-15', 28);
 
 -- Thêm dữ liệu cho phòng IT
-INSERT INTO bang_cong (mabc, manv, macv, so_gio, ngay_lam, so_luong_san_pham)
+INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
 VALUES
-    (7, 113, 301, 8, '2024-01-16', 20),
-    (8, 167, 302, 9, '2024-01-17', 22),
-    (9, 121, 303, 7, '2024-01-18', 18);
+    (7, 113, 301, 19, '2024-01-16', 20),
+    (8, 167, 302, 19, '2024-01-17', 22),
+    (9, 121, 303, 22, '2024-01-18', 18);
 
 -- Thêm dữ liệu cho phòng Quản lý
-INSERT INTO bang_cong (mabc, manv, macv, so_gio, ngay_lam, so_luong_san_pham)
+INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
 VALUES
-    (10, 101, 401, 8, '2024-01-19', 10),
-    (11, 102, 402, 7, '2024-01-20', 12),
-    (12, 110, 403, 6, '2024-01-21', 8);
+    (10, 101, 401, 22, '2024-01-19', 10),
+    (11, 102, 402, 22, '2024-01-20', 12),
+    (12, 110, 403, 22, '2024-01-21', 20);
 
 -- Thêm dữ liệu cho phòng Nhân sự
-INSERT INTO bang_cong (mabc, manv, macv, so_gio, ngay_lam, so_luong_san_pham)
+INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
 VALUES
-    (13, 103, 501, 8, '2024-01-22', 15),
-    (14, 104, 502, 7, '2024-01-23', 18),
-    (15, 118, 503, 6, '2024-01-24', 12);
+    (13, 103, 501, 20, '2024-01-22', 15),
+    (14, 104, 502, 22, '2024-01-23', 18),
+    (15, 118, 503, 22, '2024-01-24', 12);
 
 -- Thêm dữ liệu cho phòng Tài chính
-INSERT INTO bang_cong (mabc, manv, macv, so_gio, ngay_lam, so_luong_san_pham)
+INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
 VALUES
-    (16, 108, 601, 8, '2024-01-25', 25),
-    (17, 126, 602, 7, '2024-01-26', 28),
-    (18, 140, 603, 6, '2024-01-27', 22);
+    (16, 108, 601, 18, '2024-01-25', 25),
+    (17, 126, 602, 22, '2024-01-26', 28),
+    (18, 140, 603, 21, '2024-01-27', 22);
 
 select * from bang_cong;
 select * from cong_viec;
@@ -351,3 +351,9 @@ select * from khach_hang;
 select * from nguoi_dung;
 select * from nhan_vien;
 select * from phong_ban;
+
+-- truy van bang
+SELECT mabc, bc.manv, ho_ten, chuc_vu, luong_cb, bc.ngay_cong, so_luong_san_pham
+FROM bang_cong AS bc
+         JOIN nhan_vien nv ON bc.manv = nv.manv
+order by manv asc;

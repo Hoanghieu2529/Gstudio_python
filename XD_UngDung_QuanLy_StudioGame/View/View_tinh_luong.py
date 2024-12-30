@@ -24,27 +24,37 @@ class ViewTinhLuong(tk.Frame):
             command=lambda: self.controller.xuat_pdf() if self.controller else None
         ).pack(side=tk.LEFT, padx=10)
 
-        cot = ("Mã NV", "Họ Tên", "Phòng Ban", "Lương Cơ Bản", "Ngày Công", "Tổng Lương")
+        cot = ("Mã NV", "Họ Tên", "Chức Vụ", "Lương Cơ Bản", "Ngày Công", "Tổng Lương")
         self.bang_luong = ttk.Treeview(self, columns=cot, show="headings")
 
         for c in cot:
             self.bang_luong.heading(c, text=c)
-            self.bang_luong.column(c, width=100)
+            if c in ("Mã NV","Lương Cơ Bản", "Ngày Công", "Tổng Lương"):
+                self.bang_luong.column(c, anchor="center", width=120)
+            else:
+                self.bang_luong.column(c, anchor="w", width=100)
 
         self.bang_luong.pack(fill=tk.BOTH, expand=True)
 
     def hien_thi_du_lieu(self, du_lieu):
         """Hiển thị dữ liệu lên bảng Treeview."""
-        if not du_lieu:
-            return
-
         for row in self.bang_luong.get_children():
             self.bang_luong.delete(row)
 
         for nv in du_lieu:
-            tong_luong = nv["luong_co_ban"] * nv["ngay_cong"] / 22
+            tong_luong = int((nv["luong_cb"] / 22) * nv["ngay_cong"])  # Tính tổng lương
             self.bang_luong.insert("", "end", values=(
-                nv["manv"], nv["ho_ten"], nv["ten_phong_ban"], nv["luong_co_ban"], nv["ngay_cong"], tong_luong
+                nv["manv"],
+                nv["ho_ten"],
+                nv["chuc_vu"],  # Thay 'ten_phong_ban' thành 'chuc_vu'
+                "{:,} VNĐ".format(int(nv["luong_cb"])),  # Định dạng lương cơ bản
+                nv["ngay_cong"],
+                "{:,} VNĐ".format(tong_luong)  # Định dạng tổng lương
             ))
+
+
+
+
+
 
 

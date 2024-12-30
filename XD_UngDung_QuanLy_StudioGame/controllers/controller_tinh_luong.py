@@ -1,6 +1,8 @@
+import os
 from tkinter import messagebox
 from tkinter.filedialog import asksaveasfilename
 from fpdf import FPDF
+from fpdf.enums import XPos, YPos
 import pandas as pd
 from models.models_tinh_luong import ModelTinhLuong
 
@@ -19,45 +21,85 @@ class ControllerTinhLuong:
             self.view.hien_thi_du_lieu(self.du_lieu)
 
     def xuat_excel(self):
-        """Xuất dữ liệu ra file Excel."""
+        """Xuất dữ liệu lương nhân viên ra file Excel."""
         duong_dan = asksaveasfilename(defaultextension=".xlsx",
-                                       filetypes=[("Excel files", "*.xlsx"), ("All files", "*.*")])
+                                      filetypes=[("Excel files", "*.xlsx"), ("All files", "*.*")])
         if not duong_dan:
             return
 
-        df = pd.DataFrame(self.du_lieu)
-        df.to_excel(duong_dan, index=False)
-        messagebox.showinfo("Thành công", "Dữ liệu đã được xuất ra file Excel.")
+        # Chuẩn bị dữ liệu cho Excel
+        data_for_excel = [
+            {
+                "Mã NV": nv["manv"],
+                "Họ Tên": nv["ho_ten"],
+                "Chức Vụ": nv["chuc_vu"],
+                "Lương Cơ Bản": f'{nv["luong_cb"]:,} VNĐ',
+                "Ngày Công": nv["ngay_cong"],
+                "Tổng Lương": f'{int(nv["luong_cb"] * nv["ngay_cong"] / 22):,} VNĐ'
+            }
+            for nv in self.du_lieu
+        ]
+
+        # Tạo DataFrame từ dữ liệu
+        df = pd.DataFrame(data_for_excel)
+
+        # Xuất dữ liệu ra file Excel
+        try:
+            df.to_excel(duong_dan, index=False, engine='openpyxl')
+            messagebox.showinfo("Thành công", "Dữ liệu đã được xuất ra file Excel.")
+        except Exception as e:
+            messagebox.showerror("Lỗi", f"Không thể xuất file Excel: {e}")
 
     def xuat_pdf(self):
-        """Xuất dữ liệu ra file PDF."""
-        duong_dan = asksaveasfilename(defaultextension=".pdf",
-                                       filetypes=[("PDF files", "*.pdf"), ("All files", "*.*")])
-        if not duong_dan:
-            return
+        """Xuất file pdf"""
+        try:
+            # Đường dẫn lưu file PDF
+            duong_dan = asksaveasfilename(defaultextension=".pdf",
+                                          filetypes=[("PDF files", "*.pdf"), ("All files", "*.*")])
+            if not duong_dan:
+                return
 
-        pdf = FPDF()
-        pdf.add_page()
-        pdf.set_font("Arial", size=12)
-        pdf.cell(200, 10, txt="Bảng Lương Nhân Viên", ln=True, align="C")
+            pdf = FPDF()
+            pdf.add_page()
 
-        col_widths = [30, 50, 50, 30, 30]
-        headers = ["Mã NV", "Họ Tên", "Phòng Ban", "Lương Cơ Bản", "Ngày Công"]
+            # Thêm font DejaVu
+            font_path = os.path.join("fonts", "DejaVuSans.ttf")
+            pdf.add_font("DejaVu", "", font_path, uni=True)
+            pdf.set_font("DejaVu", size=12)
 
-        for i, header in enumerate(headers):
-            pdf.cell(col_widths[i], 10, header, border=1, align="C")
-        pdf.ln()
+            # Tiêu đề
+            pdf.cell(200, 10, txt="Bảng Lương Nhân Viên", ln=True, align="C")
 
-        for nv in self.du_lieu:
-            pdf.cell(col_widths[0], 10, nv["manv"], border=1)
-            pdf.cell(col_widths[1], 10, nv["ho_ten"], border=1)
-            pdf.cell(col_widths[2], 10, nv["ten_phong_ban"], border=1)
-            pdf.cell(col_widths[3], 10, str(nv["luong_co_ban"]), border=1)
-            pdf.cell(col_widths[4], 10, str(nv["ngay_cong"]), border=1)
-            pdf.ln()
+            # Tạo bảng
+            pdf.set_font("DejaVu", size=10)
+            col_widths = [30, 50, 50, 30, 30, 30]  # Định nghĩa độ rộng của các cột
+            headers = ["Mã NV", "Họ Tên", "Chức Vụ", "Lương Cơ Bản", "Ngày Công", "Tổng Lương"]
 
-        pdf.output(duong_dan)
-        messagebox.showinfo("Thành công", "Dữ liệu đã được xuất ra file PDF.")
+            # In tiêu đề cột
+            for header, width in zip(headers, col_widths):
+                pdf.cell(width, 10, header, border=1, align="C")
+            pdf.ln()  # Xuống dòng
+
+            # In dữ liệu
+            for nv in self.du_lieu:
+                tong_luong = nv["luong_cb"] * nv["ngay_cong"] / 22
+                row = [
+                    str(nv["manv"]),  # Chuyển số thành chuỗi
+                    str(nv["ho_ten"]),
+                    str(nv["chuc_vu"]),
+                    f"{nv['luong_cb']:,} VNĐ",  # Định dạng tiền tệ
+                    str(nv["ngay_cong"]),  # Chuyển số thành chuỗi
+                    f"{tong_luong:,.0f} VNĐ"  # Định dạng tiền tệ
+                ]
+                for cell, width in zip(row, col_widths):
+                    pdf.cell(width, 10, str(cell), border=1, align="C")  # Đảm bảo tất cả dữ liệu đều là chuỗi
+                pdf.ln()  # Xuống dòng
+
+            # Xuất file PDF
+            pdf.output(duong_dan)
+            messagebox.showinfo("Thành công", "Dữ liệu đã được xuất ra file PDF.")
+        except Exception as e:
+            messagebox.showerror("Lỗi", f"Không thể xuất file PDF: {e}")
 
     def cap_nhat_ngay_cong(self, manv, ngay_cong_moi):
         """Cập nhật số ngày công."""
