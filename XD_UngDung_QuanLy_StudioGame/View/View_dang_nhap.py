@@ -1,5 +1,6 @@
-import tkinter as tk
+import os
 from tkinter import PhotoImage, messagebox, font, Toplevel
+from tkinter import ttk, Entry, Button, Label, Frame, BooleanVar, Checkbutton
 from controllers.controller_dang_ky import controller_dang_ky
 from View.View_dang_ky import View_dang_ky
 from models.database import Database
@@ -29,35 +30,35 @@ class View_dang_nhap:
             print(f"Lỗi khi tải logo: {e}")
 
         # Sử dụng Frame để quản lý
-        frame = tk.Frame(self.root, bg="#f0f0f0")
+        frame = Frame(self.root, bg="#f0f0f0")
         frame.pack(expand=True)
 
         # Các thành phần trong giao diện
-        tk.Label(frame, text="Tên đăng nhập:", bg="#f0f0f0").grid(row=0, column=0, padx=10, pady=10, sticky="e")
-        tk.Label(frame, text="Mật khẩu:", bg="#f0f0f0").grid(row=1, column=0, padx=10, pady=10, sticky="e")
+        Label(frame, text="Tên đăng nhập:", bg="#f0f0f0").grid(row=0, column=0, padx=10, pady=10, sticky="e")
+        Label(frame, text="Mật khẩu:", bg="#f0f0f0").grid(row=1, column=0, padx=10, pady=10, sticky="e")
 
-        self.ten_dang_nhap = tk.Entry(frame, width=30)
-        self.mat_khau = tk.Entry(frame, show="*", width=30)
+        self.ten_dang_nhap = Entry(frame, width=30)
+        self.mat_khau = Entry(frame, show="*", width=30)
         self.ten_dang_nhap.grid(row=0, column=1, padx=10, pady=10, sticky="w")
         self.mat_khau.grid(row=1, column=1, padx=10, pady=10, sticky="w")
 
         self.root.bind("<Return>", lambda event: self.dang_nhap())
 
         # Checkbox ghi nhớ tài khoản
-        self.remember_var = tk.BooleanVar()
-        self.chk_remember = tk.Checkbutton(frame, text="Ghi nhớ thông tin", variable=self.remember_var, bg="#f0f0f0")
+        self.remember_var = BooleanVar()
+        self.chk_remember = Checkbutton(frame, text="Ghi nhớ thông tin", variable=self.remember_var, bg="#f0f0f0")
         self.chk_remember.grid(row=2, column=1, sticky="w", padx=10, pady=5)
 
         # Khung dành cho Đăng nhập và Quên mật khẩu
-        button_frame = tk.Frame(frame, bg="#f0f0f0")
+        button_frame = Frame(frame, bg="#f0f0f0")
         button_frame.grid(row=3, column=0, columnspan=2, pady=20)
 
         # Nút Đăng nhập
-        btn_dang_nhap = tk.Button(button_frame, text="Đăng nhập", command=self.dang_nhap)
+        btn_dang_nhap = Button(button_frame, text="Đăng nhập", command=self.dang_nhap)
         btn_dang_nhap.grid(row=0, column=0, padx=(0, 5))
 
         # Quên mật khẩu
-        lbl_quen_mat_khau = tk.Label(
+        lbl_quen_mat_khau = Label(
             button_frame, text="Quên mật khẩu?", fg="blue", cursor="hand2", bg="#f0f0f0"
         )
         lbl_quen_mat_khau.grid(row=0, column=1, padx=(10, 0))
@@ -65,32 +66,36 @@ class View_dang_nhap:
 
         # Đăng ký
         underline_font = font.Font(underline=True)
-        lbl_dang_ky = tk.Label(
+        lbl_dang_ky = Label(
             frame, text="Đăng ký", fg="blue", cursor="hand2", bg="#f0f0f0", font=underline_font
         )
         lbl_dang_ky.grid(row=4, column=0, columnspan=2, pady=20)
         lbl_dang_ky.bind("<Button-1>", self.dang_ky)
 
         # Tải thông tin tài khoản đã lưu
-        self.load_login_info()
+        self.tai_thong_tin_dn()
 
     def dang_nhap(self):
         """Hàm xử lý khi nhấn nút Đăng nhập"""
         ten_dn = self.ten_dang_nhap.get()
         mat_khau = self.mat_khau.get()
+        vai_tro = self.controller.xac_dinh_vai_tro(ten_dn, mat_khau)
+        # Kiểm tra thông tin đăng nhập
         if self.controller.xu_ly_dang_nhap(ten_dn, mat_khau):
+            # Lưu hoặc xóa thông tin đăng nhập nếu cần
             if self.remember_var.get():
-                self.save_login_info_to_db(ten_dn, mat_khau)
+                self.luu_thong_tin_dn_vao_db(ten_dn, mat_khau)
             else:
-                self.clear_login_info_from_db(ten_dn)
+                self.xoa_thong_tin_dn_tu_db(ten_dn)
 
+            # Gọi callback với vai_tro
             if self.on_login_success:
-                self.on_login_success()  # Gọi callback chuyển sang giao diện chính
+                self.on_login_success(vai_tro)  # Truyền vai_tro vào callback
             self.root.destroy()
         else:
             messagebox.showerror("Thất bại!", "Tên đăng nhập hoặc mật khẩu không đúng!")
 
-    def load_login_info(self):
+    def tai_thong_tin_dn(self):
         """Tải thông tin đăng nhập từ cơ sở dữ liệu"""
         db = Database()
         try:
@@ -105,7 +110,7 @@ class View_dang_nhap:
         finally:
             del db
 
-    def save_login_info_to_db(self, ten_dn, mat_khau):
+    def luu_thong_tin_dn_vao_db(self, ten_dn, mat_khau):
         """Lưu thông tin đăng nhập vào cơ sở dữ liệu"""
         db = Database()
         try:
@@ -116,7 +121,7 @@ class View_dang_nhap:
         finally:
             del db
 
-    def clear_login_info_from_db(self, ten_dn):
+    def xoa_thong_tin_dn_tu_db(self, ten_dn):
         """Xóa thông tin ghi nhớ đăng nhập trong cơ sở dữ liệu"""
         db = Database()
         try:

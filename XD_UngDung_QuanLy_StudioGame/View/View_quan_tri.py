@@ -41,19 +41,38 @@ class ViewQuanTri(tk.Frame):
                 print(f"Hàm {ten_ham} không tồn tại trong controller")
         return _wrapper
 
-    def hien_thi_danh_sach_nguoi_dung(self, data):
-        """Hiển thị danh sách người dùng trong bảng"""
-        self._xoa_bieu_do()
-        tree = ttk.Treeview(self.right_frame, columns=("ID", "Tên", "Vai trò", "Email", "Ngày đăng ký"), show="headings")
-        tree.heading("ID", text="ID")
-        tree.heading("Tên", text="Tên")
-        tree.heading("Vai trò", text="Vai trò")
-        tree.heading("Email", text="Email")
-        tree.heading("Ngày đăng ký", text="Ngày đăng ký")
-        tree.pack(fill=tk.BOTH, expand=True)
+    def hien_thi_danh_sach_nguoi_dung(self):
+        """Hiển thị danh sách người dùng trong bảng từ CSDL"""
+        self._hien_label_title("Danh sách người dùng")  # Thêm tiêu đề
 
+        # Truy vấn dữ liệu từ CSDL
+        try:
+            query = "SELECT mand, ten_dang_nhap, vai_tro, email, ngay_dang_ky FROM nguoi_dung"
+            data = self.controller.database.fetch_all(
+                query)  # Giả sử controller có thuộc tính `database` để thao tác với CSDL
+        except Exception as e:
+            messagebox.showerror("Lỗi", f"Lỗi khi tải dữ liệu: {e}")
+            return
+
+        # Tạo Treeview
+        tree = ttk.Treeview(self.right_frame, columns=("mand", "ten_dang_nhap", "vai_tro", "email", "ngay_dang_ky"),
+                            show="headings")
+        tree.heading("mand", text="ID")
+        tree.heading("ten_dang_nhap", text="Tên đăng nhập")
+        tree.heading("vai_tro", text="Vai trò")
+        tree.heading("email", text="Email")
+        tree.heading("ngay_dang_ky", text="Ngày đăng ký")
+        tree.column("mand", width=50, anchor="center")
+        tree.column("ten_dang_nhap", width=150, anchor="w")
+        tree.column("vai_tro", width=120, anchor="w")
+        tree.column("email", width=200, anchor="w")
+        tree.column("ngay_dang_ky", width=100, anchor="center")
+        tree.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+
+        # Thêm dữ liệu vào Treeview
         for row in data:
-            tree.insert("", "end", values=(row["mand"], row["ten_dang_nhap"], row["vai_tro"], row["email"], row["ngay_dang_ky"]))
+            tree.insert("", "end",
+                        values=(row["mand"], row["ten_dang_nhap"], row["vai_tro"], row["email"], row["ngay_dang_ky"]))
 
     def hien_thi_bieu_do_luong(self, data):
         """Hiển thị biểu đồ tổng lương theo phòng ban"""

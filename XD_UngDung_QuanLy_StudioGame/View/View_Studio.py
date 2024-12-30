@@ -14,6 +14,13 @@ class StudioForm:
         self.controllers = StudioFormController(self)
         self.controllers.create_info_section(self.frame)
         self.controllers.create_graph_section(self.frame)
+        # Thêm tiêu đề
+        self.tao_tieu_de("Quản lý studio")
+
+    def tao_tieu_de(self, tieu_de_text):
+        """Tạo tiêu đề ở phía trên giao diện"""
+        tieu_de = tk.Label(self, text=tieu_de_text, font=("San Francisco", 16, "bold"), bg="#f8f9fa", fg="#333")
+        tieu_de.pack(pady=10)
 
 
 

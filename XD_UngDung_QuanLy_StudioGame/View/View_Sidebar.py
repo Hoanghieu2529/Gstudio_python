@@ -2,15 +2,20 @@ import os
 from PIL import Image, ImageTk
 import tkinter as tk
 
+
+
 class Sidebar(tk.Frame):
-    def __init__(self, master, hien_thi_form):
+    def __init__(self, master, hien_thi_form, vai_tro):
         super().__init__(master, bg="#2C2C2E", width=200, height=600)
         self.pack(side=tk.LEFT, fill=tk.Y, padx=0)
 
+        self.vai_tro = vai_tro  # Vai trò của người dùng
         self.nut_chinh = {}
         self.khung_menu_con = {}  # Lưu trữ frame cho từng submenu
         self.nut_duoc_chon = None  # Theo dõi nút được chọn hiện tại
         self.icons = {}  # Lưu trữ các hình ảnh để tránh load lại nhiều lần
+        self.hien_thi_form = hien_thi_form
+        self.vai_tro = vai_tro
 
         # Đường dẫn tới thư mục Images
         self.icon_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), "Images")
@@ -18,12 +23,25 @@ class Sidebar(tk.Frame):
         # Cấu trúc các menu chính và phụ với icon tương ứng
         cau_truc_menu = {
             "Điều hành": [("Quản trị", "quan_tri.png"), ("Studio - Báo cáo", "studio.png"), ("Phòng ban", "phong_ban.png")],
-            "Nhân sự": [("Nhân viên", "nhan_vien.png"),  ("Báo cáo nhân sự", "bao_cao.png"), ("Tính lương", "tinh_luong.png")],
+            "Nhân sự": [("Nhân viên", "nhan_vien.png"), ("Báo cáo nhân sự", "bao_cao.png"), ("Tính lương", "tinh_luong.png")],
             "Công việc": [("Dự án", "du_an.png"), ("Báo cáo tiến độ", "bao_cao_tien_do.png")],
             "Tài chính": [("Chi phí", "chi_phi.png"), ("Doanh thu", "doanh_thu.png"), ("Báo cáo tổng hợp", "tong_hop.png")]
         }
 
+        # Quy định các menu cần ẩn dựa trên vai trò
+        menu_bi_an = {
+            "nguoi dung": ["Điều hành"],
+            "kiem thu": ["Điều hành", "Tài chính"],
+            "ke toan": ["Nhân sự"],
+        }
+
+        # Xác định các menu cần ẩn dựa trên vai_tro
+        an_menu = menu_bi_an.get(self.vai_tro, [])
+
         for menu_chinh, menu_phu in cau_truc_menu.items():
+            if menu_chinh in an_menu:
+                continue  # Bỏ qua menu chính nếu bị ẩn
+
             # Thêm menu chính
             nut_menu_chinh = tk.Button(
                 self,
@@ -99,12 +117,13 @@ class Sidebar(tk.Frame):
 
     def tuy_chon_mau(self, tuy_chon, hien_thi_form):
         """Thay đổi màu nút khi được chọn"""
+        if tuy_chon not in self.nut_chinh:
+            print(f"Lỗi: Tùy chọn '{tuy_chon}' không tồn tại trong self.nut_chinh.")
+            return
+
         # Reset màu tất cả các nút
-        for nut, _ in self.nut_chinh.items():
-            if nut in self.khung_menu_con:
-                self.nut_chinh[nut].config(bg="#1C1C1E", fg="white")
-            else:
-                self.nut_chinh[nut].config(bg="#333333", fg="white")
+        for nut in self.nut_chinh.values():
+            nut.config(bg="#333333", fg="white")
 
         # Đổi màu nút được chọn
         nut_duoc_chon = self.nut_chinh[tuy_chon]
@@ -152,15 +171,37 @@ class Sidebar(tk.Frame):
             activebackground="#FF5252",
             activeforeground="white",
             relief="flat",
-            command=lambda: hien_thi_form("Đăng xuất")
+            command=self.dang_xuat
         ).pack(fill=tk.X, padx=0, pady=5)
 
-# Test
+    def dang_xuat(self):
+        """Xử lý đăng xuất"""
+        self.master.destroy()  # Đóng cửa sổ chính
+        self.gd_dang_nhap_lai()  # Hiển thị lại giao diện đăng nhập
+
+    def gd_dang_nhap_lai(self):
+        """Hiển thị lại giao diện đăng nhập"""
+        from View.View_dang_nhap import View_dang_nhap
+        from controllers.controller_dang_nhap import controller_dang_nhap
+        login_root = tk.Tk()  # Tạo cửa sổ đăng nhập mới
+        login_controller = controller_dang_nhap()
+
+        def khi_dang_nhap_thanh_cong(vai_tro):
+            """Chuyển sang giao diện chính sau khi đăng nhập thành công."""
+            login_root.destroy()  # Đóng cửa sổ đăng nhập
+            from main import ham_chinh
+            ham_chinh(vai_tro)
+
+            # Hiển thị giao diện đăng nhập
+        login_view = View_dang_nhap(login_root, login_controller, khi_dang_nhap_thanh_cong)
+        login_root.mainloop()
+
+# Kiểm thử sidebar
 if __name__ == "__main__":
     def mock_callback(option):
         print(f"Selected: {option}")
 
     root = tk.Tk()
     root.geometry("300x600")
-    sidebar = Sidebar(root, mock_callback)
+    sidebar = Sidebar(root, mock_callback, vai_tro="nguoi dung")
     root.mainloop()

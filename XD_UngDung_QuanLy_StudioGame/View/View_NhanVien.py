@@ -50,6 +50,9 @@ class Nhan_vien_form(KhungCoSo):
         super().__init__(master, bg="#f8f9fa")
         self.pack(fill=tk.BOTH, expand=True)
 
+        # Thêm tiêu đề
+        self.tao_tieu_de("Quản lý Nhân viên")
+
         # List giá trị dropdown
         self.vai_tro = ['','quan tri vien', 'lap trinh vien', 'kiem thu', 'nguoi dung', 'khach hang']
         self.phong_ban = ['','Ban Điều Hành', 'IT', 'Nhân sự', 'Tài chính', 'Marketing', 'Bán hàng']
@@ -58,6 +61,11 @@ class Nhan_vien_form(KhungCoSo):
         self.tao_thanh_cong_cu()
         self.tao_bang_du_lieu()
         self.cap_nhat_du_lieu()
+
+    def tao_tieu_de(self, tieu_de_text):
+        """Tạo tiêu đề ở phía trên giao diện"""
+        tieu_de = tk.Label(self, text=tieu_de_text, font=("San Francisco", 16, "bold"), bg="#f8f9fa", fg="#333")
+        tieu_de.pack(pady=10)
 
     def tao_thanh_cong_cu(self):
         """Tạo thanh công cụ"""

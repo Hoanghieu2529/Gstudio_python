@@ -53,6 +53,16 @@ class Database:
             logging.error("Error fetching all: %s", err)
             return []
 
+    def fetch_all_phong_ban(self):
+        """Lấy tất cả thông tin từ bảng phong_ban."""
+        query = "SELECT * FROM phong_ban"
+        try:
+            result = self.fetch_all(query)
+            return result
+        except Exception as e:
+            print(f"Lỗi khi lấy dữ liệu phòng ban: {e}")
+            return []
+
     def __enter__(self):
         """Bắt đầu sử dụng kết nối trong khối with"""
         return self

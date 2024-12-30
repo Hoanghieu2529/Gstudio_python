@@ -1,47 +1,119 @@
 import tkinter as tk
-from tkinter import ttk
-from controllers import DuAnFormController
+from tkinter import ttk, messagebox
+from tkcalendar import DateEntry
 
-class DuAnForm:
-    def __init__(self, master):
-        self.frame = tk.Frame(master, bg="#f8f9fa")
-        self.frame.pack(fill=tk.BOTH, expand=True)
-        self.controller = DuAnFormController(self)
+class DuAnForm(tk.Frame):
+    def __init__(self, master, controller):
+        super().__init__(master)
+        self.controller = controller
+        self.pack(fill=tk.BOTH, expand=True)
+        self.tao_giao_dien()
 
-        self.create_toolbar(self.frame)
-        self.create_treeview(self.frame)
+    def tao_giao_dien(self):
+        """Tạo giao diện Quản lý dự án"""
+        tk.Label(self, text="Quản lý Dự án", font=("San Francisco", 16)).pack(pady=10)
 
-    def create_toolbar(self, parent_frame):
-        toolbar = tk.Frame(parent_frame, bg="#f8f9fa")
-        toolbar.pack(fill=tk.X, pady=10)
+        # Thanh công cụ
+        thanh_cong_cu = tk.Frame(self)
+        thanh_cong_cu.pack(fill=tk.X, pady=10)
 
-        create_btn = tk.Button(toolbar, text="Thêm mới", command=self.controller.create_record, bg="#f8f9fa")
-        read_btn = tk.Button(toolbar, text="Đọc", command=self.controller.read_record, bg="#f8f9fa")
-        update_btn = tk.Button(toolbar, text="Cập nhật", command=self.controller.update_record, bg="#f8f9fa")
-        delete_btn = tk.Button(toolbar, text="Xóa", command=self.controller.delete_record, bg="#f8f9fa")
+        tk.Button(thanh_cong_cu, text="Thêm mới", command=self.mo_form_them).pack(side=tk.LEFT, padx=5)
+        tk.Button(thanh_cong_cu, text="Cập nhật", command=self.mo_form_cap_nhat).pack(side=tk.LEFT, padx=5)
+        tk.Button(thanh_cong_cu, text="Xóa", command=self.xoa_du_an).pack(side=tk.LEFT, padx=5)
 
-        create_btn.pack(side=tk.LEFT, padx=10)
-        read_btn.pack(side=tk.LEFT, padx=10)
-        update_btn.pack(side=tk.LEFT, padx=10)
-        delete_btn.pack(side=tk.LEFT, padx=10)
+        # Bảng dữ liệu
+        cot = ("Mã Dự Án", "Tên Dự Án", "Mô Tả", "Ngày Bắt Đầu", "Ngày Kết Thúc", "Trạng Thái")
+        self.bang_du_an = ttk.Treeview(self, columns=cot, show="headings")
 
-    def create_treeview(self, parent_frame):
-        columns_duan = ("Số thứ tự", "Mã dự án", "Tên dự án", "Mô tả dự án", "Ngày bắt đầu", "Ngày kết thúc", "Trạng thái")
-        self.tree_duan = ttk.Treeview(parent_frame, columns=columns_duan, show="headings")
+        for c in cot:
+            self.bang_du_an.heading(c, text=c)
+            self.bang_du_an.column(c, width=150)
 
-        for col in columns_duan:
-            self.tree_duan.heading(col, text=col)
-            self.tree_duan.column(col, width=100)  # Auto fit các cột
+        self.bang_du_an.pack(fill=tk.BOTH, expand=True)
 
-        self.tree_duan.pack(fill=tk.BOTH, expand=True)
+    def hien_thi_du_lieu(self, du_lieu):
+        """Hiển thị dữ liệu từ model"""
+        for row in self.bang_du_an.get_children():
+            self.bang_du_an.delete(row)
+        for du_an in du_lieu:
+            self.bang_du_an.insert("", "end", values=(du_an["mada"], du_an["ten_du_an"], du_an["mo_ta"],
+                                                      du_an["ngay_bat_dau"], du_an["ngay_ket_thuc"], du_an["trang_thai"]))
 
-        h_scroll = ttk.Scrollbar(parent_frame, orient="horizontal", command=self.tree_duan.xview)
-        self.tree_duan.configure(xscrollcommand=h_scroll.set)
-        h_scroll.pack(side=tk.BOTTOM, fill=tk.X)
+    def mo_form_them(self):
+        """Mở form thêm mới dự án"""
+        self.mo_form_chi_tiet("Thêm dự án", {}, self.controller.them_du_an)
 
-if __name__ == "__main__":
-    root = tk.Tk()
-    root.title("Quản lý Dự án")
-    root.geometry("800x600")
-    app = DuAnForm(root)
-    root.mainloop()
+    def mo_form_cap_nhat(self):
+        """Mở form cập nhật dự án"""
+        muc_chon = self.bang_du_an.selection()
+        if not muc_chon:
+            messagebox.showwarning("Cảnh báo", "Vui lòng chọn một dự án để cập nhật")
+            return
+        du_lieu = self.bang_du_an.item(muc_chon)["values"]
+        du_an = {
+            "mada": du_lieu[0],
+            "ten_du_an": du_lieu[1],
+            "mo_ta": du_lieu[2],
+            "ngay_bat_dau": du_lieu[3],
+            "ngay_ket_thuc": du_lieu[4],
+            "trang_thai": du_lieu[5],
+        }
+        self.mo_form_chi_tiet("Cập nhật dự án", du_an, self.controller.cap_nhat_du_an)
+
+    def mo_form_chi_tiet(self, tieu_de, du_an, ham_gui):
+        """Mở form chi tiết (Thêm hoặc Cập nhật)"""
+        form = tk.Toplevel(self)
+        form.title(tieu_de)
+        form.geometry("400x300")
+
+        tk.Label(form, text="Tên Dự Án").grid(row=0, column=0, padx=10, pady=5, sticky="e")
+        tk.Label(form, text="Mô Tả").grid(row=1, column=0, padx=10, pady=5, sticky="e")
+        tk.Label(form, text="Ngày Bắt Đầu").grid(row=2, column=0, padx=10, pady=5, sticky="e")
+        tk.Label(form, text="Ngày Kết Thúc").grid(row=3, column=0, padx=10, pady=5, sticky="e")
+        tk.Label(form, text="Trạng Thái").grid(row=4, column=0, padx=10, pady=5, sticky="e")
+
+        ten_du_an = tk.Entry(form)
+        ten_du_an.grid(row=0, column=1, padx=10, pady=5)
+        ten_du_an.insert(0, du_an.get("ten_du_an", ""))
+
+        mo_ta = tk.Entry(form)
+        mo_ta.grid(row=1, column=1, padx=10, pady=5)
+        mo_ta.insert(0, du_an.get("mo_ta", ""))
+
+        ngay_bat_dau = DateEntry(form, date_pattern="yyyy-mm-dd")
+        ngay_bat_dau.grid(row=2, column=1, padx=10, pady=5)
+        ngay_bat_dau.set_date(du_an.get("ngay_bat_dau", "2000-01-01"))
+
+        ngay_ket_thuc = DateEntry(form, date_pattern="yyyy-mm-dd")
+        ngay_ket_thuc.grid(row=3, column=1, padx=10, pady=5)
+        ngay_ket_thuc.set_date(du_an.get("ngay_ket_thuc", "2000-01-01"))
+
+        trang_thai = ttk.Combobox(form, values=["hoàn thành", "đang thực hiện", "chưa hoàn thành", "hủy bỏ"])
+        trang_thai.grid(row=4, column=1, padx=10, pady=5)
+        trang_thai.set(du_an.get("trang_thai", "hoàn thành"))
+
+        def gui_du_lieu():
+            data = {
+                "ten_du_an": ten_du_an.get(),
+                "mo_ta": mo_ta.get(),
+                "ngay_bat_dau": ngay_bat_dau.get(),
+                "ngay_ket_thuc": ngay_ket_thuc.get(),
+                "trang_thai": trang_thai.get(),
+            }
+            if "mada" in du_an:
+                data["mada"] = du_an["mada"]
+            ham_gui(data)
+            form.destroy()
+
+        tk.Button(form, text="Lưu", command=gui_du_lieu).grid(row=5, column=0, columnspan=2, pady=10)
+
+    def xoa_du_an(self):
+        """Xóa dự án được chọn"""
+        muc_chon = self.bang_du_an.selection()
+        if not muc_chon:
+            messagebox.showwarning("Cảnh báo", "Vui lòng chọn một dự án để xóa")
+            return
+        xac_nhan = messagebox.askyesno("Xác nhận", "Bạn có chắc chắn muốn xóa dự án này không?")
+        if xac_nhan:
+            du_an_id = self.bang_du_an.item(muc_chon)["values"][0]
+            self.controller.xoa_du_an(du_an_id)

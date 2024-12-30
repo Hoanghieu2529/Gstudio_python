@@ -12,13 +12,20 @@ class NguoiDungForm:
         self.frame = tk.Frame(master, bg="#f8f9fa")
         self.frame.pack(fill=tk.BOTH, expand=True)
 
+
         try:
             master.iconphoto(False, PhotoImage(file="Images/Logo_studio.png"))  # Đặt icon
         except Exception as e:
             print(f"Lỗi khi tải logo: {e}")
 
+        self.tao_tieude(self.frame)
         self.create_toolbar(self.frame)
         self.create_treeview(self.frame)
+
+    def tao_tieude(self, parent_frame):
+        """Tạo tiêu đề cho giao diện"""
+        title = tk.Label(parent_frame, text="Quản lý Người Dùng", font=("San Francisco", 16, "bold"), bg="#f8f9fa", fg="#333")
+        title.pack(pady=10)
 
     def create_toolbar(self, parent_frame):
         """Tạo thanh công cụ CRUD"""
