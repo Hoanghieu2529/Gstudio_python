@@ -8,108 +8,78 @@ CREATE TABLE nguoi_dung (
     ghi_nho TINYINT(1) DEFAULT 0
 );
 
-INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro,ngay_dang_ky) VALUES (241201,'hieund',123, '23210111@ms.uit.edu.vn','quan tri vien','2024-09-01');
-INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro,ngay_dang_ky) VALUES (241202,'ducna',123,'23210102@ms.uit.edu.vn','lap trinh vien','2024-10-02');
-INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro,ngay_dang_ky) VALUES (241203,'dinhhtn',123,'23210099@ms.uit.edu.vn','kiem thu','2024-11-03');
-INSERT INTO nguoi_dung (mand, ten_dang_nhap,mat_khau,email,vai_tro,ngay_dang_ky) VALUES (241204,'nhanvien',123,'tknhanvien@ms.uit.edu.vn','nguoi dung','2024-12-01');
-
-select * from nguoi_dung;
-
-
-
+INSERT INTO nguoi_dung (mand, ten_dang_nhap, mat_khau, email, vai_tro, ngay_dang_ky) VALUES 
+(241201,'hieund',123, '23210111@ms.uit.edu.vn','quan tri vien','2024-09-01'),
+(241202,'ducna',123,'23210102@ms.uit.edu.vn','lap trinh vien','2024-10-02'),
+(241203,'dinhhtn',123,'23210099@ms.uit.edu.vn','kiem thu','2024-11-03'),
+(241204,'nhanvien',123,'tknhanvien@ms.uit.edu.vn','nguoi dung','2024-12-01');
 
 CREATE TABLE phong_ban (
-                           mapb INT PRIMARY KEY,
-                           ten_phong_ban VARCHAR(100) NOT NULL,
-                           mo_ta TEXT
+    mapb INT PRIMARY KEY,
+    ten_phong_ban VARCHAR(100) NOT NULL,
+    mo_ta TEXT
 );
--- Dữ liệu bảng phong_ban
-INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('001', 'Ban Điều Hành', 'Điều hành mọi hoạt động công ty');
-INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('002', 'IT', 'Quản lý hệ thống IT');
-INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('003', 'Nhân sự', 'Chính sách và phúc lợi, lương thưởng');
-INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('004', 'Tài chính', 'Quản lý tài chính công ty');
-INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('005', 'Marketing', 'Thực hiện các hành động marketing và quản lý thương hiệu');
-INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES ('006', 'Bán hàng', 'Tìm kiếm khách hàng và bán hàng');
+
+INSERT INTO phong_ban (mapb, ten_phong_ban, mo_ta) VALUES 
+('001', 'Ban Điều Hành', 'Điều hành mọi hoạt động công ty'),
+('002', 'IT', 'Quản lý hệ thống IT'),
+('003', 'Nhân sự', 'Chính sách và phúc lợi, lương thưởng'),
+('004', 'Tài chính', 'Quản lý tài chính công ty'),
+('005', 'Marketing', 'Thực hiện các hành động marketing và quản lý thương hiệu'),
+('006', 'Bán hàng', 'Tìm kiếm khách hàng và bán hàng');
 
 CREATE TABLE nhan_vien (
-   manv INT PRIMARY KEY,
-   ho_ten VARCHAR(100) NOT NULL,
-   email VARCHAR(100) UNIQUE NOT NULL,
-   chuc_vu VARCHAR(50),
-   mapb INT,
-   luong_cb INT
+    manv INT PRIMARY KEY,
+    ho_ten VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    chuc_vu VARCHAR(50),
+    mapb INT,
+    luong_cb INT,
+    CONSTRAINT fk_nhan_vien_phong_ban FOREIGN KEY (mapb) REFERENCES phong_ban(mapb)
 );
 
 CREATE TABLE khach_hang (
-                            makh INT AUTO_INCREMENT PRIMARY KEY,
-                            ten_khach_hang VARCHAR(100) NOT NULL,
-                            email VARCHAR(100) UNIQUE NOT NULL,
-                            so_dien_thoai VARCHAR(15),
-                            dia_chi TEXT
+    makh INT AUTO_INCREMENT PRIMARY KEY,
+    ten_khach_hang VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    so_dien_thoai VARCHAR(15),
+    dia_chi TEXT
 );
 
 CREATE TABLE du_an (
-               mada INT AUTO_INCREMENT PRIMARY KEY,
-               ten_du_an VARCHAR(100) NOT NULL,
-               mo_ta TEXT,
-               ngay_bat_dau DATE NOT NULL,
-               ngay_ket_thuc DATE NOT NULL,
-               makh INT,
-               trang_thai VARCHAR(50)
+    mada INT AUTO_INCREMENT PRIMARY KEY,
+    ten_du_an VARCHAR(100) NOT NULL,
+    mo_ta TEXT,
+    ngay_bat_dau DATE NOT NULL,
+    ngay_ket_thuc DATE NOT NULL,
+    makh INT,
+    trang_thai VARCHAR(50),
+    CONSTRAINT fk_du_an_khach_hang FOREIGN KEY (makh) REFERENCES khach_hang(makh)
 );
 
 CREATE TABLE cong_viec (
-                           macv INT PRIMARY KEY,
-                           mada INT,
-                           ten_cong_viec VARCHAR(100) NOT NULL,
-                           mo_ta TEXT,
-                           giao_cho INT,
-                           han_chot DATE NOT NULL,
-                           trang_thai ENUM('chua_thuc_hien', 'dang_thuc_hien', 'hoan_thanh') DEFAULT 'chua_thuc_hien'
+    macv INT PRIMARY KEY,
+    mada INT,
+    ten_cong_viec VARCHAR(100) NOT NULL,
+    mo_ta TEXT,
+    giao_cho INT,
+    han_chot DATE NOT NULL,
+    trang_thai ENUM('chua_thuc_hien', 'dang_thuc_hien', 'hoan_thanh') DEFAULT 'chua_thuc_hien',
+    CONSTRAINT fk_cong_viec_du_an FOREIGN KEY (mada) REFERENCES du_an(mada),
+    CONSTRAINT fk_cong_viec_nhan_vien FOREIGN KEY (giao_cho) REFERENCES nhan_vien(manv)
 );
 
 CREATE TABLE bang_cong (
-                           mabc INT PRIMARY KEY,
-                           manv INT,
-                           macv INT,
-                           ngay_cong INT NOT NULL,
-                           ngay_lam DATE NOT NULL,
-                           so_luong_san_pham INT
+    mabc INT PRIMARY KEY,
+    manv INT,
+    macv INT,
+    ngay_cong INT NOT NULL,
+    ngay_lam DATE NOT NULL,
+    so_luong_san_pham INT,
+    CONSTRAINT fk_bang_cong_nhan_vien FOREIGN KEY (manv) REFERENCES nhan_vien(manv),
+    CONSTRAINT fk_bang_cong_cong_viec FOREIGN KEY (macv) REFERENCES cong_viec(macv)
 );
-
--- Thêm khóa ngoại cho bảng nhan_vien liên kết với bảng phong_ban
-ALTER TABLE nhan_vien
-    ADD CONSTRAINT fk_nhan_vien_phong_ban
-        FOREIGN KEY (mapb) REFERENCES phong_ban(mapb);
-
--- Thêm khóa ngoại cho bảng du_an liên kết với bảng khach_hang
-ALTER TABLE du_an
-    ADD CONSTRAINT fk_du_an_khach_hang
-        FOREIGN KEY (makh) REFERENCES khach_hang(makh);
-
--- Thêm khóa ngoại cho bảng cong_viec liên kết với bảng du_an
-ALTER TABLE cong_viec
-    ADD CONSTRAINT fk_cong_viec_du_an
-        FOREIGN KEY (mada) REFERENCES du_an(mada);
-
--- Thêm khóa ngoại cho bảng cong_viec liên kết với bảng nhan_vien
-ALTER TABLE cong_viec
-    ADD CONSTRAINT fk_cong_viec_nhan_vien
-        FOREIGN KEY (giao_cho) REFERENCES nhan_vien(manv);
-
--- Thêm khóa ngoại cho bảng bang_cong liên kết với bảng nhan_vien
-ALTER TABLE bang_cong
-    ADD CONSTRAINT fk_bang_cong_nhan_vien
-        FOREIGN KEY (manv) REFERENCES nhan_vien(manv);
-
--- Thêm khóa ngoại cho bảng bang_cong liên kết với bảng cong_viec
-ALTER TABLE bang_cong
-    ADD CONSTRAINT fk_bang_cong_cong_viec
-        FOREIGN KEY (macv) REFERENCES cong_viec(macv);
-
-
-
--- Du liệu bảng nhân vien
+-- dữ liệu nhân viên
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (101, 'Nguyễn Duy Hiếu', 'hieund1@ms.uit.edu.vn', 'Quản lý', '001', 82000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (102, 'Hồ Thị Ngọc Định', 'dinhho@ms.uit.edu.vn', 'Quản lý', '001', 69000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (103, 'Nguyễn Anh Đức', 'ducad@ms.uit.edu.vn', 'Quản lý', '003', 55000000);
@@ -175,8 +145,61 @@ INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (162
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (163, 'Trương Quốc Duy', 'trương.duy@ms.uit.edu.vn', 'Trưởng phòng', '004', 43000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (164, 'Trần Tấn Phát', 'trần.phát@ms.uit.edu.vn', 'Nhân viên', '003', 17000000);
 INSERT INTO nhan_vien (manv, ho_ten, email, chuc_vu, mapb, luong_cb) VALUES (165, 'Nguyễn Duy Hiếu', 'nguyễn.hiếu@ms.uit.edu.vn', 'Trưởng phòng', '003', 28000000);
-
--- them du lieu du an
+-- dữ liệu khách hàng
+INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) VALUES
+('Mai Khánh Toàn', 'mai.khánh.toàn@example.com', '0923456789', 'Đà Nẵng, Việt Nam'),
+('Ngô Minh Tuấn', 'ngô.minh.tuấn@example.com', '0934567890', 'Bình Dương, Việt Nam'),
+('Nguyễn Hoàng Lộc', 'nguyễn.hoàng.lộc@example.com', '0967890123', 'Hà Nội, Việt Nam'),
+('Trần Hải Minh', 'trần.hải.minh@example.com', '0978901234', 'Vũng Tàu, Việt Nam'),
+('Bùi Anh Dũng', 'bùi.anh.dũng@example.com', '0990123456', 'Hải Phòng, Việt Nam'),
+('Lý Thị Lan', 'lý.thị.lan@example.com', '0990123456', 'Hà Nội, Việt Nam'),
+('Đoàn Hữu Đức', 'đoàn.hữu.đức@example.com', '0901234567', 'Hải Phòng, Việt Nam'),
+('Vũ Lan Anh', 'vũ.lan.anh@example.com', '0945678901', 'Đà Nẵng, Việt Nam'),
+('Phạm Hoàng Duy', 'phạm.hoàng.duy@example.com', '0945678901', 'Cần Thơ, Việt Nam'),
+('Bùi Lan Anh', 'bùi.lan.anh@example.com', '0967890123', 'Hồ Chí Minh, Việt Nam'),
+('Trần Hữu Tâm', 'trần.hữu.tâm@example.com', '0978901234', 'Hải Phòng, Việt Nam'),
+('Nguyễn Văn An', 'nguyễn.văn.an@example.com', '0990123456', 'Vũng Tàu, Việt Nam'),
+('Hồ Thị Hoa', 'hồ.thị.hoa@example.com', '0934567890', 'Lào Cai, Việt Nam'),
+('Trần Thị Bình', 'trần.thị.bình@example.com', '0989012345', 'Cần Thơ, Việt Nam'),
+('Nguyễn Hoàng Hải', 'nguyễn.hoàng.hải@example.com', '0990123456', 'Nha Trang, Việt Nam'),
+('Mai Khánh Hòa', 'mai.khánh.hòa@example.com', '0923456789', 'Hà Nội, Việt Nam'),
+('Lê Quang Sơn', 'lê.quang.sơn@example.com', '0912345678', 'Hà Nội, Việt Nam'),
+('Ngô Minh Quân', 'ngô.minh.quân@example.com', '0990123456', 'Đà Nẵng, Việt Nam'),
+('Lê Minh Cường', 'lê.minh.cường@example.com', '0945678901', 'Cần Thơ, Việt Nam'),
+('Nguyễn Thị Lan', 'nguyễn.thị.lan@example.com', '0989012345', 'Cần Thơ, Việt Nam'),
+('Phạm Bình Lộc', 'phạm.bình.lộc@example.com', '0967890123', 'Đà Nẵng, Việt Nam'),
+('Đoàn Hữu Tiến', 'đoàn.hữu.tiến@example.com', '0934567890', 'Vũng Tàu, Việt Nam'),
+('Lê Tuấn Kiệt', 'lê.tuấn.kiệt@example.com', '0934567890', 'Vũng Tàu, Việt Nam'),
+('Phạm Tuấn Tài', 'phạm.tuấn.tài@example.com', '0967890123', 'Hải Phòng, Việt Nam'),
+('Hồ Thị Lan', 'hồ.thị.lan@example.com', '0989012345', 'Hồ Chí Minh, Việt Nam');
+INSERT INTO khach_hang (makh, ten_khach_hang, email, so_dien_thoai, dia_chi)
+VALUES
+    (26, 'Khách Hàng 26', 'kh26@example.com', '0900123456', 'Hà Nội, Việt Nam'),
+    (27, 'Khách Hàng 27', 'kh27@example.com', '0912345678', 'Đà Nẵng, Việt Nam'),
+    (28, 'Khách Hàng 28', 'kh28@example.com', '0923456789', 'Hồ Chí Minh, Việt Nam'),
+    (29, 'Khách Hàng 29', 'kh29@example.com', '0934567890', 'Cần Thơ, Việt Nam'),
+    (30, 'Khách Hàng 30', 'kh30@example.com', '0945678901', 'Hải Phòng, Việt Nam'),
+    (31, 'Khách Hàng 31', 'kh31@example.com', '0956789012', 'Nha Trang, Việt Nam'),
+    (32, 'Khách Hàng 32', 'kh32@example.com', '0967890123', 'Vũng Tàu, Việt Nam'),
+    (33, 'Khách Hàng 33', 'kh33@example.com', '0978901234', 'Bình Dương, Việt Nam'),
+    (34, 'Khách Hàng 34', 'kh34@example.com', '0989012345', 'Lào Cai, Việt Nam'),
+    (35, 'Khách Hàng 35', 'kh35@example.com', '0990123456', 'Đồng Nai, Việt Nam'),
+    (36, 'Khách Hàng 36', 'kh36@example.com', '0901234567', 'Thanh Hóa, Việt Nam'),
+    (37, 'Khách Hàng 37', 'kh37@example.com', '0912345678', 'Hà Nội, Việt Nam'),
+    (38, 'Khách Hàng 38', 'kh38@example.com', '0923456789', 'Đà Nẵng, Việt Nam'),
+    (39, 'Khách Hàng 39', 'kh39@example.com', '0934567890', 'Hồ Chí Minh, Việt Nam'),
+    (40, 'Khách Hàng 40', 'kh40@example.com', '0945678901', 'Cần Thơ, Việt Nam'),
+    (41, 'Khách Hàng 41', 'kh41@example.com', '0956789012', 'Hải Phòng, Việt Nam'),
+    (42, 'Khách Hàng 42', 'kh42@example.com', '0967890123', 'Nha Trang, Việt Nam'),
+    (43, 'Khách Hàng 43', 'kh43@example.com', '0978901234', 'Vũng Tàu, Việt Nam'),
+    (44, 'Khách Hàng 44', 'kh44@example.com', '0989012345', 'Bình Dương, Việt Nam'),
+    (45, 'Khách Hàng 45', 'kh45@example.com', '0990123456', 'Lào Cai, Việt Nam'),
+    (46, 'Khách Hàng 46', 'kh46@example.com', '0901234567', 'Đồng Nai, Việt Nam'),
+    (47, 'Khách Hàng 47', 'kh47@example.com', '0912345678', 'Thanh Hóa, Việt Nam'),
+    (48, 'Khách Hàng 48', 'kh48@example.com', '0923456789', 'Hà Nội, Việt Nam'),
+    (49, 'Khách Hàng 49', 'kh49@example.com', '0934567890', 'Đà Nẵng, Việt Nam'),
+    (50, 'Khách Hàng 50', 'kh50@example.com', '0945678901', 'Hồ Chí Minh, Việt Nam');
+--- dữ liệu dự án 
 INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh, trang_thai)
 VALUES
 ('Dự án Alpha', 'Hoàn thành đúng thời hạn.', '2023-01-01', '2023-06-30', 1, 'hoàn thành'),
@@ -231,63 +254,7 @@ VALUES
 ('Dự án Omega2', 'Phát triển ứng dụng truyền thông xã hội.', '2023-08-01', '2024-02-01', 48, 'hủy bỏ'),
 ('Dự án Alpha3', 'Tích hợp hệ thống thanh toán.', '2023-04-01', '2024-01-01', 49, 'hủy bỏ'),
 ('Dự án Beta3', 'Nâng cấp phần mềm kế toán.', '2023-06-01', '2024-01-01', 50, 'hủy bỏ');
-
--- them du lieu khach hang
-INSERT INTO khach_hang (ten_khach_hang, email, so_dien_thoai, dia_chi) VALUES
-('Mai Khánh Toàn', 'mai.khánh.toàn@example.com', '0923456789', 'Đà Nẵng, Việt Nam'),
-('Ngô Minh Tuấn', 'ngô.minh.tuấn@example.com', '0934567890', 'Bình Dương, Việt Nam'),
-('Nguyễn Hoàng Lộc', 'nguyễn.hoàng.lộc@example.com', '0967890123', 'Hà Nội, Việt Nam'),
-('Trần Hải Minh', 'trần.hải.minh@example.com', '0978901234', 'Vũng Tàu, Việt Nam'),
-('Bùi Anh Dũng', 'bùi.anh.dũng@example.com', '0990123456', 'Hải Phòng, Việt Nam'),
-('Lý Thị Lan', 'lý.thị.lan@example.com', '0990123456', 'Hà Nội, Việt Nam'),
-('Đoàn Hữu Đức', 'đoàn.hữu.đức@example.com', '0901234567', 'Hải Phòng, Việt Nam'),
-('Vũ Lan Anh', 'vũ.lan.anh@example.com', '0945678901', 'Đà Nẵng, Việt Nam'),
-('Phạm Hoàng Duy', 'phạm.hoàng.duy@example.com', '0945678901', 'Cần Thơ, Việt Nam'),
-('Bùi Lan Anh', 'bùi.lan.anh@example.com', '0967890123', 'Hồ Chí Minh, Việt Nam'),
-('Trần Hữu Tâm', 'trần.hữu.tâm@example.com', '0978901234', 'Hải Phòng, Việt Nam'),
-('Nguyễn Văn An', 'nguyễn.văn.an@example.com', '0990123456', 'Vũng Tàu, Việt Nam'),
-('Hồ Thị Hoa', 'hồ.thị.hoa@example.com', '0934567890', 'Lào Cai, Việt Nam'),
-('Trần Thị Bình', 'trần.thị.bình@example.com', '0989012345', 'Cần Thơ, Việt Nam'),
-('Nguyễn Hoàng Hải', 'nguyễn.hoàng.hải@example.com', '0990123456', 'Nha Trang, Việt Nam'),
-('Mai Khánh Hòa', 'mai.khánh.hòa@example.com', '0923456789', 'Hà Nội, Việt Nam'),
-('Lê Quang Sơn', 'lê.quang.sơn@example.com', '0912345678', 'Hà Nội, Việt Nam'),
-('Ngô Minh Quân', 'ngô.minh.quân@example.com', '0990123456', 'Đà Nẵng, Việt Nam'),
-('Lê Minh Cường', 'lê.minh.cường@example.com', '0945678901', 'Cần Thơ, Việt Nam'),
-('Nguyễn Thị Lan', 'nguyễn.thị.lan@example.com', '0989012345', 'Cần Thơ, Việt Nam'),
-('Phạm Bình Lộc', 'phạm.bình.lộc@example.com', '0967890123', 'Đà Nẵng, Việt Nam'),
-('Đoàn Hữu Tiến', 'đoàn.hữu.tiến@example.com', '0934567890', 'Vũng Tàu, Việt Nam'),
-('Lê Tuấn Kiệt', 'lê.tuấn.kiệt@example.com', '0934567890', 'Vũng Tàu, Việt Nam'),
-('Phạm Tuấn Tài', 'phạm.tuấn.tài@example.com', '0967890123', 'Hải Phòng, Việt Nam'),
-('Hồ Thị Lan', 'hồ.thị.lan@example.com', '0989012345', 'Hồ Chí Minh, Việt Nam');
-INSERT INTO khach_hang (makh, ten_khach_hang, email, so_dien_thoai, dia_chi)
-VALUES
-    (26, 'Khách Hàng 26', 'kh26@example.com', '0900123456', 'Hà Nội, Việt Nam'),
-    (27, 'Khách Hàng 27', 'kh27@example.com', '0912345678', 'Đà Nẵng, Việt Nam'),
-    (28, 'Khách Hàng 28', 'kh28@example.com', '0923456789', 'Hồ Chí Minh, Việt Nam'),
-    (29, 'Khách Hàng 29', 'kh29@example.com', '0934567890', 'Cần Thơ, Việt Nam'),
-    (30, 'Khách Hàng 30', 'kh30@example.com', '0945678901', 'Hải Phòng, Việt Nam'),
-    (31, 'Khách Hàng 31', 'kh31@example.com', '0956789012', 'Nha Trang, Việt Nam'),
-    (32, 'Khách Hàng 32', 'kh32@example.com', '0967890123', 'Vũng Tàu, Việt Nam'),
-    (33, 'Khách Hàng 33', 'kh33@example.com', '0978901234', 'Bình Dương, Việt Nam'),
-    (34, 'Khách Hàng 34', 'kh34@example.com', '0989012345', 'Lào Cai, Việt Nam'),
-    (35, 'Khách Hàng 35', 'kh35@example.com', '0990123456', 'Đồng Nai, Việt Nam'),
-    (36, 'Khách Hàng 36', 'kh36@example.com', '0901234567', 'Thanh Hóa, Việt Nam'),
-    (37, 'Khách Hàng 37', 'kh37@example.com', '0912345678', 'Hà Nội, Việt Nam'),
-    (38, 'Khách Hàng 38', 'kh38@example.com', '0923456789', 'Đà Nẵng, Việt Nam'),
-    (39, 'Khách Hàng 39', 'kh39@example.com', '0934567890', 'Hồ Chí Minh, Việt Nam'),
-    (40, 'Khách Hàng 40', 'kh40@example.com', '0945678901', 'Cần Thơ, Việt Nam'),
-    (41, 'Khách Hàng 41', 'kh41@example.com', '0956789012', 'Hải Phòng, Việt Nam'),
-    (42, 'Khách Hàng 42', 'kh42@example.com', '0967890123', 'Nha Trang, Việt Nam'),
-    (43, 'Khách Hàng 43', 'kh43@example.com', '0978901234', 'Vũng Tàu, Việt Nam'),
-    (44, 'Khách Hàng 44', 'kh44@example.com', '0989012345', 'Bình Dương, Việt Nam'),
-    (45, 'Khách Hàng 45', 'kh45@example.com', '0990123456', 'Lào Cai, Việt Nam'),
-    (46, 'Khách Hàng 46', 'kh46@example.com', '0901234567', 'Đồng Nai, Việt Nam'),
-    (47, 'Khách Hàng 47', 'kh47@example.com', '0912345678', 'Thanh Hóa, Việt Nam'),
-    (48, 'Khách Hàng 48', 'kh48@example.com', '0923456789', 'Hà Nội, Việt Nam'),
-    (49, 'Khách Hàng 49', 'kh49@example.com', '0934567890', 'Đà Nẵng, Việt Nam'),
-    (50, 'Khách Hàng 50', 'kh50@example.com', '0945678901', 'Hồ Chí Minh, Việt Nam');
-
--- cong viec
+-- dự liệu công việc
 INSERT INTO cong_viec (macv, mada, ten_cong_viec, mo_ta, giao_cho, han_chot, trang_thai)
 VALUES
     (01, 1, 'Thiết kế đồ họa nhân vật', 'Tạo mô hình 3D cho nhân vật chính', 101, '2024-02-15', 'dang_thuc_hien'),
@@ -300,50 +267,91 @@ VALUES
     (08, 5, 'Phát triển hệ thống nhiệm vụ', 'Tạo hệ thống nhiệm vụ tự động', 108, '2024-07-10', 'chua_thuc_hien'),
     (09, 6, 'Lập trình mạng', 'Phát triển hệ thống chơi đa người', 109, '2024-08-20', 'chua_thuc_hien'),
     (10, 7, 'Tối ưu hóa hiệu năng', 'Cải thiện hiệu năng cho các thiết bị cấu hình thấp', 110, '2024-09-15', 'dang_thuc_hien');
-
-
--- Thêm dữ liệu cho phòng Bán hàng
+-- thêm dữ liệu công cho phòng bán hàng:
 INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
-VALUES
-    (1, 109, 101, 22, '2024-01-10', 50),
-    (2, 111, 102, 17, '2024-01-11', 55),
-    (3, 112, 103, 16, '2024-01-12', 48);
+VALUES 
+(114, 114, 1, 20, '2024-01-01', 45),
+(123, 123, 2, 18, '2024-01-02', 30),
+(128, 128, 3, 22, '2024-01-03', 25),
+(135, 135, 4, 16, '2024-01-04', 40),
+(138, 138, 5, 19, '2024-01-05', 10),
+(147, 147, 6, 20, '2024-01-06', 35),
+(148, 148, 7, 21, '2024-01-07', 20),
+(153, 153, 8, 17, '2024-01-08', 15),
+(156, 156, 9, 25, '2024-01-09', 5),
+(158, 158, 10, 15, '2024-01-10', 50);
 
--- Thêm dữ liệu cho phòng Marketing
+-- dữ liệu công cho phòng marketing 
 INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
-VALUES
-    (4, 105, 201, 22, '2024-01-13', 30),
-    (5, 106, 202, 20, '2024-01-14', 32),
-    (6, 120, 203, 19, '2024-01-15', 28);
+VALUES 
+(105, 105, 1, 20, '2024-02-01', 45),
+(106, 106, 2, 18, '2024-02-02', 30),
+(109, 109, 3, 22, '2024-02-03', 25),
+(111, 111, 4, 16, '2024-02-04', 40),
+(112, 112, 5, 19, '2024-02-05', 10),
+(120, 120, 6, 20, '2024-02-06', 35),
+(122, 122, 7, 21, '2024-02-07', 20),
+(125, 125, 8, 17, '2024-02-08', 15),
+(129, 129, 9, 25, '2024-02-09', 5),
+(132, 132, 10, 15, '2024-02-10', 50),
+(133, 133, 1, 18, '2024-02-11', 30),
+(134, 134, 2, 22, '2024-02-12', 40),
+(141, 141, 3, 16, '2024-02-13', 25),
+(143, 143, 4, 19, '2024-02-14', 35),
+(146, 146, 5, 20, '2024-02-15', 45),
+(150, 150, 6, 21, '2024-02-16', 30),
+(155, 155, 7, 17, '2024-02-17', 10),
+(159, 159, 8, 25, '2024-02-18', 20),
+(160, 160, 9, 15, '2024-02-19', 45),
+(161, 161, 10, 20, '2024-02-20', 25);
 
--- Thêm dữ liệu cho phòng IT
+-- dữ liệu công cho phòng IT
 INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
-VALUES
-    (7, 113, 301, 19, '2024-01-16', 20),
-    (8, 167, 302, 19, '2024-01-17', 22),
-    (9, 121, 303, 22, '2024-01-18', 18);
-
--- Thêm dữ liệu cho phòng Quản lý
+VALUES 
+(107, 107, 1, 20, '2024-03-01', 45),
+(113, 113, 2, 18, '2024-03-02', 30),
+(121, 121, 3, 22, '2024-03-03', 25),
+(136, 136, 4, 16, '2024-03-04', 40),
+(144, 144, 5, 19, '2024-03-05', 10);
+-- dữ liệu công phòng ban điều hành
 INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
-VALUES
-    (10, 101, 401, 22, '2024-01-19', 10),
-    (11, 102, 402, 22, '2024-01-20', 12),
-    (12, 110, 403, 22, '2024-01-21', 20);
-
--- Thêm dữ liệu cho phòng Nhân sự
+VALUES 
+(101, 101, 1, 20, '2024-04-01', 45),
+(102, 102, 2, 18, '2024-04-02', 30),
+(110, 110, 3, 22, '2024-04-03', 25),
+(124, 124, 4, 16, '2024-04-04', 40),
+(130, 130, 5, 19, '2024-04-05', 10),
+(140, 140, 6, 20, '2024-04-06', 35),
+(142, 142, 7, 21, '2024-04-07', 20),
+(157, 157, 8, 17, '2024-04-08', 15),
+(162, 162, 9, 25, '2024-04-09', 5);
+-- dư liệu công cho phòng nhân sự 
 INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
-VALUES
-    (13, 103, 501, 20, '2024-01-22', 15),
-    (14, 104, 502, 22, '2024-01-23', 18),
-    (15, 118, 503, 22, '2024-01-24', 12);
-
--- Thêm dữ liệu cho phòng Tài chính
+VALUES 
+(103, 103, 1, 20, '2024-05-01', 45),
+(104, 104, 2, 18, '2024-05-02', 30),
+(115, 115, 3, 22, '2024-05-03', 25),
+(116, 116, 4, 16, '2024-05-04', 40),
+(118, 118, 5, 19, '2024-05-05', 10),
+(119, 119, 6, 20, '2024-05-06', 35),
+(127, 127, 7, 21, '2024-05-07', 20),
+(131, 131, 8, 17, '2024-05-08', 15),
+(145, 145, 9, 25, '2024-05-09', 5),
+(152, 152, 10, 15, '2024-05-10', 30),
+(164, 164, 1, 18, '2024-05-11', 40),
+(165, 165, 2, 22, '2024-05-12', 10);
+-- dữ liệu công cho phòng tài chính
 INSERT INTO bang_cong (mabc, manv, macv, ngay_cong, ngay_lam, so_luong_san_pham)
-VALUES
-    (16, 108, 601, 18, '2024-01-25', 25),
-    (17, 126, 602, 22, '2024-01-26', 28),
-    (18, 140, 603, 21, '2024-01-27', 22);
-
+VALUES 
+(108, 108, 1, 20, '2024-06-01', 40),
+(117, 117, 2, 18, '2024-06-02', 30),
+(126, 126, 3, 22, '2024-06-03', 20),
+(137, 137, 4, 16, '2024-06-04', 25),
+(139, 139, 5, 19, '2024-06-05', 15),
+(149, 149, 6, 20, '2024-06-06', 10),
+(151, 151, 7, 21, '2024-06-07', 35),
+(154, 154, 8, 17, '2024-06-08', 5),
+(163, 163, 9, 25, '2024-06-09', 40);
 select * from bang_cong;
 select * from cong_viec;
 select * from du_an;
@@ -357,3 +365,13 @@ SELECT mabc, bc.manv, ho_ten, chuc_vu, luong_cb, bc.ngay_cong, so_luong_san_pham
 FROM bang_cong AS bc
          JOIN nhan_vien nv ON bc.manv = nv.manv
 order by manv asc;
+
+
+
+
+
+
+
+
+
+
