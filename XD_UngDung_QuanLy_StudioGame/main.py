@@ -41,10 +41,6 @@ class MainApp:
 
     def show_form(self, form_name):
         """Hiển thị giao diện tương ứng dựa trên form_name"""
-        if form_name == "Đăng xuất":
-            self.sidebar.dang_xuat()  # Gọi hàm đăng xuất
-            return
-
         if self.current_frame:
             self.current_frame.destroy()
 
@@ -58,8 +54,12 @@ class MainApp:
             "Công việc": CongViecForm,
             "Quản trị": ControllerQuanTri,
             "Tính lương": ControllerTinhLuong,
-            "Báo cáo nhân sự": self.show_bao_cao_nhan_su,
+            # "Báo cáo nhân sự": self.show_bao_cao_nhan_su,
+            "Báo cáo nhân sự": lambda: self.show_bao_cao_nhan_su(),
         }
+        if form_name == "Đăng xuất":
+            self.sidebar.dang_xuat()  # Gọi hàm đăng xuất
+            return
 
         # Kiểm tra và xử lý từng form
         if form_name in form_classes:

@@ -269,7 +269,7 @@
       <workItem from="1735080684632" duration="1595000" />
       <workItem from="1735135470797" duration="4465000" />
       <workItem from="1735564917856" duration="22125000" />
-      <workItem from="1735752550643" duration="10211000" />
+      <workItem from="1735752550643" duration="12367000" />
     </task>
     <task id="LOCAL-00001" summary="v.01">
       <option name="closed" value="true" />
@@ -431,7 +431,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735578755138</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="v.1.0 Thêm báo cáo nhân sự, tối ưu một số MVC">
+      <option name="closed" value="true" />
+      <created>1735762950519</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1735762950519</updated>
+    </task>
+    <task id="LOCAL-00022" summary="v.1.0 Thêm báo cáo nhân sự, tối ưu một số MVC">
+      <option name="closed" value="true" />
+      <created>1735762953623</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1735762953623</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +504,8 @@
     <MESSAGE value="V.0.8 _ Thêm icon sidebar, tinh lương" />
     <MESSAGE value="V.0.8.1" />
     <MESSAGE value="v.0.8.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v.0.8.2" />
+    <MESSAGE value="v.1.0 Thêm báo cáo nhân sự, tối ưu một số MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="v.1.0 Thêm báo cáo nhân sự, tối ưu một số MVC" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -501,7 +518,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1735762836177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1735764995099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$View_tinh_luong.coverage" NAME="View_tinh_luong Coverage Results" MODIFIED="1735573033195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/Gstudio_python$Kiem_thu.coverage" NAME="Kiem_thu Coverage Results" MODIFIED="1735221978178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
     <SUITE FILE_PATH="coverage/Gstudio_python$View_CongViec.coverage" NAME="View_CongViec Coverage Results" MODIFIED="1735726389585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />

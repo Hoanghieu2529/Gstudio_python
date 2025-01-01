@@ -19,14 +19,22 @@ class ModelBaoCaoNhanSu:
         """Truy vấn thống kê lương cơ bản."""
         query = """
         SELECT 
-            MAX(nv.luong_co_ban) AS max, 
-            MIN(nv.luong_co_ban) AS min, 
-            AVG(nv.luong_co_ban) AS avg
+            MAX(nv.luong_cb) AS max, 
+            MIN(nv.luong_cb) AS min, 
+            AVG(nv.luong_cb) AS avg
         FROM nhan_vien nv;
         """
         result = self.db.fetch_one(query)
-        return {
-            "max": result["max"],
-            "min": result["min"],
-            "avg": result["avg"]
-        }
+        if result:
+            return {
+                "max": result["max"],
+                "min": result["min"],
+                "avg": result["avg"]
+            }
+        else:
+            return {
+                "max": 0,
+                "min": 0,
+                "avg": 0
+            }
+

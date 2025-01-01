@@ -8,12 +8,9 @@ class ControllerBaoCaoNhanSu:
         self.view = BaoCaoNhanSuForm(root, self)
 
     def tai_lai_bao_cao(self):
-        """Tải lại dữ liệu và hiển thị lên view."""
-        try:
-            so_luong_data = self.model.lay_so_luong_nhan_vien()
-            self.view.hien_thi_bieu_do_treemap(so_luong_data)
+        """Tải lại dữ liệu báo cáo"""
+        so_luong_data = self.model.lay_so_luong_nhan_vien()
+        self.view.hien_thi_bieu_do_treemap(so_luong_data)
 
-            luong_data = self.model.lay_thong_ke_luong()
-            self.view.hien_thi_bieu_do_cot(luong_data)
-        except Exception as e:
-            print(f"Lỗi tải báo cáo: {e}")
+        thong_ke_luong = self.model.lay_thong_ke_luong()
+        self.view.hien_thi_bieu_do_luong(thong_ke_luong)
