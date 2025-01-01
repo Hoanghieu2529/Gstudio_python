@@ -12,3 +12,4 @@ tkcalendar
 fpdf2
 pillow
 openpyxl
+pytest

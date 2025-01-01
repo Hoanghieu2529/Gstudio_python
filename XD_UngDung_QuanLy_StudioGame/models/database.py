@@ -9,12 +9,12 @@ class Database:
         self.connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Csharpython@95",
+            password="1234",
             database="studio"
         )
         self.cursor = self.connection.cursor(dictionary=True)
 
-    def check_connection(self):
+    def kiem_tra_ket_noi(self):
         """Kiểm tra kết nối với cơ sở dữ liệu"""
         try:
             self.connection.ping(reconnect=True, attempts=3, delay=5)
@@ -82,7 +82,7 @@ class Database:
 if __name__ == "__main__":
     with Database() as db:
         try:
-            db.check_connection()
+            db.kiem_tra_ket_noi()
             result = db.fetch_all("SELECT DATABASE();")
             print("Current Database:", result)
         except Exception as e:

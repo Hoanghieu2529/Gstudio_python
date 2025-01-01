@@ -5,7 +5,11 @@ print(f"Đang làm việc tại: {os.getcwd()}")
 
 class ModelQuanTri:
     def __init__(self):
-        self.db = Database()
+        self.__db = Database()
+
+    @property
+    def db(self):
+        return self.__db
 
     def lay_danh_sach_nguoi_dung(self):
         query = "SELECT * FROM nguoi_dung;"
@@ -26,7 +30,7 @@ class ModelQuanTri:
         FROM du_an
         GROUP BY du_an.trang_thai;
         """
-        return self.db.fetch_all(query)
+        return self.__db.fetch_all(query)
 
     def lay_tien_do_du_an(self):
         query = """
@@ -34,4 +38,4 @@ class ModelQuanTri:
         FROM du_an
         WHERE trang_thai = 'dang_thuc_hien' Or trang_thai = 'hoàn thành';
         """
-        return self.db.fetch_all(query)
+        return self.__db.fetch_all(query)

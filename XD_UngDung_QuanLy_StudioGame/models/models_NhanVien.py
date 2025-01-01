@@ -1,7 +1,7 @@
 from models.database import Database
-# from models.PhongBan import PhongBan
+from mysql.connector import Error
 
-class model_NhanVien:
+class ModelNhanVien:
     def __init__(self):
         self.db = Database()
 
@@ -31,27 +31,30 @@ class model_NhanVien:
 
     def cap_nhat_nhan_vien(self, manv, ho_ten=None, chuc_vu=None, mapb=None, email=None):
         """Cập nhật thông tin của một nhân viên."""
-        query = "UPDATE nhan_vien SET"
-        fields = []
-        values = []
+        try:
+            query = "UPDATE nhan_vien SET"
+            fields: list[str] = []  # Chú thích kiểu dữ liệu
+            values: list = []
 
-        if ho_ten:
-            fields.append("ho_ten = %s")
-            values.append(ho_ten)
-        if chuc_vu:
-            fields.append("chuc_vu = %s")
-            values.append(chuc_vu)
-        if mapb:
-            fields.append("mapb = %s")
-            values.append(mapb)
-        if email:
-            fields.append("email = %s")
-            values.append(email)
+            if ho_ten:
+                fields.append("ho_ten = %s")
+                values.append(ho_ten)
+            if chuc_vu:
+                fields.append("chuc_vu = %s")
+                values.append(chuc_vu)
+            if mapb:
+                fields.append("mapb = %s")
+                values.append(mapb)
+            if email:
+                fields.append("email = %s")
+                values.append(email)
 
-        if fields:
-            query += ", ".join(fields) + " WHERE manv = %s;"
-            values.append(manv)
-            self.db.execute_query(query, values)
+            if fields:
+                query += " " + ", ".join(fields) + " WHERE manv = %s;"
+                values.append(manv)
+                self.db.execute_query(query, values)
+        except Error as e:
+            print(f"Lỗi cập nhật nhân viên: {e}")
 
     def xoa_nhan_vien(self, manv):
         """Xóa một nhân viên khỏi cơ sở dữ liệu."""
@@ -74,4 +77,8 @@ class model_NhanVien:
         query = "SELECT mapb, ten_phong_ban FROM phong_ban;"
         return self.db.fetch_all(query)
 
-
+    def lay_mapb_tu_ten_phong_ban(self, ten_phong_ban):
+        """Lấy mapb (mã phòng ban) dựa trên tên phòng ban."""
+        query = "SELECT mapb FROM phong_ban WHERE ten_phong_ban = %s;"
+        result = self.db.fetch_all(query, (ten_phong_ban,))
+        return result[0]["mapb"] if result else None

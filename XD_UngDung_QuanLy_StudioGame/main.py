@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import PhotoImage, messagebox
-from View import Sidebar, NguoiDungForm, View_dang_nhap, View_dang_ky, StudioForm, PhongBanForm, Nhan_vien_form, CongViecForm
+from View import Sidebar, NguoiDungForm, View_dang_nhap, View_dang_ky, StudioForm, PhongBanForm, Nhanvienform, CongViecForm
 from View.View_DuAn import DuAnForm
 from controllers.controller_dang_ky import controller_dang_ky
 from controllers.controller_dang_nhap import controller_dang_nhap
@@ -9,6 +9,8 @@ from controllers.controller_quan_tri import ControllerQuanTri
 from View.View_tinh_luong import ViewTinhLuong
 from controllers.controller_tinh_luong import ControllerTinhLuong
 from controllers.controller_DuAn import DuAnFormController
+from controllers.controller_BaoCaoNhanSu import ControllerBaoCaoNhanSu
+
 
 def goi_dang_ky():
     """Hàm gọi giao diện đăng ký"""
@@ -46,38 +48,45 @@ class MainApp:
         if self.current_frame:
             self.current_frame.destroy()
 
+        # Tạo các class liên quan đến form
         form_classes = {
             "Người dùng": NguoiDungForm,
             "Studio": StudioForm,
             "Phòng ban": PhongBanForm,
             "Dự án": DuAnForm,
-            "Nhân viên": Nhan_vien_form,
+            "Nhân viên": Nhanvienform,
             "Công việc": CongViecForm,
-            "Quản trị": ViewQuanTri,
-            "Tính lương": ViewTinhLuong,
+            "Quản trị": ControllerQuanTri,
+            "Tính lương": ControllerTinhLuong,
+            "Báo cáo nhân sự": self.show_bao_cao_nhan_su,
         }
 
+        # Kiểm tra và xử lý từng form
         if form_name in form_classes:
             form_class = form_classes[form_name]
             if form_name == "Quản trị":
                 self.show_quan_tri()
             elif form_name == "Dự án":
-                self.show_du_an()  # Chuyển sang xử lý View và Controller Dự án
+                self.show_du_an()
             elif form_name == "Tính lương":
                 self.show_tinh_luong()
+            elif form_name == "Báo cáo nhân sự":
+                bao_cao_controller = ControllerBaoCaoNhanSu(self.root)
+                self.current_frame = bao_cao_controller.view  # Sử dụng thuộc tính `view` thay vì `_view`
+                self.current_frame.pack(fill=tk.BOTH, expand=True)
             else:
                 # Hiển thị các form khác
                 form_instance = form_class(self.root)
                 self.current_frame = form_instance.frame if hasattr(form_instance, 'frame') else form_instance
                 self.current_frame.pack(fill=tk.BOTH, expand=True)
         else:
+            # Form chưa phát triển
             self.current_frame = tk.Frame(self.root, bg="#f8f9fa")
             self.current_frame.pack(fill=tk.BOTH, expand=True)
             tk.Label(self.current_frame, text=f"{form_name} đang được phát triển.", bg="#f8f9fa").pack()
 
     def show_quan_tri(self):
         """Hiển thị giao diện Quản trị"""
-        # Khởi tạo View và Controller
         view_quan_tri = ViewQuanTri(self.root, None)
         controller_quan_tri = ControllerQuanTri(view_quan_tri)
         view_quan_tri.controller = controller_quan_tri
@@ -99,6 +108,18 @@ class MainApp:
         view_tinh_luong.controller = controller_tinh_luong
         self.current_frame = view_tinh_luong
         self.current_frame.pack(fill=tk.BOTH, expand=True)
+
+    def show_bao_cao_nhan_su(self):
+        """Hiển thị giao diện Báo cáo Nhân sự với các biểu đồ"""
+        if self.current_frame:
+            self.current_frame.destroy()
+
+        if not hasattr(self, "_bao_cao_controller"):
+            self._bao_cao_controller = ControllerBaoCaoNhanSu(self.root)
+
+        self.current_frame = self._bao_cao_controller.view
+        self.current_frame.pack(fill=tk.BOTH, expand=True)
+
 
 def ham_chinh(vai_tro):
     """Chạy ứng dụng sau khi đăng nhập thành công"""
@@ -128,3 +149,4 @@ if __name__ == "__main__":
 
     login_view = View_dang_nhap(root, controller_dangnhap, khi_dang_nhap_thanh_cong)
     root.mainloop()
+

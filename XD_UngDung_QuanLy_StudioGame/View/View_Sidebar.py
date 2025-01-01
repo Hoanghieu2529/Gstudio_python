@@ -23,7 +23,7 @@ class Sidebar(tk.Frame):
         # Cấu trúc các menu chính và phụ với icon tương ứng
         cau_truc_menu = {
             "Điều hành": [("Quản trị", "quan_tri.png"), ("Studio - Báo cáo", "studio.png"), ("Phòng ban", "phong_ban.png")],
-            "Nhân sự": [("Nhân viên", "nhan_vien.png"), ("Báo cáo nhân sự", "bao_cao.png"), ("Tính lương", "tinh_luong.png")],
+            "Nhân sự": [("Báo cáo nhân sự", "bao_cao.png"),("Nhân viên", "nhan_vien.png"),  ("Tính lương", "tinh_luong.png")],
             "Công việc": [("Dự án", "du_an.png"), ("Báo cáo tiến độ", "bao_cao_tien_do.png")],
             "Tài chính": [("Chi phí", "chi_phi.png"), ("Doanh thu", "doanh_thu.png"), ("Báo cáo tổng hợp", "tong_hop.png")]
         }
