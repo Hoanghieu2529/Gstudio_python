@@ -199,7 +199,7 @@ VALUES
     (48, 'Khách Hàng 48', 'kh48@example.com', '0923456789', 'Hà Nội, Việt Nam'),
     (49, 'Khách Hàng 49', 'kh49@example.com', '0934567890', 'Đà Nẵng, Việt Nam'),
     (50, 'Khách Hàng 50', 'kh50@example.com', '0945678901', 'Hồ Chí Minh, Việt Nam');
---- dữ liệu dự án 
+-- dữ liệu dự án
 INSERT INTO du_an (ten_du_an, mo_ta, ngay_bat_dau, ngay_ket_thuc, makh, trang_thai)
 VALUES
 ('Dự án Alpha', 'Hoàn thành đúng thời hạn.', '2023-01-01', '2023-06-30', 1, 'hoàn thành'),

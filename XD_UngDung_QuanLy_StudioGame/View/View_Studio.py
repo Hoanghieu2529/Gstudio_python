@@ -3,11 +3,13 @@ from tkinter import messagebox, simpledialog
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 
+from View.View_BaseForm import KhungCoSo
 from controllers import StudioFormController
 
 
-class StudioForm:
-    def __init__(self, master):
+class StudioForm(KhungCoSo):
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
         self.frame = tk.Frame(master, bg="#f8f9fa")
         self.frame.pack(fill=tk.BOTH, expand=True)
 

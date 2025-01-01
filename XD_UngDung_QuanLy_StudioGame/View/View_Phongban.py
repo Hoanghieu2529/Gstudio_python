@@ -1,9 +1,12 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+
+from View.View_BaseForm import KhungCoSo
 from controllers.controller_PhongBan import PhongBanFormController
 
-class PhongBanForm:
-    def __init__(self, master):
+class PhongBanForm(KhungCoSo):
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
         self.frame = tk.Frame(master, bg="#f8f9fa")
         self.frame.pack(fill=tk.BOTH, expand=True)
 

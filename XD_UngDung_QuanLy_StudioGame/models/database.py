@@ -9,7 +9,7 @@ class Database:
         self.connection = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="1234",
+            password="Csharpython@95",
             database="studio"
         )
         self.cursor = self.connection.cursor(dictionary=True)
