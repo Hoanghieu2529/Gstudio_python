@@ -270,7 +270,7 @@
       <workItem from="1735135470797" duration="4465000" />
       <workItem from="1735564917856" duration="22125000" />
       <workItem from="1735752550643" duration="12541000" />
-      <workItem from="1735825697954" duration="3002000" />
+      <workItem from="1735825697954" duration="5708000" />
     </task>
     <task id="LOCAL-00001" summary="v.01">
       <option name="closed" value="true" />
@@ -464,7 +464,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735826973549</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="v1.0.2 _up images">
+      <option name="closed" value="true" />
+      <created>1735829504090</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1735829504090</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +504,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -524,7 +532,8 @@
     <MESSAGE value="v.1.0 Thêm báo cáo nhân sự, tối ưu một số MVC" />
     <MESSAGE value="v.1.0.1 Cập nhật lại biểu đồ cột luongcb" />
     <MESSAGE value="v1.0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.0.1" />
+    <MESSAGE value="v1.0.2 _up images" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.0.2 _up images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -537,14 +546,14 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1735765045246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$main.coverage" NAME="main Coverage Results" MODIFIED="1735829867840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$View_tinh_luong.coverage" NAME="View_tinh_luong Coverage Results" MODIFIED="1735573033195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/Gstudio_python$Kiem_thu.coverage" NAME="Kiem_thu Coverage Results" MODIFIED="1735221978178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
     <SUITE FILE_PATH="coverage/Gstudio_python$View_CongViec.coverage" NAME="View_CongViec Coverage Results" MODIFIED="1735726389585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/Gstudio_python$mvc_co_ban01_view_ui.coverage" NAME="mvc_co_ban01_view_ui Coverage Results" MODIFIED="1735048815073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/Test" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$models_NhanVien.coverage" NAME="models_NhanVien Coverage Results" MODIFIED="1735477515716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
-    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$install_requirements.coverage" NAME="install_requirements Coverage Results" MODIFIED="1734545285147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$View_Sidebar.coverage" NAME="View_Sidebar Coverage Results" MODIFIED="1735756690887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
+    <SUITE FILE_PATH="coverage/StudioGame_do_an_python$install_requirements.coverage" NAME="install_requirements Coverage Results" MODIFIED="1734545285147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame" />
     <SUITE FILE_PATH="coverage/Gstudio_python$View_DuAn.coverage" NAME="View_DuAn Coverage Results" MODIFIED="1735725572077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/View" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$controller_tinh_luong.coverage" NAME="controller_tinh_luong Coverage Results" MODIFIED="1735572947264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/controllers" />
     <SUITE FILE_PATH="coverage/StudioGame_do_an_python$database.coverage" NAME="database Coverage Results" MODIFIED="1735478131012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XD_UngDung_QuanLy_StudioGame/models" />
