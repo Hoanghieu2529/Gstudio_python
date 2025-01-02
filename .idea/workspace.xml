@@ -270,7 +270,7 @@
       <workItem from="1735135470797" duration="4465000" />
       <workItem from="1735564917856" duration="22125000" />
       <workItem from="1735752550643" duration="12541000" />
-      <workItem from="1735825697954" duration="1162000" />
+      <workItem from="1735825697954" duration="3002000" />
     </task>
     <task id="LOCAL-00001" summary="v.01">
       <option name="closed" value="true" />
@@ -456,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735765115119</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="v1.0.1">
+      <option name="closed" value="true" />
+      <created>1735826973549</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1735826973549</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +496,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -515,7 +523,8 @@
     <MESSAGE value="v.0.8.2" />
     <MESSAGE value="v.1.0 Thêm báo cáo nhân sự, tối ưu một số MVC" />
     <MESSAGE value="v.1.0.1 Cập nhật lại biểu đồ cột luongcb" />
-    <option name="LAST_COMMIT_MESSAGE" value="v.1.0.1 Cập nhật lại biểu đồ cột luongcb" />
+    <MESSAGE value="v1.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.0.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
