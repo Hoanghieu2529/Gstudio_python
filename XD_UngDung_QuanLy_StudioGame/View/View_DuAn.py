@@ -31,13 +31,34 @@ class DuAnForm(tk.Frame):
 
         self.bang_du_an.pack(fill=tk.BOTH, expand=True)
 
-    def hien_thi_du_lieu(self, du_lieu):
+        self.hien_thi_du_lieu()#ban đầu
+
+    # def hien_thi_du_lieu(self, du_lieu):
+    #     """Hiển thị dữ liệu từ model"""
+    #     for row in self.bang_du_an.get_children():
+    #         self.bang_du_an.delete(row)
+    #     for du_an in du_lieu:
+    #         self.bang_du_an.insert("", "end", values=(du_an["mada"], du_an["ten_du_an"], du_an["mo_ta"],
+    #                                                   du_an["ngay_bat_dau"], du_an["ngay_ket_thuc"], du_an["trang_thai"]))
+    def hien_thi_du_lieu(self, du_lieu=None):
         """Hiển thị dữ liệu từ model"""
+        if du_lieu is None:
+            du_lieu = []  # Nếu không có dữ liệu thì dùng danh sách rỗng
+
+        # Xóa dữ liệu cũ trong bảng
         for row in self.bang_du_an.get_children():
             self.bang_du_an.delete(row)
+
+        # Thêm dữ liệu mới vào bảng
         for du_an in du_lieu:
-            self.bang_du_an.insert("", "end", values=(du_an["mada"], du_an["ten_du_an"], du_an["mo_ta"],
-                                                      du_an["ngay_bat_dau"], du_an["ngay_ket_thuc"], du_an["trang_thai"]))
+            self.bang_du_an.insert("", "end", values=(
+                du_an.get("mada", ""),
+                du_an.get("ten_du_an", ""),
+                du_an.get("mo_ta", ""),
+                du_an.get("ngay_bat_dau", ""),
+                du_an.get("ngay_ket_thuc", ""),
+                du_an.get("trang_thai", "")
+            ))
 
     def mo_form_them(self):
         """Mở form thêm mới dự án"""

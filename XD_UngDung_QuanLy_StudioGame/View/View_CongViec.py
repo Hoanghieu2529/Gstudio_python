@@ -18,10 +18,10 @@ class CongViecForm(KhungCoSo):
         toolbar = tk.Frame(parent_frame, bg="#f8f9fa")
         toolbar.pack(fill=tk.X, pady=10)
 
-        create_btn = tk.Button(toolbar, text="Thêm mới", command=self.controller.create_record, bg="#f8f9fa")
-        read_btn = tk.Button(toolbar, text="Đọc", command=self.controller.read_record, bg="#f8f9fa")
-        update_btn = tk.Button(toolbar, text="Cập nhật", command=self.controller.update_record, bg="#f8f9fa")
-        delete_btn = tk.Button(toolbar, text="Xóa", command=self.controller.delete_record, bg="#f8f9fa")
+        create_btn = tk.Button(toolbar, text="Thêm mới", command=self.controller.tao_ban_ghi, bg="#f8f9fa")
+        read_btn = tk.Button(toolbar, text="Đọc", command=self.controller.doc_ban_ghi, bg="#f8f9fa")
+        update_btn = tk.Button(toolbar, text="Cập nhật", command=self.controller.cap_nhat_ban_ghi, bg="#f8f9fa")
+        delete_btn = tk.Button(toolbar, text="Xóa", command=self.controller.xoa_ban_ghi, bg="#f8f9fa")
 
         create_btn.pack(side=tk.LEFT, padx=10)
         read_btn.pack(side=tk.LEFT, padx=10)

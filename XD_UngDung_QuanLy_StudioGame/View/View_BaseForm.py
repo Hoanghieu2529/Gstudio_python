@@ -3,8 +3,22 @@ from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
 
 class KhungCoSo(tk.Frame):
-    """Lớp cơ sở để kế thừa"""
+    """
+    Lớp cơ sở (base class) để kế thừa cho các khung giao diện khác.
+    - Chức năng:
+        + Định nghĩa khung giao diện cơ bản.
+        + Cung cấp phương thức tạo cửa sổ động với các trường linh hoạt.
+    """
     def __init__(self, master, **kwargs):
+        """
+        Khởi tạo khung cơ sở.
+
+        - Đầu vào:
+            + master (tk.Tk hoặc tk.Frame): Cửa sổ hoặc khung cha.
+            + kwargs: Các tham số bổ sung cho lớp `tk.Frame`.
+        - Đầu ra:
+            + Tạo khung cơ sở để làm nền tảng kế thừa cho các lớp giao diện khác.
+        """
         super().__init__(master, **kwargs)
         self.goc = master
 

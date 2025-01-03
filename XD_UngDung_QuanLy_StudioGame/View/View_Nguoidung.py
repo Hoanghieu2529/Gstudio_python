@@ -6,9 +6,10 @@ import bcrypt
 
 
 class NguoiDungForm:
-    def __init__(self, master):
+    def __init__(self, master,controller):
         """Khởi tạo giao diện người dùng"""
         self.master = master  # Lưu trữ tham chiếu đến master
+        self.controller = controller
         self.frame = tk.Frame(master, bg="#f8f9fa")
         self.frame.pack(fill=tk.BOTH, expand=True)
 

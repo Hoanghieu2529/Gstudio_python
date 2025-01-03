@@ -9,6 +9,13 @@ from models.models_NhanVien import ModelNhanVien
 class Nhanvienform(KhungCoSo):
     """Tạo lớp quản lý giao diện Nhân Viên"""
     def __init__(self, master):
+        """
+        Khởi tạo giao diện quản lý Nhân Viên.
+
+        Args:
+            master: Cửa sổ hoặc khung chứa giao diện.
+            controller: Đối tượng điều khiển để xử lý logic và giao tiếp với mô hình dữ liệu.
+        """
         super().__init__(master, bg="#f8f9fa")
         self.pack(fill=tk.BOTH, expand=True)
         self.bang_nhan_vien = None

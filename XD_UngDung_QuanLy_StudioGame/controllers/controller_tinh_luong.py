@@ -7,7 +7,22 @@ import pandas as pd
 from models.models_tinh_luong import ModelTinhLuong
 
 class ControllerTinhLuong:
+    """
+    Lớp điều khiển quản lý tính lương nhân viên, chịu trách nhiệm:
+    - Hiển thị dữ liệu lương từ model lên view.
+    - Xuất dữ liệu lương ra file Excel và PDF.
+    - Cập nhật thông tin ngày công của nhân viên.
+    """
     def __init__(self, view):
+        """
+        Khởi tạo lớp điều khiển tính lương.
+
+        - Đầu vào:
+            + view: Đối tượng giao diện (View) để hiển thị dữ liệu lương.
+        - Đầu ra:
+            + Kết nối với model `ModelTinhLuong` để lấy dữ liệu lương.
+            + Hiển thị dữ liệu lương lên view nếu có view được truyền vào.
+        """
         self.view = view
         self.model = ModelTinhLuong()
         self.du_lieu = self.model.lay_danh_sach_luong()  # Lấy dữ liệu từ model
@@ -15,13 +30,24 @@ class ControllerTinhLuong:
             self.view.hien_thi_du_lieu(self.du_lieu)
 
     def hien_thi_du_lieu(self):
-        """Lấy dữ liệu từ model và hiển thị trên view."""
+        """
+        Lấy dữ liệu từ model và hiển thị trên view.
+        - Đầu ra:
+            + Cập nhật dữ liệu lương từ model.
+            + Hiển thị dữ liệu lên giao diện view.
+        """
         if self.view:
             self.du_lieu = self.model.lay_danh_sach_luong()
             self.view.hien_thi_du_lieu(self.du_lieu)
 
     def xuat_excel(self):
-        """Xuất dữ liệu lương nhân viên ra file Excel."""
+        """
+        Xuất dữ liệu lương nhân viên ra file Excel.
+        - Đầu ra:
+            + Xuất file Excel chứa dữ liệu lương với các thông tin:
+                * Mã NV, Họ Tên, Chức Vụ, Lương Cơ Bản, Ngày Công, Tổng Lương.
+            + Hiển thị thông báo khi xuất thành công hoặc lỗi khi xuất thất bại.
+        """
         duong_dan = asksaveasfilename(defaultextension=".xlsx",
                                       filetypes=[("Excel files", "*.xlsx"), ("All files", "*.*")])
         if not duong_dan:
@@ -51,7 +77,13 @@ class ControllerTinhLuong:
             messagebox.showerror("Lỗi", f"Không thể xuất file Excel: {e}")
 
     def xuat_pdf(self):
-        """Xuất file pdf"""
+        """
+        Xuất dữ liệu lương nhân viên ra file PDF.
+        - Đầu ra:
+            + Xuất file PDF chứa dữ liệu lương với các thông tin:
+                * Mã NV, Họ Tên, Chức Vụ, Lương Cơ Bản, Ngày Công, Tổng Lương.
+            + Hiển thị thông báo khi xuất thành công hoặc lỗi khi xuất thất bại.
+        """
         try:
             # Đường dẫn lưu file PDF
             duong_dan = asksaveasfilename(defaultextension=".pdf",
@@ -102,6 +134,14 @@ class ControllerTinhLuong:
             messagebox.showerror("Lỗi", f"Không thể xuất file PDF: {e}")
 
     def cap_nhat_ngay_cong(self, manv, ngay_cong_moi):
-        """Cập nhật số ngày công."""
+        """Cập nhật số ngày công của một nhân viên.
+
+        - Đầu vào:
+            + manv: Mã nhân viên cần cập nhật.
+            + ngay_cong_moi: Số ngày công mới.
+        - Đầu ra:
+            + Cập nhật thông tin ngày công vào cơ sở dữ liệu qua model.
+            + Hiển thị thông báo khi cập nhật thành công.
+        """
         self.model.cap_nhat_ngay_cong(manv, ngay_cong_moi)
         messagebox.showinfo("Thành công", "Ngày công đã được cập nhật.")

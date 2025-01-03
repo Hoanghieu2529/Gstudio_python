@@ -2,8 +2,6 @@ import os
 from PIL import Image, ImageTk
 import tkinter as tk
 
-
-
 class Sidebar(tk.Frame):
     def __init__(self, master, hien_thi_form, vai_tro):
         super().__init__(master, bg="#2C2C2E", width=200, height=600)
@@ -22,15 +20,15 @@ class Sidebar(tk.Frame):
 
         # Cấu trúc các menu chính và phụ với icon tương ứng
         cau_truc_menu = {
-            "Điều hành": [("Quản trị", "quan_tri.png"), ("Studio - Báo cáo", "studio.png"), ("Phòng ban", "phong_ban.png")],
+            "Điều hành": [("Quản trị", "quan_tri.png"), ("Phòng ban", "phong_ban.png")],
             "Nhân sự": [("Báo cáo nhân sự", "bao_cao.png"),("Nhân viên", "nhan_vien.png"),  ("Tính lương", "tinh_luong.png")],
             "Công việc": [("Dự án", "du_an.png"), ("Báo cáo tiến độ", "bao_cao_tien_do.png")],
             "Tài chính": [("Chi phí", "chi_phi.png"), ("Doanh thu", "doanh_thu.png"), ("Báo cáo tổng hợp", "tong_hop.png")]
         }
 
-        # Quy định các menu cần ẩn dựa trên vai trò
+        # Nguyên tắc phân quyền
         menu_bi_an = {
-            "nguoi dung": ["Điều hành"],
+            "nguoi dung": ["Điều hành","Tài chính"],
             "kiem thu": ["Điều hành", "Tài chính"],
             "ke toan": ["Nhân sự"],
         }
